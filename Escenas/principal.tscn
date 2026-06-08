@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dqgsy2hypth75"]
+
+[ext_resource type="Script" uid="uid://c30tr4uk0haln" path="res://Scripts/principal.gd" id="1_6w77o"]
+[ext_resource type="PackedScene" uid="uid://k031ir6q0kjh" path="res://Escenas/primerNivel.tscn" id="2_waexs"]
+[ext_resource type="PackedScene" uid="uid://ctsrqe3nbuijf" path="res://Escenas/interfaz.tscn" id="3_4q36c"]
+
+[node name="Principal" type="Node" unique_id=956810490 node_paths=PackedStringArray("areaActual", "interfaz")]
+script = ExtResource("1_6w77o")
+areaActual = NodePath("primerNivel")
+interfaz = NodePath("Interfaz")
+
+[node name="Interfaz" parent="." unique_id=240472160 instance=ExtResource("3_4q36c")]
+
+[node name="primerNivel" parent="." unique_id=631651522 instance=ExtResource("2_waexs")]
