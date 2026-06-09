@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://biljmi5fgmoif"
+path="res://.godot/imported/Opciones.dialogue-a88d493b54df7b2d4a1a39cd2680acad.tres"
+
+[deps]
+
+source_file="res://Dialogos/Opciones.dialogue"
+dest_files=["res://.godot/imported/Opciones.dialogue-a88d493b54df7b2d4a1a39cd2680acad.tres"]
+
+[params]
+
+defaults=true
