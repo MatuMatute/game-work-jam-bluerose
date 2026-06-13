@@ -1,0 +1,22 @@
+class_name Mapa 
+extends Node2D
+
+enum IDsMapa {
+	DESPACHO_DETECTIVE = 0,
+	RESTAURANTE_RECEPCION = 1,
+	RESTAURANTE_COMEDOR_PUBLICO = 2,
+	RESTAURANTE_COMEDOR_PRIVADO = 3,
+	RESTAURANTE_DIMENSION_PARALELA = 4,
+	RESTAURANTE_PASILLO = 5,
+	RESTAURANTE_DESPACHO = 6,
+	RESTAURANTE_SALA_BILLAR = 7,
+	RESTAURANTE_OFICINA_ANDREA = 8,
+	RESTAURANTE_COCINA = 9,
+	
+}
+
+@export var IDMapa : IDsMapa
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
