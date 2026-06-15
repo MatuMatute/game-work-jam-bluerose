@@ -10,3 +10,6 @@ script = ExtResource("1_spkme")
 [node name="FondoInterfaz" parent="." unique_id=240472160 instance=ExtResource("2_n77xa")]
 
 [node name="interfazPrincipal" parent="." unique_id=142371296 instance=ExtResource("3_spkme")]
+
+[connection signal="libroPistasAbierto" from="interfazPrincipal" to="." method="oscurecerFondo"]
+[connection signal="libroPistasCerrado" from="interfazPrincipal" to="." method="aclararFondo"]

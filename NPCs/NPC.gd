@@ -1,5 +1,4 @@
-class_name NPC
-extends Area2D
+class_name NPC extends Area2D
 
 const DIALOGO = preload("uid://biljmi5fgmoif")
 

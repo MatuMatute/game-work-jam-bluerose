@@ -1,4 +1,3 @@
-class_name FondoInterfaz
-extends CanvasLayer
+class_name FondoInterfaz extends CanvasLayer
 
 @onready var animacionesInterfaz : AnimationPlayer = $AnimacionesFondo

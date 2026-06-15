@@ -16,4 +16,4 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	if !event.is_released():
 		return
 	
-	emit_signal("cambiarHabitacion", IDHabitacion)
+	cambiarHabitacion.emit(IDHabitacion)

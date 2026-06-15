@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://bt5rix8pcs8lq"]
 
 [ext_resource type="Texture2D" uid="uid://b4fexc34gmsvd" path="res://Assets/Interfaz/libro.png" id="1_ai7u8"]
+[ext_resource type="Script" uid="uid://vxhm1xapgsni" path="res://Interfaz/InterfazPrincipal/interfazPrincipal.gd" id="1_nhmib"]
 [ext_resource type="Texture2D" uid="uid://cvcwlwg0lpwhc" path="res://Assets/Interfaz/Inventario.png" id="2_rf438"]
 
 [node name="interfazPrincipal" type="CanvasLayer" unique_id=142371296]
 layer = 3
+script = ExtResource("1_nhmib")
 
 [node name="ContenedorBotones" type="HBoxContainer" parent="." unique_id=401102508]
 anchors_preset = -1
@@ -29,3 +31,6 @@ texture_normal = ExtResource("2_rf438")
 texture_pressed = ExtResource("2_rf438")
 texture_hover = ExtResource("2_rf438")
 texture_focused = ExtResource("2_rf438")
+
+[connection signal="pressed" from="ContenedorBotones/BotonLibroPistas" to="." method="BotonLibroPistasPresionado"]
+[connection signal="pressed" from="ContenedorBotones/BotonInventario" to="." method="BotonInventarioPresionado"]

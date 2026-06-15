@@ -4,8 +4,8 @@ class_name DespachoOficina extends Mapa
 
 func _ready() -> void:
 	# Chequea el singleton a ver si el jugador esta en el prologo
-	match VariablesJuego.progresoActual:
-		VariablesJuego.Progreso.PROLOGO:
+	match VariablesJugador.progresoActual:
+		VariablesJugador.Progreso.PROLOGO:
 			var dialogo : DialogueResource = load("res://Dialogos/untitled.dialogue")
 			DialogueManager.show_dialogue_balloon(dialogo)
 			print("ACA DANI PODES PONER EL DIALOGO CON CHIARA")

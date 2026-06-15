@@ -1,7 +1,6 @@
-class_name Juego
-extends Node
+class_name Juego extends Node
 
-var mapaActual : Node2D
+var mapaActual : Mapa
 
 @onready var fondoInterfaz : FondoInterfaz = $FondoInterfaz
 @onready var mensajeErrorCargarArea : PackedScene = preload("res://Escenas/mensajeErrorCargarArea.tscn")
@@ -22,5 +21,14 @@ func cambiarMapa(IDHabitacion : int) -> void:
 
 func cargarMapa(ubicacion : String) -> void:
 	var mapaCargado : PackedScene = load(ubicacion) as PackedScene
-	add_child(mapaCargado.instantiate())
+	var mapaInstanciado : Mapa = mapaCargado.instantiate()
+	mapaActual = mapaInstanciado
+	print(mapaActual)
+	add_child(mapaInstanciado)
 	fondoInterfaz.animacionesInterfaz.play("fundidoATransparente")
+
+func oscurecerFondo() -> void:
+	fondoInterfaz.animacionesInterfaz.play("fundidoAOscuro")
+
+func aclararFondo() -> void:
+	fondoInterfaz.animacionesInterfaz.play_backwards("fundidoAOscuro")

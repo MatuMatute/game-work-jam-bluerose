@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://cmmkijyd6g3t"]
+
+[ext_resource type="Texture2D" uid="uid://dy7y4dq7oo11m" path="res://icon.svg" id="1_j43d4"]
+[ext_resource type="Script" uid="uid://cp3dcs3uil5gt" path="res://Pistas/libroPistas.gd" id="2_yn43f"]
+
+[sub_resource type="Animation" id="Animation_yn43f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:anchor_bottom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:anchor_top")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_gtqss"]
+resource_name = "aparecer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:anchor_bottom")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.5, 0.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:anchor_top")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.5, 0.5]
+}
+
+[sub_resource type="Animation" id="Animation_03hsb"]
+resource_name = "desaparecer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:anchor_bottom")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5, -0.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:anchor_top")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5, -0.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pjm65"]
+_data = {
+&"RESET": SubResource("Animation_yn43f"),
+&"aparecer": SubResource("Animation_gtqss"),
+&"desaparecer": SubResource("Animation_03hsb")
+}
+
+[node name="libroPistas" type="TextureRect" unique_id=1333721456]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -556.5
+offset_top = -317.0
+offset_right = 556.5
+offset_bottom = 317.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j43d4")
+script = ExtResource("2_yn43f")
+
+[node name="animacionLibroPistas" type="AnimationPlayer" parent="." unique_id=1406564905]
+libraries/ = SubResource("AnimationLibrary_pjm65")
+autoplay = &"aparecer"
+
+[node name="Pista1" type="Label" parent="." unique_id=1599121125]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 488.0
+offset_bottom = 113.0
+text = "PISTA 1 PISTA 1 PISTA 1 PISTA 1 PISTA 1 PISTA 1
+PISTA 1 PISTA 1 PISTA 1 PISTA 1 PISTA 1 PISTA 1"
