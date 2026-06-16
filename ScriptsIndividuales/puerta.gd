@@ -5,8 +5,8 @@ extends Area2D
 signal cambiarHabitacion(NumeroHabitacion : int)
 
 func _ready() -> void:
-	var nodoPrincipal : Principal = get_tree().current_scene as Principal
-	connect("cambiarHabitacion", nodoPrincipal.cambiarArea)
+	var nodoPrincipal : Juego = get_tree().current_scene as Juego
+	connect("cambiarHabitacion", nodoPrincipal.cambiarMapa)
 
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if !event is InputEventMouseButton:
@@ -16,4 +16,4 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	if !event.is_released():
 		return
 	
-	emit_signal("cambiarHabitacion", IDHabitacion)
+	cambiarHabitacion.emit(IDHabitacion)

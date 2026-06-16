@@ -1,7 +1,6 @@
-class_name NPC
-extends Area2D
+class_name NPC extends Area2D
 
-const OPCIONES = preload("uid://biljmi5fgmoif")
+const DIALOGO = preload("uid://biljmi5fgmoif")
 
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if !event is InputEventMouseButton:
@@ -11,6 +10,6 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	if !event.is_released():
 		return
 	
-	DialogueManager.show_dialogue_balloon(OPCIONES)
+	DialogueManager.show_dialogue_balloon(DIALOGO)
 	print("dialogo?")
 	print("Ahora deberia spawnear el cuadro de dialogo, esto podria requerir de comunicarse con la raiz de la escena.")

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://k031ir6q0kjh"]
+
+[ext_resource type="Script" uid="uid://c8vbm5t0naxpy" path="res://Mapas/despachoOficina/despachoOficina.gd" id="1_8dxnp"]
+[ext_resource type="Texture2D" uid="uid://c6hj5nkwok8sh" path="res://Assets/Fondos/despachoDetective.png" id="2_chbjx"]
+[ext_resource type="PackedScene" uid="uid://elpxaqpqa4vj" path="res://Escenas/puerta.tscn" id="3_chbjx"]
+
+[node name="despachoOficina" type="Node2D" unique_id=631651522]
+script = ExtResource("1_8dxnp")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1429677629]
+texture = ExtResource("2_chbjx")
+centered = false
+
+[node name="Puerta" parent="." unique_id=3285009 instance=ExtResource("3_chbjx")]
+position = Vector2(969, 350)
+IDHabitacion = 1

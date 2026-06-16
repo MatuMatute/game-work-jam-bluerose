@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dleouhvkjt81b"]
+
+[ext_resource type="Script" uid="uid://bru2uk5o8nav0" path="res://Mapas/restauranteRecepcion/restauranteRecepcion.gd" id="1_eweqs"]
+[ext_resource type="Texture2D" uid="uid://dw7mgor1l6885" path="res://Assets/Fondos/restauranteRecepcion1.png" id="1_xmmtj"]
+[ext_resource type="Texture2D" uid="uid://g5h7e80ojcoe" path="res://Assets/Fondos/restauranteRecepcion2.png" id="2_eweqs"]
+[ext_resource type="PackedScene" uid="uid://dso57smkjfxme" path="res://NPCs/NPC.tscn" id="2_xmmtj"]
+[ext_resource type="PackedScene" uid="uid://168aqe2r44w1" path="res://ObjetosEscenario/objetoEscenario.tscn" id="3_eweqs"]
+[ext_resource type="PackedScene" uid="uid://elpxaqpqa4vj" path="res://Escenas/puerta.tscn" id="4_45ibf"]
+
+[node name="restauranteRecepcion" type="Node2D" unique_id=839677619]
+script = ExtResource("1_eweqs")
+
+[node name="Fondo1" type="Sprite2D" parent="." unique_id=1316702881]
+texture = ExtResource("1_xmmtj")
+centered = false
+
+[node name="NPC" parent="." unique_id=1521574208 instance=ExtResource("2_xmmtj")]
+position = Vector2(932, 454)
+
+[node name="Fondo2" type="Sprite2D" parent="." unique_id=1280710408]
+texture = ExtResource("2_eweqs")
+centered = false
+
+[node name="ObjetoEscenario" parent="." unique_id=1756300785 instance=ExtResource("3_eweqs")]
+position = Vector2(1208, 469)
+
+[node name="Puerta" parent="." unique_id=3285009 instance=ExtResource("4_45ibf")]
+position = Vector2(2030, 468)
+rotation = 0.2617994
+skew = -0.2617994
