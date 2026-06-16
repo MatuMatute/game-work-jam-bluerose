@@ -32,5 +32,7 @@ texture_pressed = ExtResource("2_rf438")
 texture_hover = ExtResource("2_rf438")
 texture_focused = ExtResource("2_rf438")
 
+[node name="Escritura" type="AudioStreamPlayer" parent="." unique_id=96659780]
+
 [connection signal="pressed" from="ContenedorBotones/BotonLibroPistas" to="." method="BotonLibroPistasPresionado"]
 [connection signal="pressed" from="ContenedorBotones/BotonInventario" to="." method="BotonInventarioPresionado"]

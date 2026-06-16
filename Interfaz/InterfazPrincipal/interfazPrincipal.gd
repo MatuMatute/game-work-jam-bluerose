@@ -6,6 +6,8 @@ signal libroPistasCerrado()
 var escenaLibroPistas : PackedScene = preload("res://Interfaz/InterfazPrincipal/libroPistas.tscn")
 var libroPistas : LibroPistas
 
+@onready var sonidoEscritura : AudioStreamPlayer = $Escritura
+
 func BotonLibroPistasPresionado() -> void:
 	if libroPistas == null:
 		libroPistas = escenaLibroPistas.instantiate()

@@ -11,5 +11,7 @@ script = ExtResource("1_spkme")
 
 [node name="interfazPrincipal" parent="." unique_id=142371296 instance=ExtResource("3_spkme")]
 
+[node name="Pisadas" type="AudioStreamPlayer" parent="." unique_id=554286182]
+
 [connection signal="libroPistasAbierto" from="interfazPrincipal" to="." method="oscurecerFondo"]
 [connection signal="libroPistasCerrado" from="interfazPrincipal" to="." method="aclararFondo"]

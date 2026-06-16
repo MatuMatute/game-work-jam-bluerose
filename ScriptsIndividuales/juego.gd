@@ -3,6 +3,7 @@ class_name Juego extends Node
 var mapaActual : Mapa
 
 @onready var fondoInterfaz : FondoInterfaz = $FondoInterfaz
+@onready var sonidoPisadas : AudioStreamPlayer = $Pisadas
 @onready var mensajeErrorCargarArea : PackedScene = preload("res://Escenas/mensajeErrorCargarArea.tscn")
 
 var habitaciones : Array[String] = [
@@ -20,6 +21,7 @@ func cambiarMapa(IDHabitacion : int) -> void:
 	cargarMapa(habitaciones[IDHabitacion])
 
 func cargarMapa(ubicacion : String) -> void:
+	sonidoPisadas.play()
 	var mapaCargado : PackedScene = load(ubicacion) as PackedScene
 	var mapaInstanciado : Mapa = mapaCargado.instantiate()
 	mapaActual = mapaInstanciado
