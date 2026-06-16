@@ -13,4 +13,6 @@ centered = false
 
 [node name="Puerta" parent="." unique_id=3285009 instance=ExtResource("3_chbjx")]
 position = Vector2(969, 350)
+rotation = 0.0
+skew = 0.0
 IDHabitacion = 1
