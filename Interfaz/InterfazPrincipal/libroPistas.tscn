@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cmmkijyd6g3t"]
 
-[ext_resource type="Texture2D" uid="uid://dy7y4dq7oo11m" path="res://icon.svg" id="1_j43d4"]
+[ext_resource type="Texture2D" uid="uid://dqh2vpbrjk4x5" path="res://Assets/Interfaz/AcercamientoLibroPistas.png" id="1_yn43f"]
 [ext_resource type="Script" uid="uid://cp3dcs3uil5gt" path="res://Pistas/libroPistas.gd" id="2_yn43f"]
 
 [sub_resource type="Animation" id="Animation_yn43f"]
@@ -103,7 +103,7 @@ offset_right = 556.5
 offset_bottom = 317.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_j43d4")
+texture = ExtResource("1_yn43f")
 script = ExtResource("2_yn43f")
 
 [node name="animacionLibroPistas" type="AnimationPlayer" parent="." unique_id=1406564905]
