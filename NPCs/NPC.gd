@@ -11,5 +11,3 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 		return
 	
 	DialogueManager.show_dialogue_balloon(DIALOGO)
-	print("dialogo?")
-	print("Ahora deberia spawnear el cuadro de dialogo, esto podria requerir de comunicarse con la raiz de la escena.")

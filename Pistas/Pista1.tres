@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Pista" format=3 uid="uid://d2dy1j1338rtf"]
+
+[ext_resource type="Script" uid="uid://b6lbkst00ut16" path="res://Pistas/Pista.gd" id="1_0m1lc"]
+
+[resource]
+script = ExtResource("1_0m1lc")
+informacion = "PISTA1"
