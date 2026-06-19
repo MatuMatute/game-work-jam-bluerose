@@ -11,6 +11,8 @@ theme_override_colors/font_hover_color = Color(1, 0.4745098, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 flat = true
+text_overrun_behavior = 2
+autowrap_mode = 2
 script = ExtResource("1_sn2he")
 
 [connection signal="pressed" from="." to="." method="Presionado"]

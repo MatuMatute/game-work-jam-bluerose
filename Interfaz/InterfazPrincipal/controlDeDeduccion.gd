@@ -1,31 +1,33 @@
 class_name ControlDeDeduccion extends Node
 
 signal PistaDeducida()
-var pistas : Array[Pista]
-var resultadoDeduccion : Pista
-
-func _init() -> void:
-	resultadoDeduccion = Pista.new()
-	resultadoDeduccion.informacion = "Caca"
+var botonesPistas : Array[BotonPista]
+var resultadoDeduccion : Pista = preload("uid://c1uvboj0imf0j")
 
 func RecibirPista(pistaRecibida : BotonPista) -> void:
 	if not pistaRecibida.estaSeleccionado:
-		pistas.erase(pistaRecibida.pista)
+		botonesPistas.erase(pistaRecibida)
 	else:
-		pistas.append(pistaRecibida.pista)
+		botonesPistas.append(pistaRecibida)
 	
-	if pistas.size() == 3:
+	if botonesPistas.size() == 3:
 		var coincidencias : int = 0
-		for pista : Pista in pistas:
-			match pista.informacion:
-				"PISTA1":
+		for botonPista : BotonPista in botonesPistas:
+			match botonPista.pista.informacion:
+				"Lorenzo, encargado del restaurante.":
 					coincidencias += 1
-				"PISTA2":
+				"Parece que Lorenzo se encuentra estresado.":
 					coincidencias += 1
-				"PISTA3":
+				"Lorenzo trabajaba como mercenario anteriormente.":
 					coincidencias += 1
 		
 		if coincidencias == 3:
+			var pistas : Array[Pista] = [botonesPistas[0].pista, botonesPistas[1].pista, botonesPistas[2].pista]
 			VariablesJugador.RemoverTresPistas(pistas)
 			VariablesJugador.AgregarPista(resultadoDeduccion)
+			botonesPistas.clear()
 			PistaDeducida.emit()
+		else:
+			for botonPista : BotonPista in botonesPistas:
+				botonPista.DeseleccionarTrasDeduccionFallida()
+			botonesPistas.clear()

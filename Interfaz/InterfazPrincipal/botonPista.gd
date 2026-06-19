@@ -14,7 +14,11 @@ func Presionado() -> void:
 		add_theme_color_override("font_color", Color.RED)
 		estaSeleccionado = true
 	else:
-		add_theme_color_override("font_color", Color.WHITE)
+		add_theme_color_override("font_color", Color.BLACK)
 		estaSeleccionado = false
 	
 	haSidoCliqueado.emit(self)
+
+func DeseleccionarTrasDeduccionFallida() -> void:
+	add_theme_color_override("font_color", Color.BLACK)
+	estaSeleccionado = false

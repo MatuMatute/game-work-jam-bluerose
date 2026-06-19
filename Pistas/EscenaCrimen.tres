@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Pista" format=3 uid="uid://bjqvseig10v1m"]
+
+[ext_resource type="Script" uid="uid://b6lbkst00ut16" path="res://Pistas/Pista.gd" id="1_jgttm"]
+
+[resource]
+script = ExtResource("1_jgttm")
+informacion = "Escena del crimen: Salón privado."

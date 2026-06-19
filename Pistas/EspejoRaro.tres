@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Pista" format=3 uid="uid://c0umsy13y64fd"]
+
+[ext_resource type="Script" uid="uid://b6lbkst00ut16" path="res://Pistas/Pista.gd" id="1_i8d5y"]
+
+[resource]
+script = ExtResource("1_i8d5y")
+informacion = "Espejo raro: parece poseer cuatro gemas, sin embargo una de éstas han sido quitadas."

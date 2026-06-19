@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Pista" format=3 uid="uid://c5oaymhgpe3ij"]
+
+[ext_resource type="Script" uid="uid://b6lbkst00ut16" path="res://Pistas/Pista.gd" id="1_x6hxp"]
+
+[resource]
+script = ExtResource("1_x6hxp")
+informacion = "Lorenzo trabajaba como mercenario anteriormente."

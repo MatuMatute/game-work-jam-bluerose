@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Pista" format=3 uid="uid://bwdx1jxg2h5l5"]
+
+[ext_resource type="Script" uid="uid://b6lbkst00ut16" path="res://Pistas/Pista.gd" id="1_fgu2h"]
+
+[resource]
+script = ExtResource("1_fgu2h")
+informacion = "Las iniciales de Lorenzo son L.M."

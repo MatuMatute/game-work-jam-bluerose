@@ -25,6 +25,8 @@ centered = false
 position = Vector2(1208, 469)
 
 [node name="Puerta" parent="." unique_id=3285009 instance=ExtResource("4_45ibf")]
-position = Vector2(2030, 468)
+position = Vector2(1906.9999, 424.99997)
 rotation = 0.2617994
+scale = Vector2(0.27436686, 1.1101319)
 skew = -0.2617994
+IDHabitacion = 2

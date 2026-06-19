@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Pista" format=3 uid="uid://c1uvboj0imf0j"]
+
+[ext_resource type="Script" uid="uid://b6lbkst00ut16" path="res://Pistas/Pista.gd" id="1_gpba7"]
+
+[resource]
+script = ExtResource("1_gpba7")
+informacion = "¿Lorenzo podría estar estresado por el cambio de rubro? ¿Estaría enojado con Andrea?"

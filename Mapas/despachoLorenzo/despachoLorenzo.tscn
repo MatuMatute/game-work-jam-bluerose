@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dpkoh3xi1ya25"]
+
+[ext_resource type="Script" uid="uid://ikp4ufl8d7hp" path="res://Mapas/despachoLorenzo/despachoLorenzo.gd" id="1_fxl2t"]
+[ext_resource type="Texture2D" uid="uid://c56k58yx4pnce" path="res://Assets/Fondos/despachoLorenzo.png" id="2_fxl2t"]
+[ext_resource type="PackedScene" uid="uid://elpxaqpqa4vj" path="res://Escenas/puerta.tscn" id="3_fv43t"]
+
+[node name="despachoLorenzo" type="Node2D" unique_id=631651522]
+script = ExtResource("1_fxl2t")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1429677629]
+texture = ExtResource("2_fxl2t")
+centered = false
+
+[node name="Puerta" parent="." unique_id=3285009 instance=ExtResource("3_fv43t")]
+position = Vector2(957, 1059)
+rotation = 0.0
+scale = Vector2(5.9038277, -0.049184565)
+skew = 0.0
+IDHabitacion = 2

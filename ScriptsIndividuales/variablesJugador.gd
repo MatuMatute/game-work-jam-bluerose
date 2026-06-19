@@ -6,11 +6,13 @@ enum Progreso {
 	CAPITULO_1_COMPLETADO = 2
 }
 
-var pistas : Array[Pista] = [preload("uid://d2dy1j1338rtf"), preload("uid://c8g7tht1qd742"), preload("uid://bjqvseig10v1m")]
+var pistas : Array[Pista] = [preload("uid://w3f1nv24w1cp"), preload("uid://c53kj5ij8xawr"), preload("uid://uamkua543xln"), preload("uid://c5oaymhgpe3ij")]
 var progresoActual : Progreso
+var interfazPrincipal : InterfazPrincipal
 
 func AgregarPista(pista : Pista) -> void:
 	pistas.append(pista)
+	interfazPrincipal.activarNotificacionLibroPistas()
 
 func RemoverTresPistas(pistasAEliminar : Array[Pista]) -> void:
 	for pista : Pista in pistasAEliminar:

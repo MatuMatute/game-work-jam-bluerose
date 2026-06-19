@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c30tr4uk0haln" path="res://ScriptsIndividuales/juego.gd" id="1_spkme"]
 [ext_resource type="PackedScene" uid="uid://ctsrqe3nbuijf" path="res://Interfaz/Fondo/fondoInterfaz.tscn" id="2_n77xa"]
 [ext_resource type="PackedScene" uid="uid://bt5rix8pcs8lq" path="res://Interfaz/InterfazPrincipal/interfazPrincipal.tscn" id="3_spkme"]
+[ext_resource type="AudioStream" uid="uid://bedsn8iiobeno" path="res://Assets/Sonidos/PuertaAbriendose.mp3" id="4_n77xa"]
 
 [node name="Juego" type="Node" unique_id=956810490]
 script = ExtResource("1_spkme")
@@ -13,5 +14,5 @@ script = ExtResource("1_spkme")
 
 [node name="Pisadas" type="AudioStreamPlayer" parent="." unique_id=554286182]
 
-[connection signal="libroPistasAbierto" from="interfazPrincipal" to="." method="oscurecerFondo"]
-[connection signal="libroPistasCerrado" from="interfazPrincipal" to="." method="aclararFondo"]
+[node name="Puerta" type="AudioStreamPlayer" parent="." unique_id=1962379010]
+stream = ExtResource("4_n77xa")
