@@ -1,6 +1,12 @@
 class_name ObjetoEscenario extends Area2D
 
-var pista : Pista = preload("uid://daqum432qyjnw")
+signal hacerZoomObjeto(escenaZoom : PackedScene)
+
+var escenaZoom : PackedScene
+
+func _ready() -> void:
+	var nodoPrincipal : Juego = get_tree().current_scene as Juego
+	connect("hacerZoomObjeto", nodoPrincipal.acercarObjeto)
 
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if !event is InputEventMouseButton:
@@ -10,5 +16,4 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	if !event.is_released():
 		return
 	
-	VariablesJugador.AgregarPista(pista)
-	print("Ahora acercar al objeto, pensandolo puede ser de dos maneras que voy a explicar mas adelante")
+	hacerZoomObjeto.emit(escenaZoom)

@@ -10,7 +10,9 @@ var mapaActual : Mapa
 var habitaciones : Array[String] = [
 	"res://Mapas/despachoOficina/despachoOficina.tscn",
 	"res://Mapas/restauranteRecepcion/restauranteRecepcion.tscn",
-	"res://Mapas/comedorPublico/comedorPublico.tscn"
+	"res://Mapas/comedorPublico/comedorPublico.tscn",
+	"res://Mapas/comedorPrivado/comedorPrivado.tscn",
+	"res://Mapas/despachoLorenzo/despachoLorenzo.tscn"
 ]
 
 func _ready() -> void:
@@ -31,3 +33,7 @@ func cargarMapa(ubicacion : String) -> void:
 	print(mapaActual)
 	add_child(mapaInstanciado)
 	fondoInterfaz.animacionesInterfaz.play("fundidoATransparente")
+
+func acercarObjeto(objeto : PackedScene) -> void:
+	var objetoAcercado : ObjetoZoom = objeto.instantiate()
+	add_child(objetoAcercado)

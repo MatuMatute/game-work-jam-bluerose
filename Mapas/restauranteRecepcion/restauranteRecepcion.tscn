@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dw7mgor1l6885" path="res://Assets/Fondos/restauranteRecepcion1.png" id="1_xmmtj"]
 [ext_resource type="Texture2D" uid="uid://g5h7e80ojcoe" path="res://Assets/Fondos/restauranteRecepcion2.png" id="2_eweqs"]
 [ext_resource type="PackedScene" uid="uid://dso57smkjfxme" path="res://NPCs/NPC.tscn" id="2_xmmtj"]
-[ext_resource type="PackedScene" uid="uid://168aqe2r44w1" path="res://ObjetosEscenario/objetoEscenario.tscn" id="3_eweqs"]
 [ext_resource type="PackedScene" uid="uid://elpxaqpqa4vj" path="res://Escenas/puerta.tscn" id="4_45ibf"]
 [ext_resource type="PackedScene" uid="uid://chdrfpb8ngn6u" path="res://Interfaz/location_card.tscn" id="7_45ibf"]
 
@@ -22,14 +21,11 @@ position = Vector2(932, 454)
 texture = ExtResource("2_eweqs")
 centered = false
 
-[node name="ObjetoEscenario" parent="." unique_id=1756300785 instance=ExtResource("3_eweqs")]
-position = Vector2(1208, 469)
-
 [node name="Puerta" parent="." unique_id=3285009 instance=ExtResource("4_45ibf")]
-position = Vector2(1906.9999, 424.99997)
-rotation = 0.2617994
-scale = Vector2(0.27436686, 1.1101319)
-skew = -0.2617994
+position = Vector2(312, 365)
+rotation = 0.0
+scale = Vector2(0.9316705, 0.88)
+skew = 0.0
 IDHabitacion = 2
 
 [node name="LocationCard" parent="." unique_id=829454247 instance=ExtResource("7_45ibf")]
