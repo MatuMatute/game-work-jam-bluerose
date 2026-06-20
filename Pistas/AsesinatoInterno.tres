@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Pista" format=3 uid="uid://dc23gls7gemb1"]
+
+[ext_resource type="Script" uid="uid://b6lbkst00ut16" path="res://Pistas/Pista.gd" id="1_god4d"]
+
+[resource]
+script = ExtResource("1_god4d")
+informacion = "Fue un asesinato interno."

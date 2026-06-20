@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cmmkijyd6g3t"]
 
-[ext_resource type="Texture2D" uid="uid://dy7y4dq7oo11m" path="res://icon.svg" id="1_j43d4"]
-[ext_resource type="Script" uid="uid://cp3dcs3uil5gt" path="res://Pistas/libroPistas.gd" id="2_yn43f"]
+[ext_resource type="Texture2D" uid="uid://dqh2vpbrjk4x5" path="res://Assets/Interfaz/AcercamientoLibroPistas.png" id="1_yn43f"]
+[ext_resource type="Script" uid="uid://cp3dcs3uil5gt" path="res://Interfaz/InterfazPrincipal/libroPistas.gd" id="2_yn43f"]
 
 [sub_resource type="Animation" id="Animation_yn43f"]
 length = 0.001
@@ -103,18 +103,26 @@ offset_right = 556.5
 offset_bottom = 317.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_j43d4")
+mouse_filter = 0
+texture = ExtResource("1_yn43f")
 script = ExtResource("2_yn43f")
 
 [node name="animacionLibroPistas" type="AnimationPlayer" parent="." unique_id=1406564905]
 libraries/ = SubResource("AnimationLibrary_pjm65")
 autoplay = &"aparecer"
 
-[node name="Pista1" type="Label" parent="." unique_id=1599121125]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 64.0
-offset_right = 488.0
-offset_bottom = 113.0
-text = "PISTA 1 PISTA 1 PISTA 1 PISTA 1 PISTA 1 PISTA 1
-PISTA 1 PISTA 1 PISTA 1 PISTA 1 PISTA 1 PISTA 1"
+[node name="PrimeraPagina" type="VBoxContainer" parent="." unique_id=711970319]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.07
+anchor_right = 0.45
+anchor_bottom = 0.07
+
+[node name="SegundaPagina" type="VBoxContainer" parent="." unique_id=373635683]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.56
+anchor_top = 0.07
+anchor_right = 0.95
+anchor_bottom = 0.07

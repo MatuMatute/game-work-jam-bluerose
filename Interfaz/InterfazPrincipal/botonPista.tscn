@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dxwnj33w64wae"]
+
+[ext_resource type="Script" uid="uid://qu5tu2utod6h" path="res://Interfaz/InterfazPrincipal/botonPista.gd" id="1_sn2he"]
+
+[node name="BotonPista" type="Button" unique_id=1058961478]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.4745098, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+flat = true
+text_overrun_behavior = 2
+autowrap_mode = 2
+script = ExtResource("1_sn2he")
+
+[connection signal="pressed" from="." to="." method="Presionado"]

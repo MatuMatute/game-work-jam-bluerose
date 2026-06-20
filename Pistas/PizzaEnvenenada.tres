@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Pista" format=3 uid="uid://b3cifkcamf5ac"]
+
+[ext_resource type="Script" uid="uid://b6lbkst00ut16" path="res://Pistas/Pista.gd" id="1_th6cv"]
+
+[resource]
+script = ExtResource("1_th6cv")
+informacion = "Su pizza de piña fue envenenada."

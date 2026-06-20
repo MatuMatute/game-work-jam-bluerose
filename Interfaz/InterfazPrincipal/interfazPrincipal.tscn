@@ -3,10 +3,109 @@
 [ext_resource type="Texture2D" uid="uid://b4fexc34gmsvd" path="res://Assets/Interfaz/libro.png" id="1_ai7u8"]
 [ext_resource type="Script" uid="uid://vxhm1xapgsni" path="res://Interfaz/InterfazPrincipal/interfazPrincipal.gd" id="1_nhmib"]
 [ext_resource type="Texture2D" uid="uid://cvcwlwg0lpwhc" path="res://Assets/Interfaz/Inventario.png" id="2_rf438"]
+[ext_resource type="PackedScene" uid="uid://cpr47mgwsyf64" path="res://Interfaz/InterfazPrincipal/notificacion.tscn" id="3_62hb2"]
+[ext_resource type="AudioStream" uid="uid://q2ywx4u24pbf" path="res://Assets/Sonidos/EscrituraEnPapel.wav" id="5_gi23e"]
+
+[sub_resource type="Animation" id="Animation_nhmib"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fondo:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fondo:mouse_filter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_62hb2"]
+resource_name = "fundidoAOscuro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fondo:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.5019608)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fondo:mouse_filter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_gi23e"]
+resource_name = "fundidoATransparente"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fondo:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.5019608), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fondo:mouse_filter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gi23e"]
+_data = {
+&"RESET": SubResource("Animation_nhmib"),
+&"fundidoAOscuro": SubResource("Animation_62hb2"),
+&"fundidoATransparente": SubResource("Animation_gi23e")
+}
 
 [node name="interfazPrincipal" type="CanvasLayer" unique_id=142371296]
 layer = 3
 script = ExtResource("1_nhmib")
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=2021417372]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
 
 [node name="ContenedorBotones" type="HBoxContainer" parent="." unique_id=401102508]
 anchors_preset = -1
@@ -25,6 +124,14 @@ texture_pressed = ExtResource("1_ai7u8")
 texture_hover = ExtResource("1_ai7u8")
 texture_focused = ExtResource("1_ai7u8")
 
+[node name="Notificacion" parent="ContenedorBotones/BotonLibroPistas" unique_id=1566343199 instance=ExtResource("3_62hb2")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.03
+anchor_right = 0.03
+anchor_bottom = 0.03
+
 [node name="BotonInventario" type="TextureButton" parent="ContenedorBotones" unique_id=1102917552]
 layout_mode = 2
 texture_normal = ExtResource("2_rf438")
@@ -33,6 +140,11 @@ texture_hover = ExtResource("2_rf438")
 texture_focused = ExtResource("2_rf438")
 
 [node name="Escritura" type="AudioStreamPlayer" parent="." unique_id=96659780]
+stream = ExtResource("5_gi23e")
+volume_db = -4.0
+
+[node name="AnimacionesFondo" type="AnimationPlayer" parent="." unique_id=535885951]
+libraries/ = SubResource("AnimationLibrary_gi23e")
 
 [connection signal="pressed" from="ContenedorBotones/BotonLibroPistas" to="." method="BotonLibroPistasPresionado"]
 [connection signal="pressed" from="ContenedorBotones/BotonInventario" to="." method="BotonInventarioPresionado"]

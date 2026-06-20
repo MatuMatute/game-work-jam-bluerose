@@ -4,17 +4,20 @@ var mapaActual : Mapa
 
 @onready var fondoInterfaz : FondoInterfaz = $FondoInterfaz
 @onready var sonidoPisadas : AudioStreamPlayer = $Pisadas
+@onready var sonidoPuerta : AudioStreamPlayer = $Puerta
 @onready var mensajeErrorCargarArea : PackedScene = preload("res://Escenas/mensajeErrorCargarArea.tscn")
 
 var habitaciones : Array[String] = [
 	"res://Mapas/despachoOficina/despachoOficina.tscn",
-	"res://Mapas/restauranteRecepcion/restauranteRecepcion.tscn"
+	"res://Mapas/restauranteRecepcion/restauranteRecepcion.tscn",
+	"res://Mapas/comedorPublico/comedorPublico.tscn"
 ]
 
 func _ready() -> void:
 	cargarMapa(habitaciones[0])
 
 func cambiarMapa(IDHabitacion : int) -> void:
+	sonidoPuerta.play()
 	fondoInterfaz.animacionesInterfaz.play("fundidoANegro")
 	await fondoInterfaz.animacionesInterfaz.animation_finished
 	if mapaActual != null: mapaActual.queue_free()
@@ -28,9 +31,3 @@ func cargarMapa(ubicacion : String) -> void:
 	print(mapaActual)
 	add_child(mapaInstanciado)
 	fondoInterfaz.animacionesInterfaz.play("fundidoATransparente")
-
-func oscurecerFondo() -> void:
-	fondoInterfaz.animacionesInterfaz.play("fundidoAOscuro")
-
-func aclararFondo() -> void:
-	fondoInterfaz.animacionesInterfaz.play_backwards("fundidoAOscuro")

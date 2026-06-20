@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cpr47mgwsyf64"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61eg6"]
+bg_color = Color(0.84262097, 0.27178884, 0.23864305, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Notificacion" type="Panel" unique_id=1566343199]
+visible = false
+offset_right = 32.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_61eg6")
+
+[node name="Simbolo" type="Label" parent="." unique_id=997556616]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 32.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 30
+text = "!"
+horizontal_alignment = 1
