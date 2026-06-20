@@ -10,4 +10,6 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	if !event.is_released():
 		return
 	
-	DialogueManager.show_dialogue_balloon(DIALOGO)
+	#LEEME, PUSE EL DIALOGO DE ELENA ACA PORQUE AUN NO AGREGUE NADA, PERO ESTA ACA Y NO TIENE QUE ESTARLO.... segundo, luego agrego que a la segunda vez que me hable, diga otra cosa, pero problema para la Dani del futuro
+	var dialogoElenaRecepcion : DialogueResource = load("res://Dialogos/primerEncuentroElena.dialogue")
+	DialogueManager.show_dialogue_balloon(dialogoElenaRecepcion)

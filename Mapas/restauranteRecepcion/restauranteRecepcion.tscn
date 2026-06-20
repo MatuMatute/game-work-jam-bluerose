@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dso57smkjfxme" path="res://NPCs/NPC.tscn" id="2_xmmtj"]
 [ext_resource type="PackedScene" uid="uid://168aqe2r44w1" path="res://ObjetosEscenario/objetoEscenario.tscn" id="3_eweqs"]
 [ext_resource type="PackedScene" uid="uid://elpxaqpqa4vj" path="res://Escenas/puerta.tscn" id="4_45ibf"]
+[ext_resource type="PackedScene" uid="uid://chdrfpb8ngn6u" path="res://Interfaz/location_card.tscn" id="7_45ibf"]
 
 [node name="restauranteRecepcion" type="Node2D" unique_id=839677619]
 script = ExtResource("1_eweqs")
@@ -30,3 +31,9 @@ rotation = 0.2617994
 scale = Vector2(0.27436686, 1.1101319)
 skew = -0.2617994
 IDHabitacion = 2
+
+[node name="LocationCard" parent="." unique_id=829454247 instance=ExtResource("7_45ibf")]
+offset_left = 1006.0
+offset_top = 122.0
+offset_right = 1006.0
+offset_bottom = 122.0
