@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ccpiaqfhh7iv6"
+path="res://.godot/imported/ChiaraMichaelPrologo.dialogue-ebb9731593d05df3d13ddcdefc10bfec.tres"
+
+[deps]
+
+source_file="res://Dialogos/ChiaraMichaelPrologo.dialogue"
+dest_files=["res://.godot/imported/ChiaraMichaelPrologo.dialogue-ebb9731593d05df3d13ddcdefc10bfec.tres"]
+
+[params]
+
+defaults=true

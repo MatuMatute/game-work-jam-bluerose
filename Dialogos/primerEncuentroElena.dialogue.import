@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dvattokuxofiv"
+path="res://.godot/imported/primerEncuentroElena.dialogue-eb95ed59b04eef7000d3b650d279cf37.tres"
+
+[deps]
+
+source_file="res://Dialogos/primerEncuentroElena.dialogue"
+dest_files=["res://.godot/imported/primerEncuentroElena.dialogue-eb95ed59b04eef7000d3b650d279cf37.tres"]
+
+[params]
+
+defaults=true
