@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://cfss7u40kggcw"]
+[gd_scene format=3 uid="uid://c8e4a6m27213i"]
 
-[ext_resource type="Script" uid="uid://duknwj0ip207c" path="res://ObjetosZoom/llaveZoom.gd" id="1_khlpx"]
-[ext_resource type="Texture2D" uid="uid://n3e61psfgy3r" path="res://Assets/Interfaz/ZoomObjetos/LlaveZoom.png" id="2_o18j2"]
+[ext_resource type="Script" uid="uid://ea8rjnf7tw5v" path="res://ObjetosZoom/cuchilloZoom.gd" id="1_rjmpw"]
+[ext_resource type="Texture2D" uid="uid://dewas16m1akco" path="res://Assets/Interfaz/ZoomObjetos/CuchilloZoom.png" id="2_rjmpw"]
 
-[node name="llaveZoom" type="CanvasLayer" unique_id=1879841724]
+[node name="cuchilloZoom" type="CanvasLayer" unique_id=1879841724]
 layer = 2
-script = ExtResource("1_khlpx")
+script = ExtResource("1_rjmpw")
 
 [node name="Bloqueo" type="Control" parent="." unique_id=128568875]
 layout_mode = 3
@@ -28,4 +28,4 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
-texture = ExtResource("2_o18j2")
+texture = ExtResource("2_rjmpw")

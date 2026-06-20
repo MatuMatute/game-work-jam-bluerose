@@ -1,11 +1,10 @@
 class_name ObjetoZoom extends CanvasLayer
 
-const DURACION_ANIMACION = 1.0
+const DURACION_ANIMACION = 0.5
 const CENTRO_PANTALLA = Vector2(896.0, 476.0)
 
 @onready var fondo : TextureRect = $Fondo
-
-var posicionMouse : Vector2 = get_viewport().get_mouse_position()
+@onready var posicionMouse : Vector2 = get_viewport().get_mouse_position()
 
 # Aca el nodo entra en escena, con una animacion Tween
 func _ready() -> void:

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d4a7lp07xrcsq" path="res://Mapas/comedorPublico/comedorPublico.gd" id="1_guivy"]
 [ext_resource type="Texture2D" uid="uid://uxrkwwqq7mja" path="res://Assets/Fondos/comedorPublico.png" id="2_guivy"]
 [ext_resource type="PackedScene" uid="uid://elpxaqpqa4vj" path="res://Escenas/puerta.tscn" id="3_qhqcw"]
-[ext_resource type="PackedScene" uid="uid://d1c27bk522m51" path="res://ObjetosEscenario/llave.tscn" id="4_anb26"]
+[ext_resource type="PackedScene" uid="uid://d1c27bk522m51" path="res://ObjetosEscenario/llaveEscenario.tscn" id="4_anb26"]
 [ext_resource type="PackedScene" uid="uid://bfuseukr2kof7" path="res://ObjetosEscenario/cuchilloEscenario.tscn" id="5_cq6s3"]
 
 [node name="comedorPublico" type="Node2D" unique_id=631651522]
@@ -14,14 +14,14 @@ texture = ExtResource("2_guivy")
 centered = false
 
 [node name="PuertaComedorPrivado" parent="." unique_id=3285009 instance=ExtResource("3_qhqcw")]
-position = Vector2(687, 363)
-rotation = 0.0
-scale = Vector2(0.5638338, 0.5199988)
-skew = 0.0
+position = Vector2(1857.0002, 511.00024)
+rotation = 0.7853982
+scale = Vector2(0.54461914, 0.67974305)
+skew = -0.7853982
 IDHabitacion = 3
 
-[node name="llave" parent="." unique_id=1756300785 instance=ExtResource("4_anb26")]
+[node name="llaveEscenario" parent="." unique_id=1756300785 instance=ExtResource("4_anb26")]
 position = Vector2(624, 746)
 
-[node name="cuchillo" parent="." unique_id=115171248 instance=ExtResource("5_cq6s3")]
+[node name="cuchilloEscenario" parent="." unique_id=115171248 instance=ExtResource("5_cq6s3")]
 position = Vector2(1124, 844)
