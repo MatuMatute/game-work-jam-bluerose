@@ -19,7 +19,6 @@ skew = 0.0
 IDHabitacion = 1
 
 [node name="LocationCard" parent="." unique_id=829454247 instance=ExtResource("4_j3b6v")]
-visible = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
