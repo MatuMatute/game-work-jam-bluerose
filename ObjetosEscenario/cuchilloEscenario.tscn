@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfuseukr2kof7"]
 
-[ext_resource type="Script" uid="uid://s0oalbernhht" path="res://ObjetosEscenario/llaveEscenario.gd" id="1_xu11m"]
+[ext_resource type="Script" uid="uid://b0oq8c3f74od0" path="res://ObjetosEscenario/cuchilloEscenario.gd" id="1_xu11m"]
 [ext_resource type="Texture2D" uid="uid://cn27ftepoxrme" path="res://Assets/Fondos/ObjetosEscenario/Cuchillo.png" id="2_btti0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0d1u"]
@@ -10,7 +10,6 @@ size = Vector2(64, 64)
 script = ExtResource("1_xu11m")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1122037579]
-modulate = Color(1, 0.80784315, 0, 1)
 texture = ExtResource("2_btti0")
 
 [node name="Colision" type="CollisionShape2D" parent="." unique_id=1723101688]

@@ -11,7 +11,7 @@ func _ready() -> void:
 	VariablesJugador.interfazPrincipal = self
 
 func activarNotificacionLibroPistas() -> void:
-	sonidoEscritura.play()
+	if not sonidoEscritura.playing: sonidoEscritura.play()
 	if libroPistas == null:
 		notificacionLibroPistas.show()
 

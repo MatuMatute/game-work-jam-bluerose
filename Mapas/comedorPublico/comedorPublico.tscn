@@ -8,12 +8,20 @@
 
 [node name="comedorPublico" type="Node2D" unique_id=631651522]
 script = ExtResource("1_guivy")
+IDMapa = 2
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1429677629]
 texture = ExtResource("2_guivy")
 centered = false
 
-[node name="PuertaComedorPrivado" parent="." unique_id=3285009 instance=ExtResource("3_qhqcw")]
+[node name="PuertaRecepcion" parent="." unique_id=3285009 instance=ExtResource("3_qhqcw")]
+position = Vector2(43, 538.00006)
+rotation = -0.61086524
+scale = Vector2(0.42385918, 0.7588514)
+skew = 0.61086524
+IDHabitacion = 1
+
+[node name="PuertaComedorPrivado" parent="." unique_id=66621023 instance=ExtResource("3_qhqcw")]
 position = Vector2(1857.0002, 511.00024)
 rotation = 0.7853982
 scale = Vector2(0.54461914, 0.67974305)

@@ -1,6 +1,7 @@
 class_name Puerta
 extends Area2D
-@export var IDHabitacion : int
+
+@export var IDHabitacion : Mapa.IDsMapa
 
 signal cambiarHabitacion(NumeroHabitacion : int)
 

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://xbnog8xortbf"]
+
+[ext_resource type="Script" uid="uid://bdixe1o0x3rfd" path="res://ObjetosEscenario/espejoEscenario.gd" id="1_iqoin"]
+[ext_resource type="Texture2D" uid="uid://dcsyxvo1kkmhi" path="res://Assets/Fondos/ObjetosEscenario/Espejo.png" id="2_iqoin"]
+[ext_resource type="Texture2D" uid="uid://btdsp5x0wphye" path="res://Assets/Fondos/ObjetosEscenario/GemaFaltanteEspejo.png" id="3_oejut"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0d1u"]
+size = Vector2(224, 384)
+
+[node name="espejoEscenario" type="Area2D" unique_id=1756300785]
+script = ExtResource("1_iqoin")
+
+[node name="Espejo" type="Sprite2D" parent="." unique_id=1122037579]
+texture = ExtResource("2_iqoin")
+
+[node name="GemaFaltante" type="Sprite2D" parent="." unique_id=1340164732]
+texture = ExtResource("3_oejut")
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=1723101688]
+shape = SubResource("RectangleShape2D_x0d1u")
+
+[connection signal="input_event" from="." to="." method="_input_event"]
