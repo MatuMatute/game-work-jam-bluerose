@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cl1o5w7mwivt"]
+
+[node name="InventarioUi" type="Control" unique_id=1575303713]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1620.0
+offset_bottom = -780.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=465376897]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=561627766]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 30
+text = "texto"
