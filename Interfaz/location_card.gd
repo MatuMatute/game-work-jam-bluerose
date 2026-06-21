@@ -1,6 +1,6 @@
 extends Control
 
-@onready var label = $Label 
+@onready var label = $PanelContainer/Label 
 #Nota para Dani (yo) que aún no aprende a usar todo: @onready declarar una variable y asignarle un valor automáticamente justo después de que el nodo y todos sus hijos hayan sido cargados y configurados en la escena
 
 func mostrarCartel(texto: String):

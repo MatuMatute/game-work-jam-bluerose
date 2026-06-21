@@ -1,6 +1,6 @@
 class_name ObjetoEscenario extends Area2D
 
-signal hacerZoomObjeto(escenaZoom : PackedScene)
+signal hacerZoomObjeto(escenaZoom : PackedScene, objetoEscenario : ObjetoEscenario)
 
 var escenaZoom : PackedScene
 
@@ -16,4 +16,5 @@ func _input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if !event.is_released():
 		return
 	
-	hacerZoomObjeto.emit(escenaZoom)
+	hacerZoomObjeto.emit(escenaZoom, self)
+	
