@@ -23,7 +23,7 @@ func RecibirPista(pistaRecibida : BotonPista) -> void:
 		
 		if coincidencias == 3:
 			var pistas : Array[Pista] = [botonesPistas[0].pista, botonesPistas[1].pista, botonesPistas[2].pista]
-			VariablesJugador.RemoverTresPistas(pistas)
+			VariablesJugador.RemoverPistas(pistas)
 			VariablesJugador.AgregarPista(resultadoDeduccion)
 			botonesPistas.clear()
 			PistaDeducida.emit()

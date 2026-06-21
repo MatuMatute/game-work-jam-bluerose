@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://do24ag8fakvah"]
+
+[ext_resource type="Script" uid="uid://dwcx2lhgp7b5a" path="res://ObjetosEscenario/fragmentoLlave2Escenario.gd" id="1_etxm3"]
+[ext_resource type="Texture2D" uid="uid://eihldi0seh1h" path="res://Assets/Fondos/ObjetosEscenario/FragmentoLlave2.png" id="2_etxm3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0d1u"]
+size = Vector2(32, 32)
+
+[node name="fragmentoLlave2Escenario" type="Area2D" unique_id=1756300785]
+script = ExtResource("1_etxm3")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1122037579]
+texture = ExtResource("2_etxm3")
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=1723101688]
+shape = SubResource("RectangleShape2D_x0d1u")

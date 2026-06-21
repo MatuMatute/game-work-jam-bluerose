@@ -18,9 +18,9 @@ var habitaciones : Array[String] = [
 ]
 
 func _ready() -> void:
-	cargarMapa(habitaciones[0])
+	cargarMapa(habitaciones[Mapa.IDsMapa.DESPACHO_DETECTIVE])
 
-func cambiarMapa(IDHabitacion : int) -> void:
+func cambiarMapa(IDHabitacion : Mapa.IDsMapa) -> void:
 	sonidoPuerta.play()
 	fondoInterfaz.animacionesInterfaz.play("fundidoANegro")
 	await fondoInterfaz.animacionesInterfaz.animation_finished
@@ -32,7 +32,6 @@ func cargarMapa(ubicacion : String) -> void:
 	var mapaCargado : PackedScene = load(ubicacion) as PackedScene
 	var mapaInstanciado : Mapa = mapaCargado.instantiate()
 	mapaActual = mapaInstanciado
-	print(mapaActual)
 	add_child(mapaInstanciado)
 	fondoInterfaz.animacionesInterfaz.play("fundidoATransparente")
 

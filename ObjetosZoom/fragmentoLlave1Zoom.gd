@@ -1,10 +1,10 @@
-class_name LlaveZoom extends ObjetoZoom
+class_name FragmentoLlave1Zoom extends ObjetoZoom
 
 func Comportamiento() -> void:
 	DialogueManager.show_dialogue_balloon(load("res://Dialogos/fragmentoLlave1.dialogue"))
 	await DialogueManager.dialogue_ended
 	
 	Inventario.agregarObjeto("fragmentoLlave")
-	LlaveEscenario.haSidoAgarrado = true
+	FragmentoLlave1Escenario.haSidoAgarrado = true
 	objetoBase.queue_free()
 	super()

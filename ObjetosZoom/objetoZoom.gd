@@ -15,7 +15,7 @@ func _ready() -> void:
 	animacionAlAparecer.tween_property(fondo, "scale", Vector2.ONE, DURACION_ANIMACION).from(Vector2.ZERO)
 	animacionAlAparecer.connect("finished", Comportamiento)
 
-# Aca el nodo se va de la escenam, con otra animacion Tween
+# Aca el nodo se va de la escena, con otra animacion Tween
 func Comportamiento() -> void:
 	var animacionAlIrse : Tween = create_tween()
 	animacionAlIrse.set_parallel(true)

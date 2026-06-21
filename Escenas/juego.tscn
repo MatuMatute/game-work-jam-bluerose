@@ -16,3 +16,5 @@ script = ExtResource("1_spkme")
 
 [node name="Puerta" type="AudioStreamPlayer" parent="." unique_id=1962379010]
 stream = ExtResource("4_n77xa")
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=1215451485]

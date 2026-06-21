@@ -14,6 +14,6 @@ func AgregarPista(pista : Pista) -> void:
 	pistas.append(pista)
 	interfazPrincipal.activarNotificacionLibroPistas()
 
-func RemoverTresPistas(pistasAEliminar : Array[Pista]) -> void:
+func RemoverPistas(pistasAEliminar : Array[Pista]) -> void:
 	for pista : Pista in pistasAEliminar:
 		pistas.erase(pista)

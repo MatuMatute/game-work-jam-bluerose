@@ -1,4 +1,4 @@
-class_name LlaveEscenario extends ObjetoEscenario
+class_name FragmentoLlave1Escenario extends ObjetoEscenario
 
 static var haSidoAgarrado : bool
 
