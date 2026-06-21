@@ -15,7 +15,7 @@ func Comportamiento() -> void:
 	# Aca ira todo lo del espejo
 	
 	await DialogueManager.dialogue_ended
-	# Dani, la funcion "super" ejecuta la funcion de la clase base, es como un metodo virtual y override en C#, cuando ejecutas la funcion usando "base."
+	
 	if EspejoEscenario.estado == EspejoEscenario.EstadoDelEspejo.SIN_REVISAR: 
 		EspejoEscenario.estado = EspejoEscenario.EstadoDelEspejo.GEMA_FALTANTE
 		super()
