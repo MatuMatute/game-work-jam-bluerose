@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://clig0nlera3gu" path="res://Mapas/comedorPrivado/comedorPrivado.gd" id="1_3nou3"]
 [ext_resource type="Texture2D" uid="uid://b325nxs855jwx" path="res://Assets/Fondos/comedorPrivado.png" id="2_3nou3"]
 [ext_resource type="PackedScene" uid="uid://elpxaqpqa4vj" path="res://Escenas/puerta.tscn" id="3_73p82"]
+[ext_resource type="PackedScene" uid="uid://xbnog8xortbf" path="res://ObjetosEscenario/espejoEscenario.tscn" id="4_ej64i"]
 
 [node name="comedorPrivado" type="Node2D" unique_id=631651522]
 script = ExtResource("1_3nou3")
+IDMapa = 3
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1429677629]
 texture = ExtResource("2_3nou3")
@@ -17,3 +19,6 @@ rotation = 0.0
 scale = Vector2(5.9038277, -0.049184565)
 skew = 0.0
 IDHabitacion = 2
+
+[node name="espejoEscenario" parent="." unique_id=1756300785 instance=ExtResource("4_ej64i")]
+position = Vector2(1813, 333)

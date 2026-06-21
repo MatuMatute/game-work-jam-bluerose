@@ -6,6 +6,7 @@
 
 [node name="despachoLorenzo" type="Node2D" unique_id=631651522]
 script = ExtResource("1_fxl2t")
+IDMapa = 6
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1429677629]
 texture = ExtResource("2_fxl2t")

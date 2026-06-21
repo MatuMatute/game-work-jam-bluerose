@@ -6,7 +6,7 @@ var escenaZoom : PackedScene
 
 func _ready() -> void:
 	var nodoPrincipal : Juego = get_tree().current_scene as Juego
-	connect("hacerZoomObjeto", nodoPrincipal.acercarObjeto)
+	connect("hacerZoomObjeto", nodoPrincipal.acercarObjeto, 4)
 
 func _input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if !event is InputEventMouseButton:

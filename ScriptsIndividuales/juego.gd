@@ -12,6 +12,8 @@ var habitaciones : Array[String] = [
 	"res://Mapas/restauranteRecepcion/restauranteRecepcion.tscn",
 	"res://Mapas/comedorPublico/comedorPublico.tscn",
 	"res://Mapas/comedorPrivado/comedorPrivado.tscn",
+	"DimensionParalela",
+	"Pasillo",
 	"res://Mapas/despachoLorenzo/despachoLorenzo.tscn"
 ]
 
