@@ -36,6 +36,7 @@ func cargarMapa(ubicacion : String) -> void:
 	add_child(mapaInstanciado)
 	fondoInterfaz.animacionesInterfaz.play("fundidoATransparente")
 
-func acercarObjeto(objeto : PackedScene) -> void:
+func acercarObjeto(objeto : PackedScene, objetoEscenario : ObjetoEscenario) -> void:
 	var objetoAcercado : ObjetoZoom = objeto.instantiate()
+	objetoAcercado.objetoBase = objetoEscenario
 	add_child(objetoAcercado)

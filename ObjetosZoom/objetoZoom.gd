@@ -5,6 +5,7 @@ const CENTRO_PANTALLA = Vector2(896.0, 476.0)
 
 @onready var fondo : TextureRect = $Fondo
 @onready var posicionMouse : Vector2 = get_viewport().get_mouse_position()
+var objetoBase : ObjetoEscenario
 
 # Aca el nodo entra en escena, con una animacion Tween
 func _ready() -> void:
