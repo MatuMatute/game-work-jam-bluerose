@@ -3,7 +3,7 @@ extends Area2D
 
 @export var IDHabitacion : Mapa.IDsMapa
 
-signal cambiarHabitacion(NumeroHabitacion : int)
+signal cambiarHabitacion(IDMapa : Mapa.IDsMapa)
 
 func _ready() -> void:
 	var nodoPrincipal : Juego = get_tree().current_scene as Juego

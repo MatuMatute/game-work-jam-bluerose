@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://d1c27bk522m51"]
 
-[ext_resource type="Script" uid="uid://s0oalbernhht" path="res://ObjetosEscenario/llaveEscenario.gd" id="1_6c86a"]
-[ext_resource type="Texture2D" uid="uid://b5os8e2g1412r" path="res://Assets/Fondos/ObjetosEscenario/Llave.png" id="2_6c86a"]
+[ext_resource type="Script" uid="uid://s0oalbernhht" path="res://ObjetosEscenario/fragmentoLlave1Escenario.gd" id="1_6c86a"]
+[ext_resource type="Texture2D" uid="uid://b5os8e2g1412r" path="res://Assets/Fondos/ObjetosEscenario/FragmentoLlave1.png" id="2_6c86a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0d1u"]
 size = Vector2(32, 32)
 
-[node name="llaveEscenario" type="Area2D" unique_id=1756300785]
+[node name="fragmentoLlave1Escenario" type="Area2D" unique_id=1756300785]
 script = ExtResource("1_6c86a")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1122037579]
@@ -14,5 +14,3 @@ texture = ExtResource("2_6c86a")
 
 [node name="Colision" type="CollisionShape2D" parent="." unique_id=1723101688]
 shape = SubResource("RectangleShape2D_x0d1u")
-
-[connection signal="input_event" from="." to="." method="_input_event"]

@@ -13,6 +13,8 @@ config_version=5
 config/name="Game Work Jam"
 run/main_scene="uid://dqgsy2hypth75"
 config/features=PackedStringArray("4.7", "Mobile")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="uid://b4n5j62gg36uf"
 config/icon="res://icon.svg"
 
 [autoload]

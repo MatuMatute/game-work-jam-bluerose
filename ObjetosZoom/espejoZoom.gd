@@ -5,9 +5,9 @@ var texturaEspejoDimension : Texture2D = preload("uid://ci8uqedxjurgp")
 
 func _ready() -> void:
 	match EspejoEscenario.estado:
-		EspejoEscenario.EstadosDelEspejo.GEMA_COLOCADA:
+		EspejoEscenario.EstadoDelEspejo.GEMA_COLOCADA:
 			fondo.texture = texturaEspejoCompleto
-		EspejoEscenario.EstadosDelEspejo.PORTAL_DIMENSIONAL:
+		EspejoEscenario.EstadoDelEspejo.PORTAL_DIMENSIONAL:
 			fondo.texture = texturaEspejoDimension
 	super()
 
@@ -16,8 +16,8 @@ func Comportamiento() -> void:
 	
 	await DialogueManager.dialogue_ended
 	# Dani, la funcion "super" ejecuta la funcion de la clase base, es como un metodo virtual y override en C#, cuando ejecutas la funcion usando "base."
-	if EspejoEscenario.estado == EspejoEscenario.EstadosDelEspejo.SIN_REVISAR: 
-		EspejoEscenario.estado = EspejoEscenario.EstadosDelEspejo.GEMA_FALTANTE
+	if EspejoEscenario.estado == EspejoEscenario.EstadoDelEspejo.SIN_REVISAR: 
+		EspejoEscenario.estado = EspejoEscenario.EstadoDelEspejo.GEMA_FALTANTE
 		super()
 
 func Regresar(event : InputEvent) -> void:

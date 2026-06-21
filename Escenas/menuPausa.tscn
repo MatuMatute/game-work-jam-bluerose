@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dt8ybb73aswp8"]
+
+[node name="MenuPausa" type="CanvasLayer" unique_id=1020421535]
+process_mode = 2
+layer = 4

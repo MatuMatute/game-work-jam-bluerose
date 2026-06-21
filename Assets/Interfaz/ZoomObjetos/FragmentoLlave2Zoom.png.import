@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5os8e2g1412r"
-path="res://.godot/imported/Llave.png-2675de6aeda9283f3c69c78f154eb14c.ctex"
+uid="uid://cxsno0lmt1owx"
+path="res://.godot/imported/FragmentoLlave2Zoom.png-3404c898538d1483a260b98b1512ff05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fondos/ObjetosEscenario/Llave.png"
-dest_files=["res://.godot/imported/Llave.png-2675de6aeda9283f3c69c78f154eb14c.ctex"]
+source_file="res://Assets/Interfaz/ZoomObjetos/FragmentoLlave2Zoom.png"
+dest_files=["res://.godot/imported/FragmentoLlave2Zoom.png-3404c898538d1483a260b98b1512ff05.ctex"]
 
 [params]
 
