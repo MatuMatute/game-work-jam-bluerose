@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b5ufq2peob3qv"]
+
+[ext_resource type="Texture2D" uid="uid://d2qlbauvmonwk" path="res://Assets/Interfaz/ZoomObjetos/cuadroTemporal.png" id="1_l1545"]
+[ext_resource type="Script" uid="uid://b1l8o08s1utn1" path="res://Inventario/item.gd" id="2_4byk7"]
+
+[resource]
+script = ExtResource("2_4byk7")
+nombre = "Retrato"
+icono = ExtResource("1_l1545")

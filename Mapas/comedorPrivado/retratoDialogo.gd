@@ -9,11 +9,13 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	if !event.is_released():
 		return
 	
+	var retrato : Item = preload("res://Inventario/items/cuadroHombres.tres")
+	
 	var PistaHombresCuadro : Pista = load("res://Pistas/HombresCuadro.tres")
 	
 	var dialogoCuadros : DialogueResource = load("res://Dialogos/retratosDialogo.dialogue")
 	DialogueManager.show_dialogue_balloon(dialogoCuadros)
 	await DialogueManager.dialogue_ended
 	VariablesJugador.AgregarPista(PistaHombresCuadro)
+	Inventario.agregarObjeto(retrato)
 	VariablesJugador.progresoActual = VariablesJugador.Progreso.LLEGADO_ESCENA_CRIMEN
-	
