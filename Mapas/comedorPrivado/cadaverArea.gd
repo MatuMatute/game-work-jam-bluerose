@@ -10,3 +10,4 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	
 	var dialogoCadaver : DialogueResource = load("res://Dialogos/cadaverPrimerVistazo.dialogue")
 	DialogueManager.show_dialogue_balloon(dialogoCadaver)
+	VariablesJugador.progresoActual = VariablesJugador.Progreso.LLEGADO_ESCENA_CRIMEN
