@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Deduccion" format=3 uid="uid://ek6eyxwl6u86"]
+
+[ext_resource type="Resource" uid="uid://c2qnq38pg4h10" path="res://Pistas/VenenoOtraDimension.tres" id="1_2dgul"]
+[ext_resource type="Script" uid="uid://b6lbkst00ut16" path="res://Pistas/Pista.gd" id="2_skr2w"]
+[ext_resource type="Resource" uid="uid://c4w8vbn5h2od6" path="res://Pistas/OtraDimension.tres" id="3_1lnhm"]
+[ext_resource type="Resource" uid="uid://b3cifkcamf5ac" path="res://Pistas/PizzaEnvenenada.tres" id="4_qo87h"]
+[ext_resource type="Resource" uid="uid://bjqvseig10v1m" path="res://Pistas/EscenaCrimen.tres" id="5_2uerw"]
+[ext_resource type="Script" uid="uid://ch4eh6novqobo" path="res://Deducciones/deduccion.gd" id="6_wpwy5"]
+
+[resource]
+script = ExtResource("6_wpwy5")
+pistas = Array[ExtResource("2_skr2w")]([ExtResource("3_1lnhm"), ExtResource("4_qo87h"), ExtResource("5_2uerw")])
+pistaResultante = ExtResource("1_2dgul")
+metadata/_custom_type_script = "uid://ch4eh6novqobo"

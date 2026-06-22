@@ -1,6 +1,8 @@
 class_name Retrato extends NPC
 
 #Entiendo que esto ya al estar con npc no deberia estar(??????? pero por si acaso xD
+# A ver, como este objeto tendra un close up, mi recomendacion personal es la de hacerlo clase derivada de ObjetoEscenario
+# Tambien porque podemos poner una variable estatica para que desaparezca el objetoEscenario una vez agarrado
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if !event is InputEventMouseButton:
 		return

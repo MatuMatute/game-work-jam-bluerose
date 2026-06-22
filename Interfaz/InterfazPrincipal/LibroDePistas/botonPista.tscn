@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxwnj33w64wae"]
 
-[ext_resource type="Script" uid="uid://qu5tu2utod6h" path="res://Interfaz/InterfazPrincipal/botonPista.gd" id="1_sn2he"]
+[ext_resource type="Script" uid="uid://qu5tu2utod6h" path="res://Interfaz/InterfazPrincipal/LibroDePistas/botonPista.gd" id="1_sn2he"]
 [ext_resource type="FontFile" uid="uid://b6he2qt3egtns" path="res://Assets/Interfaz/Fuentes/GrapeNuts LibroPistas.ttf" id="1_wlugf"]
 
 [node name="BotonPista" type="Button" unique_id=1058961478]
