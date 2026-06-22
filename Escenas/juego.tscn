@@ -24,6 +24,7 @@ bus = &"Efectos"
 
 [node name="Inicio" type="AudioStreamPlayer" parent="." unique_id=20986634]
 stream = ExtResource("5_i3j75")
+volume_db = -15.0
 bus = &"Musica"
 
 [node name="MusicaFondoInvestigacion" type="AudioStreamPlayer" parent="." unique_id=1215451485]
