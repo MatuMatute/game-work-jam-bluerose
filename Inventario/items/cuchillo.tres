@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://cnkn5ilcsb1m2"]
+
+[ext_resource type="Texture2D" uid="uid://dewas16m1akco" path="res://Assets/Interfaz/ZoomObjetos/CuchilloZoom.png" id="1_vfadd"]
+[ext_resource type="Script" uid="uid://b1l8o08s1utn1" path="res://Inventario/item.gd" id="2_xt7su"]
+
+[resource]
+script = ExtResource("2_xt7su")
+nombre = "cuchillo"
+icono = ExtResource("1_vfadd")

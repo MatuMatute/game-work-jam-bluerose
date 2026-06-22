@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://8wypccg7467u"
+path="res://.godot/imported/fragmentoLlave2.dialogue-2d1bd28696d4d014bf6e0d7a01213403.tres"
+
+[deps]
+
+source_file="res://Dialogos/fragmentoLlave2.dialogue"
+dest_files=["res://.godot/imported/fragmentoLlave2.dialogue-2d1bd28696d4d014bf6e0d7a01213403.tres"]
+
+[params]
+
+defaults=true

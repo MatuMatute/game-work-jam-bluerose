@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://ccd1sbnh7wf37"]
+
+[ext_resource type="Texture2D" uid="uid://n3e61psfgy3r" path="res://Assets/Interfaz/ZoomObjetos/LlaveZoom.png" id="1_33y88"]
+[ext_resource type="Script" uid="uid://b1l8o08s1utn1" path="res://Inventario/item.gd" id="1_e55or"]
+
+[resource]
+script = ExtResource("1_e55or")
+nombre = "llave1"
+icono = ExtResource("1_33y88")

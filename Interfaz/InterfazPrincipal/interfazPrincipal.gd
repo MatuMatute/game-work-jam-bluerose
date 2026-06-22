@@ -2,6 +2,8 @@ class_name InterfazPrincipal extends CanvasLayer
 
 var escenaLibroPistas : PackedScene = preload("res://Interfaz/InterfazPrincipal/libroPistas.tscn")
 var libroPistas : LibroPistas
+var escenaInventario : PackedScene = preload("res://Inventario/inventarioUI.tscn")
+var inventarioUI
 
 @onready var sonidoEscritura : AudioStreamPlayer = $Escritura
 @onready var animacionesFondo : AnimationPlayer = $AnimacionesFondo
@@ -29,5 +31,12 @@ func BotonLibroPistasPresionado() -> void:
 		await libroPistas.animacionLibroPistas.animation_finished
 		libroPistas.queue_free()
 
+
 func BotonInventarioPresionado() -> void:
-	print("Aca Dani tenes que hacer aparecer al inventario")
+	if inventarioUI == null:
+		inventarioUI = escenaInventario.instantiate()
+		add_child(inventarioUI)
+	else:
+		inventarioUI.queue_free()
+		inventarioUI = null
+	
