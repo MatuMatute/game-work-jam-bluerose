@@ -21,3 +21,6 @@ func AgregarPista(pista : Pista) -> void:
 func RemoverPistas(pistasAEliminar : Array[Pista]) -> void:
 	for pista : Pista in pistasAEliminar:
 		pistas.erase(pista)
+
+func TienePista(pista : Pista) -> bool:
+	return pista in pistas
