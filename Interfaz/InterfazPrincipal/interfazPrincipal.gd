@@ -31,6 +31,7 @@ func BotonLibroPistasPresionado() -> void:
 		await libroPistas.animacionLibroPistas.animation_finished
 		libroPistas.queue_free()
 
+
 func BotonInventarioPresionado() -> void:
 	if inventarioUI == null:
 		inventarioUI = escenaInventario.instantiate()

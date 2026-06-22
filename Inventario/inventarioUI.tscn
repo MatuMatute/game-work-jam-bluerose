@@ -1,25 +1,52 @@
 [gd_scene format=3 uid="uid://cl1o5w7mwivt"]
 
+[ext_resource type="Texture2D" uid="uid://k0mwhiq01imi" path="res://Inventario/imgPrueba/fondoInv.png" id="1_g17rc"]
+
+[sub_resource type="GDScript" id="GDScript_smwm4"]
+script/source = "extends Control
+
+@onready var grid = $PanelContainer/GridContainer
+
+func _ready() -> void:
+	var escenaSlot : PackedScene = load(\"res://Inventario/slotUI.tscn\")
+
+#ITERARRRRR 
+	for item : Item in Inventario.objetos: 
+		var slot : Slot = escenaSlot.instantiate()
+		slot.itemBase = item
+		grid.add_child(slot)
+"
+
 [node name="InventarioUi" type="Control" unique_id=1575303713]
 layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1620.0
-offset_bottom = -780.0
-grow_horizontal = 2
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_right = -223.0
+grow_horizontal = 0
 grow_vertical = 2
+script = SubResource("GDScript_smwm4")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=465376897]
+custom_minimum_size = Vector2(195, 195)
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -204.0
+offset_top = -132.0
+offset_right = 96.0
+offset_bottom = 368.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="PanelContainer" unique_id=561627766]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=423066602]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_stretch_ratio = 0.0
-theme_override_font_sizes/font_size = 30
-text = "texto"
+texture = ExtResource("1_g17rc")
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer" unique_id=1184607388]
+layout_mode = 2
+columns = 3
