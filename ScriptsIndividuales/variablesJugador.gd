@@ -10,7 +10,7 @@ enum Progreso {
 	CAPITULO_1_COMPLETADO = 6
 }
 
-var pistas : Array[Pista] = [preload("uid://w3f1nv24w1cp"), preload("uid://c53kj5ij8xawr"), preload("uid://uamkua543xln"), preload("uid://c5oaymhgpe3ij")]
+var pistas : Array[Pista] 
 var progresoActual : Progreso
 var interfazPrincipal : InterfazPrincipal
 

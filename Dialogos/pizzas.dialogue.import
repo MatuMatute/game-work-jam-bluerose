@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://coun0cdd2mxdu"
+path="res://.godot/imported/pizzas.dialogue-b09247f363a504e1679caffb9ff9b7a2.tres"
+
+[deps]
+
+source_file="res://Dialogos/pizzas.dialogue"
+dest_files=["res://.godot/imported/pizzas.dialogue-b09247f363a504e1679caffb9ff9b7a2.tres"]
+
+[params]
+
+defaults=true
