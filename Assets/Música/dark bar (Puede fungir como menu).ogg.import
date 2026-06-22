@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://byommyohgmmdv"
+path="res://.godot/imported/dark bar (Puede fungir como menu).ogg-eaeff9d05977c06e2cbd0aed99e49d1e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Música/dark bar (Puede fungir como menu).ogg"
+dest_files=["res://.godot/imported/dark bar (Puede fungir como menu).ogg-eaeff9d05977c06e2cbd0aed99e49d1e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

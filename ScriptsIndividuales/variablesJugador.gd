@@ -3,7 +3,11 @@ extends Node
 enum Progreso {
 	PROLOGO = 0,
 	CONVERSACION_ELENA = 1,
-	CAPITULO_1_COMPLETADO = 2
+	LLEGAR_ESCENA_CRIMEN = 2,
+	LLEGADO_ESCENA_CRIMEN = 3,
+	CONVERSACION_LORENZO = 4,
+	CONFRONTACION_LORENZO = 5,
+	CAPITULO_1_COMPLETADO = 6
 }
 
 var pistas : Array[Pista] = [preload("uid://w3f1nv24w1cp"), preload("uid://c53kj5ij8xawr"), preload("uid://uamkua543xln"), preload("uid://c5oaymhgpe3ij")]
