@@ -9,4 +9,6 @@ func _ready() -> void:
 		connect("comienzaInvestigacion", nodoPrincipal.iniciarMusicaDeInvestigacion, 4)
 		comienzaInvestigacion.emit()
 		VariablesJugador.progresoActual = VariablesJugador.Progreso.LLEGADO_ESCENA_CRIMEN
-		# Dani aca va el primer dialogo de Michael cuando llega a la escena del crimen
+		var dialogoComedorPrivado : DialogueResource = load("res://Dialogos/introComedorPrivado.dialogue")
+		DialogueManager.show_dialogue_balloon(dialogoComedorPrivado)
+		await DialogueManager.dialogue_ended

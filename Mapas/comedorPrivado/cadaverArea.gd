@@ -1,4 +1,4 @@
-class_name NPC extends Area2D
+class_name CadaverArea extends NPC
 
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if !event is InputEventMouseButton:
@@ -8,3 +8,5 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	if !event.is_released():
 		return
 	
+	var dialogoCadaver : DialogueResource = load("res://Dialogos/cadaverPrimerVistazo.dialogue")
+	DialogueManager.show_dialogue_balloon(dialogoCadaver)
