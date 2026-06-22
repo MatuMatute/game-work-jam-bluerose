@@ -12,6 +12,6 @@ script = ExtResource("1_aelxh")
 position = Vector2(-144.45313, 1)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1938766989]
-position = Vector2(109, 0)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=628968858]
+position = Vector2(99, 1)
 shape = SubResource("RectangleShape2D_g4v7s")

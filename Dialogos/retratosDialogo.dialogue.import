@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://biyo2gest8eoe"
+path="res://.godot/imported/retratosDialogo.dialogue-6e640d4e1ba1f26b3dfd9de3459331a0.tres"
+
+[deps]
+
+source_file="res://Dialogos/retratosDialogo.dialogue"
+dest_files=["res://.godot/imported/retratosDialogo.dialogue-6e640d4e1ba1f26b3dfd9de3459331a0.tres"]
+
+[params]
+
+defaults=true

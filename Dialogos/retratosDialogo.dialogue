@@ -1,0 +1,7 @@
+Michael: Hay varios cuadros colgados en la pared. La mayoría parecen retratos familiares exceptuando uno.
+Michael: Este cuadro está él sentado en la oficina con tres hombres alrededor.
+Michael: [wait=0.5] Debería volver con Elena para preguntarle.
+Se suma al libro de información
+
+	+¿Quiénes son los hombres del cuadro?
+
