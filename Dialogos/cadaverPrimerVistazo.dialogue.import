@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://pfnsgsrrpbpa"
+path="res://.godot/imported/cadaverPrimerVistazo.dialogue-4da01ff744330cc476d228c8019ceed1.tres"
+
+[deps]
+
+source_file="res://Dialogos/cadaverPrimerVistazo.dialogue"
+dest_files=["res://.godot/imported/cadaverPrimerVistazo.dialogue-4da01ff744330cc476d228c8019ceed1.tres"]
+
+[params]
+
+defaults=true

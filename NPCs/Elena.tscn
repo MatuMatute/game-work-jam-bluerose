@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://pfk1q2r4rjjq"]
+
+[ext_resource type="Script" uid="uid://dcaxalaliltxp" path="res://NPCs/elenaDialogo.gd" id="1_oh5b7"]
+[ext_resource type="Texture2D" uid="uid://dcd5yhkifa72i" path="res://Assets/Personajes/Elena/elenaNormal.png" id="2_4x0jr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwpyb"]
+size = Vector2(256, 512)
+
+[node name="NPC" type="Area2D" unique_id=1521574208]
+script = ExtResource("1_oh5b7")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=533567611]
+position = Vector2(1.9999924, 0)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_4x0jr")
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=924339869]
+shape = SubResource("RectangleShape2D_qwpyb")

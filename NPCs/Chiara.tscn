@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dqgxrpnf2t5ts"]
+
+[ext_resource type="Script" uid="uid://cfq8sox55fyj5" path="res://NPCs/NPC.gd" id="1_7b22s"]
+[ext_resource type="Texture2D" uid="uid://dc84de0rxptur" path="res://Assets/Personajes/Chiara/chiaraNormal.png" id="2_7b22s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwpyb"]
+size = Vector2(256, 512)
+
+[node name="NPC" type="Area2D" unique_id=1521574208]
+script = ExtResource("1_7b22s")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=533567611]
+position = Vector2(3.8146973e-06, -7.6293945e-06)
+scale = Vector2(0.35, 0.32)
+texture = ExtResource("2_7b22s")
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=924339869]
+shape = SubResource("RectangleShape2D_qwpyb")

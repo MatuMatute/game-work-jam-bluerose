@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://csqjcr23iy7n1"]
+
+[ext_resource type="Script" uid="uid://dlcspt7dl47mp" path="res://Mapas/comedorPrivado/pizzasDialogo.gd" id="1_aelxh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(146.90625, 85.3125)
+
+[node name="Pizzas" type="Area2D" unique_id=558130018]
+script = ExtResource("1_aelxh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1673324377]
+position = Vector2(-144.45313, 1)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1938766989]
+position = Vector2(109, 0)
+shape = SubResource("RectangleShape2D_g4v7s")

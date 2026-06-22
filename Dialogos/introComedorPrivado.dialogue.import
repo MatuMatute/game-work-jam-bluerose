@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://fqx7xevigkdj"
+path="res://.godot/imported/introComedorPrivado.dialogue-e6d49ce338f18f71d3e221696a869fcf.tres"
+
+[deps]
+
+source_file="res://Dialogos/introComedorPrivado.dialogue"
+dest_files=["res://.godot/imported/introComedorPrivado.dialogue-e6d49ce338f18f71d3e221696a869fcf.tres"]
+
+[params]
+
+defaults=true
