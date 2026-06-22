@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://ctsrqe3nbuijf" path="res://Interfaz/Fondo/fondoInterfaz.tscn" id="2_n77xa"]
 [ext_resource type="PackedScene" uid="uid://bt5rix8pcs8lq" path="res://Interfaz/InterfazPrincipal/interfazPrincipal.tscn" id="3_spkme"]
 [ext_resource type="AudioStream" uid="uid://bedsn8iiobeno" path="res://Assets/Sonidos/PuertaAbriendose.mp3" id="4_n77xa"]
+[ext_resource type="AudioStream" uid="uid://coeqvjahhhi3x" path="res://Assets/Música/JazzInvestigaciónWELC0MEИ0.ogg" id="5_aoscc"]
+[ext_resource type="AudioStream" uid="uid://byommyohgmmdv" path="res://Assets/Música/dark bar (Puede fungir como menu).ogg" id="5_i3j75"]
+[ext_resource type="AudioStream" uid="uid://c0770rlfjy2r" path="res://Assets/Música/DimensiónOscura.ogg" id="6_74bab"]
 
 [node name="Juego" type="Node" unique_id=956810490]
 script = ExtResource("1_spkme")
@@ -17,4 +20,13 @@ script = ExtResource("1_spkme")
 [node name="Puerta" type="AudioStreamPlayer" parent="." unique_id=1962379010]
 stream = ExtResource("4_n77xa")
 
-[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=1215451485]
+[node name="Inicio" type="AudioStreamPlayer" parent="." unique_id=20986634]
+stream = ExtResource("5_i3j75")
+
+[node name="MusicaFondoInvestigacion" type="AudioStreamPlayer" parent="." unique_id=1215451485]
+stream = ExtResource("5_aoscc")
+volume_db = -10.0
+parameters/looping = true
+
+[node name="DimensionOscura" type="AudioStreamPlayer" parent="." unique_id=1528786768]
+stream = ExtResource("6_74bab")

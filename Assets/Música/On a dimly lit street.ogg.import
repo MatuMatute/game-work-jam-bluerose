@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://q3qodvc8pxih"
+path="res://.godot/imported/On a dimly lit street.ogg-97d0882e58c0fcbe0f775fcfe744ceba.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Música/On a dimly lit street.ogg"
+dest_files=["res://.godot/imported/On a dimly lit street.ogg-97d0882e58c0fcbe0f775fcfe744ceba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

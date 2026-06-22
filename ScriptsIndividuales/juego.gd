@@ -5,6 +5,7 @@ var mapaActual : Mapa
 @onready var fondoInterfaz : FondoInterfaz = $FondoInterfaz
 @onready var sonidoPisadas : AudioStreamPlayer = $Pisadas
 @onready var sonidoPuerta : AudioStreamPlayer = $Puerta
+@onready var musicaFondoInvestigacion : AudioStreamPlayer = $MusicaFondoInvestigacion
 @onready var mensajeErrorCargarArea : PackedScene = preload("res://Escenas/mensajeErrorCargarArea.tscn")
 
 var habitaciones : Array[String] = [
@@ -39,3 +40,6 @@ func acercarObjeto(objeto : PackedScene, objetoEscenario : ObjetoEscenario) -> v
 	var objetoAcercado : ObjetoZoom = objeto.instantiate()
 	objetoAcercado.objetoBase = objetoEscenario
 	add_child(objetoAcercado)
+
+func iniciarMusicaDeInvestigacion() -> void:
+	musicaFondoInvestigacion.play()
