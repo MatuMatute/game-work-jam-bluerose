@@ -16,17 +16,22 @@ script = ExtResource("1_spkme")
 [node name="interfazPrincipal" parent="." unique_id=142371296 instance=ExtResource("3_spkme")]
 
 [node name="Pisadas" type="AudioStreamPlayer" parent="." unique_id=554286182]
+bus = &"Efectos"
 
 [node name="Puerta" type="AudioStreamPlayer" parent="." unique_id=1962379010]
 stream = ExtResource("4_n77xa")
+bus = &"Efectos"
 
 [node name="Inicio" type="AudioStreamPlayer" parent="." unique_id=20986634]
 stream = ExtResource("5_i3j75")
+bus = &"Musica"
 
 [node name="MusicaFondoInvestigacion" type="AudioStreamPlayer" parent="." unique_id=1215451485]
 stream = ExtResource("5_aoscc")
 volume_db = -10.0
+bus = &"Musica"
 parameters/looping = true
 
 [node name="DimensionOscura" type="AudioStreamPlayer" parent="." unique_id=1528786768]
 stream = ExtResource("6_74bab")
+bus = &"Musica"

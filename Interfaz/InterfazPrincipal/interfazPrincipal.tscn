@@ -3,8 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://b4fexc34gmsvd" path="res://Assets/Interfaz/libro.png" id="1_ai7u8"]
 [ext_resource type="Script" uid="uid://vxhm1xapgsni" path="res://Interfaz/InterfazPrincipal/interfazPrincipal.gd" id="1_nhmib"]
 [ext_resource type="Texture2D" uid="uid://cvcwlwg0lpwhc" path="res://Assets/Interfaz/Inventario.png" id="2_rf438"]
+[ext_resource type="Texture2D" uid="uid://4nsafu20rhfk" path="res://Assets/Interfaz/libroHover.png" id="3_8wckj"]
 [ext_resource type="PackedScene" uid="uid://cpr47mgwsyf64" path="res://Interfaz/InterfazPrincipal/notificacion.tscn" id="3_62hb2"]
 [ext_resource type="AudioStream" uid="uid://q2ywx4u24pbf" path="res://Assets/Sonidos/EscrituraEnPapel.wav" id="5_gi23e"]
+[ext_resource type="Texture2D" uid="uid://b57331e2bo3k0" path="res://Assets/Interfaz/InventarioHover.png" id="6_rryay"]
 
 [sub_resource type="Animation" id="Animation_nhmib"]
 length = 0.001
@@ -121,7 +123,7 @@ grow_horizontal = 0
 layout_mode = 2
 texture_normal = ExtResource("1_ai7u8")
 texture_pressed = ExtResource("1_ai7u8")
-texture_hover = ExtResource("1_ai7u8")
+texture_hover = ExtResource("3_8wckj")
 texture_focused = ExtResource("1_ai7u8")
 
 [node name="Notificacion" parent="ContenedorBotones/BotonLibroPistas" unique_id=1566343199 instance=ExtResource("3_62hb2")]
@@ -136,12 +138,13 @@ anchor_bottom = 0.03
 layout_mode = 2
 texture_normal = ExtResource("2_rf438")
 texture_pressed = ExtResource("2_rf438")
-texture_hover = ExtResource("2_rf438")
+texture_hover = ExtResource("6_rryay")
 texture_focused = ExtResource("2_rf438")
 
 [node name="Escritura" type="AudioStreamPlayer" parent="." unique_id=96659780]
 stream = ExtResource("5_gi23e")
 volume_db = -4.0
+bus = &"Efectos"
 
 [node name="AnimacionesFondo" type="AnimationPlayer" parent="." unique_id=535885951]
 libraries/ = SubResource("AnimationLibrary_gi23e")
