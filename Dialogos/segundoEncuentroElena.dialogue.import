@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dbqqdqo3g2y86"
+path="res://.godot/imported/segundoEncuentroElena.dialogue-c27c6022972fb3ca87ff06199db12504.tres"
+
+[deps]
+
+source_file="res://Dialogos/segundoEncuentroElena.dialogue"
+dest_files=["res://.godot/imported/segundoEncuentroElena.dialogue-c27c6022972fb3ca87ff06199db12504.tres"]
+
+[params]
+
+defaults=true
