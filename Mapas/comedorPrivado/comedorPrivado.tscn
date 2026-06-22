@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://do24ag8fakvah" path="res://ObjetosEscenario/fragmentoLlave2Escenario.tscn" id="5_wk0ft"]
 [ext_resource type="PackedScene" uid="uid://csqjcr23iy7n1" path="res://Escenas/Pizzas.tscn" id="7_lxmgf"]
 [ext_resource type="PackedScene" uid="uid://c0xsqpl05pt21" path="res://Escenas/cadaverDiPista.tscn" id="8_kjwm2"]
+[ext_resource type="PackedScene" uid="uid://cfe3x8i835lc8" path="res://Escenas/retratos.tscn" id="9_8oegb"]
 
 [node name="comedorPrivado" type="Node2D" unique_id=631651522]
 script = ExtResource("1_3nou3")
@@ -38,5 +39,8 @@ position = Vector2(1763, 578)
 position = Vector2(979, 563)
 
 [node name="CadaverArea" parent="." unique_id=2091613232 instance=ExtResource("8_kjwm2")]
-position = Vector2(445.00003, 663)
+position = Vector2(445, 663)
 scale = Vector2(2.28868, 1.6733142)
+
+[node name="Retratos" parent="." unique_id=859463479 instance=ExtResource("9_8oegb")]
+position = Vector2(295, 84)

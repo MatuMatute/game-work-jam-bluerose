@@ -8,6 +8,11 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	if !event.is_released():
 		return
 	
+	var PistaOtraDimensión : Pista = load("res://Pistas/OtraDimension.tres")
+	var PistaPizzaEnvenenada : Pista = load("res://Pistas/PizzaEnvenenada.tres")
+	
 	var dialogoCadaver : DialogueResource = load("res://Dialogos/cadaverPrimerVistazo.dialogue")
 	DialogueManager.show_dialogue_balloon(dialogoCadaver)
-	VariablesJugador.progresoActual = VariablesJugador.Progreso.LLEGADO_ESCENA_CRIMEN
+	await DialogueManager.dialogue_ended
+	VariablesJugador.AgregarPista(PistaOtraDimensión)
+	VariablesJugador.AgregarPista(PistaPizzaEnvenenada)
