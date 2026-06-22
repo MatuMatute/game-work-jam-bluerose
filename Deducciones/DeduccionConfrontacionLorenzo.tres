@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Deduccion" format=3 uid="uid://hoha27x1wojn"]
+
+[ext_resource type="Resource" uid="uid://c1uvboj0imf0j" path="res://Pistas/LorenzoDeduccion.tres" id="1_iw6yd"]
+[ext_resource type="Script" uid="uid://b6lbkst00ut16" path="res://Pistas/Pista.gd" id="1_nrw2q"]
+[ext_resource type="Script" uid="uid://ch4eh6novqobo" path="res://Deducciones/deduccion.gd" id="2_b8l53"]
+[ext_resource type="Resource" uid="uid://c53kj5ij8xawr" path="res://Pistas/LorenzoEncargado.tres" id="3_u6iy6"]
+[ext_resource type="Resource" uid="uid://uamkua543xln" path="res://Pistas/LorenzoEstresado.tres" id="4_mr10i"]
+[ext_resource type="Resource" uid="uid://c5oaymhgpe3ij" path="res://Pistas/LorenzoMercenario.tres" id="5_ujora"]
+
+[resource]
+script = ExtResource("2_b8l53")
+pistas = Array[ExtResource("1_nrw2q")]([ExtResource("3_u6iy6"), ExtResource("4_mr10i"), ExtResource("5_ujora")])
+pistaResultante = ExtResource("1_iw6yd")
+metadata/_custom_type_script = "uid://ch4eh6novqobo"

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://d0wiwtioccjd3"]
+
+[ext_resource type="Script" uid="uid://ea8rjnf7tw5v" path="res://ObjetosZoom/cuchilloZoom.gd" id="1_gslmh"]
+[ext_resource type="Texture2D" uid="uid://d2qlbauvmonwk" path="res://Assets/Interfaz/ZoomObjetos/cuadroTemporal.png" id="2_gslmh"]
+
+[node name="retratoZoom" type="CanvasLayer" unique_id=1879841724]
+layer = 2
+script = ExtResource("1_gslmh")
+
+[node name="Bloqueo" type="Control" parent="." unique_id=128568875]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=88507700]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 0
+texture = ExtResource("2_gslmh")

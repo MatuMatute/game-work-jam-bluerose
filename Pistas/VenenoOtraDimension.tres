@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Pista" format=3 uid="uid://c2qnq38pg4h10"]
+
+[ext_resource type="Script" uid="uid://b6lbkst00ut16" path="res://Pistas/Pista.gd" id="1_xs4vn"]
+
+[resource]
+script = ExtResource("1_xs4vn")
+informacion = "La pizza fue envenenada desde el comedor privado, pero en otra dimension."
+metadata/_custom_type_script = "uid://b6lbkst00ut16"

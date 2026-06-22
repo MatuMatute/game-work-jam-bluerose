@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cmmkijyd6g3t"]
 
 [ext_resource type="Texture2D" uid="uid://dqh2vpbrjk4x5" path="res://Assets/Interfaz/AcercamientoLibroPistas.png" id="1_yn43f"]
-[ext_resource type="Script" uid="uid://cp3dcs3uil5gt" path="res://Interfaz/InterfazPrincipal/libroPistas.gd" id="2_yn43f"]
+[ext_resource type="Script" uid="uid://cp3dcs3uil5gt" path="res://Interfaz/InterfazPrincipal/LibroDePistas/libroPistas.gd" id="2_yn43f"]
 
 [sub_resource type="Animation" id="Animation_yn43f"]
 length = 0.001
@@ -92,7 +92,6 @@ _data = {
 }
 
 [node name="libroPistas" type="TextureRect" unique_id=1333721456]
-anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

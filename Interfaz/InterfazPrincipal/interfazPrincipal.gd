@@ -1,6 +1,6 @@
 class_name InterfazPrincipal extends CanvasLayer
 
-var escenaLibroPistas : PackedScene = preload("res://Interfaz/InterfazPrincipal/libroPistas.tscn")
+var escenaLibroPistas : PackedScene = preload("res://Interfaz/InterfazPrincipal/LibroDePistas/libroPistas.tscn")
 var libroPistas : LibroPistas
 var escenaInventario : PackedScene = preload("res://Inventario/inventarioUI.tscn")
 var inventarioUI
