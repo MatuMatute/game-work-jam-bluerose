@@ -10,11 +10,14 @@ func _ready() -> void:
 		EspejoEscenario.EstadoDelEspejo.PORTAL_DIMENSIONAL:
 			fondo.texture = texturaEspejoDimension
 	super()
-
-func Comportamiento() -> void:
-	# Aca ira todo lo del espejo
 	
+var PistaEspejo : Pista = load("res://Pistas/EspejoRaro.tres")
+func Comportamiento() -> void:
+	#dialogo base --> debe cambiar con los estados ¿condicional que evalue estado del espejo?
+	var dialogoEspejoInicio : DialogueResource = load("res://Dialogos/dialogoEspejoDescubre.dialogue")
+	DialogueManager.show_dialogue_balloon(dialogoEspejoInicio)
 	await DialogueManager.dialogue_ended
+	VariablesJugador.AgregarPista(PistaEspejo)
 	
 	if EspejoEscenario.estado == EspejoEscenario.EstadoDelEspejo.SIN_REVISAR: 
 		EspejoEscenario.estado = EspejoEscenario.EstadoDelEspejo.GEMA_FALTANTE
