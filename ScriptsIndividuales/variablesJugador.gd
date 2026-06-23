@@ -13,6 +13,7 @@ enum Progreso {
 var pistas : Array[Pista] 
 var progresoActual : Progreso
 var interfazPrincipal : InterfazPrincipal
+var slotAgarrado : Slot
 
 func AgregarPista(pista : Pista) -> void:
 	pistas.append(pista)
