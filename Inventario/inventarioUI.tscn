@@ -9,12 +9,26 @@ script/source = "extends Control
 
 func _ready() -> void:
 	var escenaSlot : PackedScene = load(\"res://Inventario/slotUI.tscn\")
-
-#ITERARRRRR 
+	
+	#ITERARRRRR 
 	for item : Item in Inventario.objetos: 
 		var slot : Slot = escenaSlot.instantiate()
 		slot.itemBase = item
+		slot.connect(\"fueClickeado\", SlotClickeado)
+		slot.connect(\"fueSoltado\", SlotSoltado)
 		grid.add_child(slot)
+
+func SlotClickeado(slot : Slot) -> void:
+	slot.reparent.call_deferred(self)
+	VariablesJugador.slotAgarrado = slot
+
+func SlotSoltado(slot : Slot) -> void:
+	slot.reparent.call_deferred(grid)
+	VariablesJugador.slotAgarrado = null
+
+func Crafting(slot : Slot) -> void:
+	if VariablesJugador.slotAgarrado != null:
+		pass
 "
 
 [node name="InventarioUi" type="Control" unique_id=1575303713]
