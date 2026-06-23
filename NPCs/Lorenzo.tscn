@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://5ukrlqtof4mn"]
+
+[ext_resource type="Script" uid="uid://mrypqmv6wi2n" path="res://NPCs/lorenzoDialogo.gd" id="1_6oimb"]
+[ext_resource type="Texture2D" uid="uid://cyv5d6vccelsk" path="res://Assets/Personajes/temporal.png" id="2_6oimb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwpyb"]
+size = Vector2(256, 512)
+
+[node name="NPC" type="Area2D" unique_id=1521574208]
+script = ExtResource("1_6oimb")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=533567611]
+position = Vector2(3.8146973e-06, -7.6293945e-06)
+scale = Vector2(0.6, 1.2)
+texture = ExtResource("2_6oimb")
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=924339869]
+shape = SubResource("RectangleShape2D_qwpyb")
