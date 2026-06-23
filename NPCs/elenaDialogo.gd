@@ -31,4 +31,4 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 		VariablesJugador.AgregarPista(pistaLorenzoEncargado)
 		VariablesJugador.AgregarPista(pistaDamianoCocinero)
 		VariablesJugador.AgregarPista(pistaLucianoHermano)
-		#Se vuelve a hablar con ella otra vez con la condición de tener la info
+		VariablesJugador.progresoActual = VariablesJugador.Progreso.CONVERSACION_LORENZO

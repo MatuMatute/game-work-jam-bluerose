@@ -40,7 +40,7 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogos/ChiaraMichaelPrologo.dialogue", "res://Dialogos/primerEncuentroElena.dialogue", "res://Dialogos/cuchillo.dialogue", "res://Dialogos/fragmentoLlave1.dialogue", "res://Dialogos/fragmentoLlave2.dialogue", "res://Dialogos/introComedorPrivado.dialogue", "res://Dialogos/pizzas.dialogue", "res://Dialogos/cadaverPrimerVistazo.dialogue", "res://Dialogos/segundoEncuentroElena.dialogue", "res://Dialogos/retratosDialogo.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogos/ChiaraMichaelPrologo.dialogue", "res://Dialogos/primerEncuentroElena.dialogue", "res://Dialogos/cuchillo.dialogue", "res://Dialogos/fragmentoLlave1.dialogue", "res://Dialogos/fragmentoLlave2.dialogue", "res://Dialogos/introComedorPrivado.dialogue", "res://Dialogos/pizzas.dialogue", "res://Dialogos/cadaverPrimerVistazo.dialogue", "res://Dialogos/segundoEncuentroElena.dialogue", "res://Dialogos/retratosDialogo.dialogue", "res://Dialogos/LorenzoRecepcion.dialogue", "res://Dialogos/dialogoEspejoDescubre.dialogue")
 
 [physics]
 

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cp3y2hlwrk58i"
+path="res://.godot/imported/dialogoEspejoDescubre.dialogue-34be2d1671158ea8df440cb22179e499.tres"
+
+[deps]
+
+source_file="res://Dialogos/dialogoEspejoDescubre.dialogue"
+dest_files=["res://.godot/imported/dialogoEspejoDescubre.dialogue-34be2d1671158ea8df440cb22179e499.tres"]
+
+[params]
+
+defaults=true

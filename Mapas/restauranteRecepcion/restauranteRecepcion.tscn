@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://pfk1q2r4rjjq" path="res://NPCs/Elena.tscn" id="3_eweqs"]
 [ext_resource type="PackedScene" uid="uid://elpxaqpqa4vj" path="res://Escenas/puerta.tscn" id="4_45ibf"]
 [ext_resource type="PackedScene" uid="uid://chdrfpb8ngn6u" path="res://Interfaz/location_card.tscn" id="7_45ibf"]
+[ext_resource type="PackedScene" uid="uid://5ukrlqtof4mn" path="res://NPCs/Lorenzo.tscn" id="7_nlvpe"]
 
 [node name="restauranteRecepcion" type="Node2D" unique_id=839677619]
 script = ExtResource("1_eweqs")
@@ -33,3 +34,7 @@ offset_left = 1006.0
 offset_top = 122.0
 offset_right = 1006.0
 offset_bottom = 122.0
+
+[node name="Lorenzo" parent="." unique_id=1521574208 instance=ExtResource("7_nlvpe")]
+visible = false
+position = Vector2(207, 675)
