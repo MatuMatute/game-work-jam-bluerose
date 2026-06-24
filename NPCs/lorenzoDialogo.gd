@@ -13,10 +13,10 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 		return
 	if !event.is_released():
 		return
-		
-	Inventario.agregarObjeto(llaveLorenzo)
 	
-	var dialogoLorenzoRecepcion : DialogueResource = load("res://Dialogos/LorenzoRecepcion.dialogue")
-	DialogueManager.show_dialogue_balloon(dialogoLorenzoRecepcion)
-	await DialogueManager.dialogue_ended
-	VariablesJugador.progresoActual = VariablesJugador.Progreso.CONVERSACION_LORENZO
+	if VariablesJugador.progresoActual == VariablesJugador.Progreso.CONVERSACION_LORENZO:
+		var dialogoLorenzoRecepcion : DialogueResource = load("res://Dialogos/LorenzoRecepcion.dialogue")
+		DialogueManager.show_dialogue_balloon(dialogoLorenzoRecepcion)
+		await DialogueManager.dialogue_ended
+		VariablesJugador.progresoActual = VariablesJugador.Progreso.OFICINA_LORENZO
+		Inventario.agregarObjeto(llaveLorenzo)

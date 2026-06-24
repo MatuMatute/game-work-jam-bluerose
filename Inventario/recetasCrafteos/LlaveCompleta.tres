@@ -2,12 +2,12 @@
 
 [ext_resource type="Resource" uid="uid://ccd1sbnh7wf37" path="res://Inventario/items/fragmentoLlave1.tres" id="1_se3qw"]
 [ext_resource type="Script" uid="uid://dt4q1w1qqteu4" path="res://Inventario/recetasCrafteos/recetaCrafteo.gd" id="1_wk270"]
-[ext_resource type="Resource" uid="uid://b5ufq2peob3qv" path="res://Inventario/items/cuadroHombres.tres" id="2_mnrvd"]
+[ext_resource type="Resource" uid="uid://carl8nxmd0quy" path="res://Inventario/items/llaveCompleta.tres" id="2_se3qw"]
 [ext_resource type="Resource" uid="uid://d262tiao5est2" path="res://Inventario/items/fragmentoLlave2.tres" id="4_b82l7"]
 
 [resource]
 script = ExtResource("1_wk270")
 primerItem = ExtResource("1_se3qw")
 segundoItem = ExtResource("4_b82l7")
-resultado = ExtResource("2_mnrvd")
+resultado = ExtResource("2_se3qw")
 metadata/_custom_type_script = "uid://dt4q1w1qqteu4"
