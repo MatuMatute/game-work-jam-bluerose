@@ -5,6 +5,7 @@ var mapaActual : Mapa
 @onready var fondoInterfaz : FondoInterfaz = $FondoInterfaz
 @onready var sonidoPisadas : AudioStreamPlayer = $Pisadas
 @onready var sonidoPuerta : AudioStreamPlayer = $Puerta
+@onready var sonidoAscensor : AudioStreamPlayer = $Ascensor
 @onready var musicaIntro : AudioStreamPlayer = $Inicio
 @onready var musicaFondoInvestigacion : AudioStreamPlayer = $MusicaFondoInvestigacion
 @onready var mensajeErrorCargarArea : PackedScene = preload("res://Escenas/mensajeErrorCargarArea.tscn")
@@ -23,15 +24,18 @@ func _ready() -> void:
 	cargarMapa(habitaciones[Mapa.IDsMapa.DESPACHO_DETECTIVE])
 	musicaIntro.play()
 
-func cambiarMapa(IDHabitacion : Mapa.IDsMapa) -> void:
-	sonidoPuerta.play()
+func cambiarMapa(IDHabitacion : Mapa.IDsMapa, Sonido : Puerta.SonidoTransicion) -> void:
+	# Sonido que se reproducira al 
+	if Sonido == Puerta.SonidoTransicion.PUERTA: sonidoPuerta.play()
+	if Sonido == Puerta.SonidoTransicion.ASCENSOR: sonidoAscensor.play()
+	
 	fondoInterfaz.animacionesInterfaz.play("fundidoANegro")
 	await fondoInterfaz.animacionesInterfaz.animation_finished
 	if mapaActual != null: mapaActual.queue_free()
 	cargarMapa(habitaciones[IDHabitacion])
 	
 	if (IDHabitacion == Mapa.IDsMapa.RESTAURANTE_COMEDOR_PUBLICO and musicaIntro.playing):
-		apagarMusica(musicaIntro)
+		apagarMusicaEspecifica(musicaIntro)
 
 func cargarMapa(ubicacion : String) -> void:
 	sonidoPisadas.play()
@@ -46,7 +50,7 @@ func acercarObjeto(objeto : PackedScene, objetoEscenario : ObjetoEscenario) -> v
 	objetoAcercado.objetoBase = objetoEscenario
 	add_child(objetoAcercado)
 
-func apagarMusica(musica : AudioStreamPlayer) -> void:
+func apagarMusicaEspecifica(musica : AudioStreamPlayer) -> void:
 	var animacionApagado : Tween = create_tween()
 	animacionApagado.tween_property(musica, "volume_linear", 0.0, 1.0)
 	await animacionApagado.finished

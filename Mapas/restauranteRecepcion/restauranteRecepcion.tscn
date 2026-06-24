@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://g5h7e80ojcoe" path="res://Assets/Fondos/restauranteRecepcion2.png" id="2_eweqs"]
 [ext_resource type="PackedScene" uid="uid://pfk1q2r4rjjq" path="res://NPCs/Elena.tscn" id="3_eweqs"]
 [ext_resource type="PackedScene" uid="uid://elpxaqpqa4vj" path="res://Escenas/puerta.tscn" id="4_45ibf"]
+[ext_resource type="PackedScene" uid="uid://bi0ykl7anst36" path="res://Escenas/puertaCerrada.tscn" id="6_aj64q"]
+[ext_resource type="Resource" uid="uid://cgl7pe2wtr25o" path="res://Dialogos/ascensorCerrado.dialogue" id="7_6g6m0"]
+[ext_resource type="Resource" uid="uid://cf7wffjuw32xo" path="res://Inventario/items/llaveLorenzo.tres" id="7_17osi"]
 [ext_resource type="PackedScene" uid="uid://chdrfpb8ngn6u" path="res://Interfaz/location_card.tscn" id="7_45ibf"]
 [ext_resource type="PackedScene" uid="uid://5ukrlqtof4mn" path="res://NPCs/Lorenzo.tscn" id="7_nlvpe"]
 
@@ -22,12 +25,22 @@ position = Vector2(912, 467)
 texture = ExtResource("2_eweqs")
 centered = false
 
-[node name="Puerta" parent="." unique_id=3285009 instance=ExtResource("4_45ibf")]
-position = Vector2(312, 365)
-rotation = 0.0
-scale = Vector2(0.9316705, 0.88)
-skew = 0.0
+[node name="PuertaComedor" parent="." unique_id=3285009 instance=ExtResource("4_45ibf")]
+position = Vector2(1910.0001, 455.99997)
+rotation = 1.0471976
+scale = Vector2(0.9316705, 1.2759789)
+skew = -1.0471976
 IDHabitacion = 2
+
+[node name="PuertaCerrada" parent="." unique_id=13828757 instance=ExtResource("6_aj64q")]
+position = Vector2(311, 367)
+rotation = 0.0
+scale = Vector2(0.91999996, 0.88)
+skew = 0.0
+dialogoCerrado = ExtResource("7_6g6m0")
+llave = ExtResource("7_17osi")
+IDHabitacion = 6
+Sonido = 1
 
 [node name="LocationCard" parent="." unique_id=829454247 instance=ExtResource("7_45ibf")]
 offset_left = 1006.0

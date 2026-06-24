@@ -19,4 +19,4 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	var dialogoLorenzoRecepcion : DialogueResource = load("res://Dialogos/LorenzoRecepcion.dialogue")
 	DialogueManager.show_dialogue_balloon(dialogoLorenzoRecepcion)
 	await DialogueManager.dialogue_ended
-	VariablesJugador.progresoActual == VariablesJugador.Progreso.CONVERSACION_LORENZO
+	VariablesJugador.progresoActual = VariablesJugador.Progreso.CONVERSACION_LORENZO

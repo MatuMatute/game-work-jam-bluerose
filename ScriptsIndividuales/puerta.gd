@@ -1,9 +1,14 @@
-class_name Puerta
-extends Area2D
+class_name Puerta extends Area2D
+
+signal cambiarHabitacion(IDMapa : Mapa.IDsMapa, sonidoTransicion : SonidoTransicion)
+
+enum SonidoTransicion {
+	PUERTA = 0,
+	ASCENSOR = 1
+}
 
 @export var IDHabitacion : Mapa.IDsMapa
-
-signal cambiarHabitacion(IDMapa : Mapa.IDsMapa)
+@export var Sonido : SonidoTransicion
 
 func _ready() -> void:
 	var nodoPrincipal : Juego = get_tree().current_scene as Juego
@@ -17,4 +22,4 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	if !event.is_released():
 		return
 	
-	cambiarHabitacion.emit(IDHabitacion)
+	cambiarHabitacion.emit(IDHabitacion, Sonido)

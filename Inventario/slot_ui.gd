@@ -37,6 +37,7 @@ func _input(event: InputEvent) -> void:
 				fueSoltado.emit(self)
 				print(itemBase.nombre, ": Soltado")
 			elif get_global_rect().has_point(event.global_position):
+				hacerCrafting.emit(self)
 				print(itemBase.nombre, ": PosibleCrafting")
 
 func SalioElMouse() -> void:
