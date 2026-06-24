@@ -7,7 +7,16 @@ script/source = "extends Control
 
 @onready var grid = $PanelContainer/GridContainer
 
+var crafteoLlave : RecetaCrafteo = preload(\"res://Inventario/recetasCrafteos/LlaveCompleta.tres\")
+
 func _ready() -> void:
+	ActualizarInventario()
+
+func ActualizarInventario() -> void:
+	if grid.get_child_count() > 0:
+		for node : Node in grid.get_children():
+			node.queue_free()
+	
 	var escenaSlot : PackedScene = load(\"res://Inventario/slotUI.tscn\")
 	
 	#ITERARRRRR 
@@ -16,6 +25,7 @@ func _ready() -> void:
 		slot.itemBase = item
 		slot.connect(\"fueClickeado\", SlotClickeado)
 		slot.connect(\"fueSoltado\", SlotSoltado)
+		slot.connect(\"hacerCrafting\", Crafting)
 		grid.add_child(slot)
 
 func SlotClickeado(slot : Slot) -> void:
@@ -24,11 +34,16 @@ func SlotClickeado(slot : Slot) -> void:
 
 func SlotSoltado(slot : Slot) -> void:
 	slot.reparent.call_deferred(grid)
-	VariablesJugador.slotAgarrado = null
 
 func Crafting(slot : Slot) -> void:
-	if VariablesJugador.slotAgarrado != null:
-		pass
+	var resultado : Item = crafteoLlave.confirmarCrafteo(VariablesJugador.slotAgarrado.itemBase, slot.itemBase)
+	
+	if resultado != null:
+		Inventario.quitarObjeto(VariablesJugador.slotAgarrado.itemBase)
+		Inventario.quitarObjeto(slot.itemBase)
+		Inventario.agregarObjeto(resultado)
+		VariablesJugador.slotAgarrado.queue_free()
+		ActualizarInventario()
 "
 
 [node name="InventarioUi" type="Control" unique_id=1575303713]

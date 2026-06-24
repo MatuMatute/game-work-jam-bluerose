@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d0wiwtioccjd3"]
 
-[ext_resource type="Script" uid="uid://ea8rjnf7tw5v" path="res://ObjetosZoom/cuchilloZoom.gd" id="1_gslmh"]
-[ext_resource type="Texture2D" uid="uid://d2qlbauvmonwk" path="res://Assets/Interfaz/ZoomObjetos/cuadroTemporal.png" id="2_gslmh"]
+[ext_resource type="Script" uid="uid://uoy6xtc4f7ck" path="res://ObjetosZoom/retratoZoom.gd" id="1_gslmh"]
+[ext_resource type="Texture2D" uid="uid://c8w6051f30p8" path="res://Assets/Interfaz/ZoomObjetos/cuadro 2.png" id="2_gslmh"]
 
 [node name="retratoZoom" type="CanvasLayer" unique_id=1879841724]
 layer = 2
@@ -27,7 +27,7 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(3, 3)
+scale = Vector2(0.5, 0.5)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 0
 texture = ExtResource("2_gslmh")

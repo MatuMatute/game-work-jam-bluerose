@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://coeqvjahhhi3x" path="res://Assets/Música/JazzInvestigaciónWELC0MEИ0.ogg" id="5_aoscc"]
 [ext_resource type="AudioStream" uid="uid://byommyohgmmdv" path="res://Assets/Música/dark bar (Puede fungir como menu).ogg" id="5_i3j75"]
 [ext_resource type="AudioStream" uid="uid://c0770rlfjy2r" path="res://Assets/Música/DimensiónOscura.ogg" id="6_74bab"]
+[ext_resource type="AudioStream" uid="uid://hf7122p8cbkk" path="res://Assets/Sonidos/Ascensor.ogg" id="8_irylq"]
 
 [node name="Juego" type="Node" unique_id=956810490]
 script = ExtResource("1_spkme")
@@ -36,3 +37,7 @@ parameters/looping = true
 [node name="DimensionOscura" type="AudioStreamPlayer" parent="." unique_id=1528786768]
 stream = ExtResource("6_74bab")
 bus = &"Musica"
+
+[node name="Ascensor" type="AudioStreamPlayer" parent="." unique_id=2019444448]
+stream = ExtResource("8_irylq")
+volume_db = -10.0

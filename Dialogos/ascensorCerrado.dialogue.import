@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cgl7pe2wtr25o"
+path="res://.godot/imported/ascensorCerrado.dialogue-88658be88ed26dbb196de1381907b912.tres"
+
+[deps]
+
+source_file="res://Dialogos/ascensorCerrado.dialogue"
+dest_files=["res://.godot/imported/ascensorCerrado.dialogue-88658be88ed26dbb196de1381907b912.tres"]
+
+[params]
+
+defaults=true

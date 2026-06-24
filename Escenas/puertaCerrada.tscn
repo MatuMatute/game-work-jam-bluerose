@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bi0ykl7anst36"]
+
+[ext_resource type="Script" uid="uid://bifm8eipgyoqp" path="res://ScriptsIndividuales/puertaCerrada.gd" id="1_7bcoh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ylh6m"]
+size = Vector2(320, 640)
+
+[node name="PuertaCerrada" type="Area2D" unique_id=3285009]
+rotation = -0.2617994
+skew = 0.2617994
+script = ExtResource("1_7bcoh")
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=1917999516]
+shape = SubResource("RectangleShape2D_ylh6m")

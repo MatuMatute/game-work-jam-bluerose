@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c1q5omfslbt0y"
+path="res://.godot/imported/retratoDialogo2.dialogue-a9d0ab19ccc7b5f3e65a79cbc4e0f20e.tres"
+
+[deps]
+
+source_file="res://Dialogos/retratoDialogo2.dialogue"
+dest_files=["res://.godot/imported/retratoDialogo2.dialogue-a9d0ab19ccc7b5f3e65a79cbc4e0f20e.tres"]
+
+[params]
+
+defaults=true
