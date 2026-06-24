@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cpkmcwue2nbq8"]
+
+[ext_resource type="Script" uid="uid://d08c04sckoydf" path="res://ObjetosEscenario/fotoEscenario.gd" id="1_7wvq3"]
+[ext_resource type="Texture2D" uid="uid://pwgrhpqktkgw" path="res://Assets/Fondos/ObjetosEscenario/Foto.png" id="2_7wvq3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0d1u"]
+size = Vector2(96, 96)
+
+[node name="fotoEscenario" type="Area2D" unique_id=1756300785]
+script = ExtResource("1_7wvq3")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1122037579]
+texture = ExtResource("2_7wvq3")
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=1723101688]
+shape = SubResource("RectangleShape2D_x0d1u")
