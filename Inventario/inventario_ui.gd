@@ -2,7 +2,7 @@ class_name InterfazInventario extends Control
 
 signal terminarDemo()
 
-@onready var grid = $PanelContainer/GridContainer
+@onready var grid = $PanelContainer/CenterContainer/GridContainer
 
 var recetas : Array[RecetaCrafteo] = [
 	preload("res://Inventario/recetasCrafteos/LlaveCompleta.tres"), 
