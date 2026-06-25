@@ -188,7 +188,7 @@ offset_left = -40.0
 offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "v0.7.0-demobeta"
+text = "v0.7.1-demobeta"
 label_settings = SubResource("LabelSettings_alxc1")
 vertical_alignment = 1
 
@@ -201,4 +201,5 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[connection signal="pressed" from="ContenedorMargen/ContenedorVertical/IniciarPartida" to="." method="iniciarPartida"]
 [connection signal="cambiarAMenuDeOpciones" from="ContenedorMargen/ContenedorVertical/Opciones" to="." method="cambiarMenu"]
