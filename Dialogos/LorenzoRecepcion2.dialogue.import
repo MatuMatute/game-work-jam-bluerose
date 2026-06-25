@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cs3fboof5f0t6"
+path="res://.godot/imported/LorenzoRecepcion2.dialogue-8ca28f593aa977ec345b95606125ecc6.tres"
+
+[deps]
+
+source_file="res://Dialogos/LorenzoRecepcion2.dialogue"
+dest_files=["res://.godot/imported/LorenzoRecepcion2.dialogue-8ca28f593aa977ec345b95606125ecc6.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dg2ycl5vp0a7n"
+path="res://.godot/imported/relojDialogo.dialogue-a7050c83ba59d42a2e95b4d6332cb7b8.tres"
+
+[deps]
+
+source_file="res://Dialogos/relojDialogo.dialogue"
+dest_files=["res://.godot/imported/relojDialogo.dialogue-a7050c83ba59d42a2e95b4d6332cb7b8.tres"]
+
+[params]
+
+defaults=true

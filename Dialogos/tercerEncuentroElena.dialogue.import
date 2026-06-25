@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cu503v7nlg17j"
+path="res://.godot/imported/tercerEncuentroElena.dialogue-fd076b5bc1d42ad3a918600811c6c54f.tres"
+
+[deps]
+
+source_file="res://Dialogos/tercerEncuentroElena.dialogue"
+dest_files=["res://.godot/imported/tercerEncuentroElena.dialogue-fd076b5bc1d42ad3a918600811c6c54f.tres"]
+
+[params]
+
+defaults=true

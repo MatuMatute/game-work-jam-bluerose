@@ -20,7 +20,6 @@ func _gui_input(event: InputEvent) -> void:
 		if event.is_pressed():
 			manteniendoClic = true
 			fueClickeado.emit(self)
-			print(itemBase.nombre, ": Presionado")
 			accept_event()
 	if event is InputEventMouseMotion:
 		if manteniendoClic:
@@ -35,10 +34,8 @@ func _input(event: InputEvent) -> void:
 			if manteniendoClic:
 				manteniendoClic = false
 				fueSoltado.emit(self)
-				print(itemBase.nombre, ": Soltado")
 			elif get_global_rect().has_point(event.global_position):
 				hacerCrafting.emit(self)
-				print(itemBase.nombre, ": PosibleCrafting")
 
 func SalioElMouse() -> void:
 	if manteniendoClic and not get_parent().is_class("GridContainer"):

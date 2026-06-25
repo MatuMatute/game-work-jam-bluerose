@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b0r64uj0q7td7"]
+
+[node name="ContenedorVertical" type="VBoxContainer" unique_id=1038722583]
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 48

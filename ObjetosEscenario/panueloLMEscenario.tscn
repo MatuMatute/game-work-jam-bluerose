@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cb8e70527xe0r"]
+
+[ext_resource type="Script" uid="uid://dx5oj106id6kc" path="res://ObjetosEscenario/panueloLMEscenario.gd" id="1_5x1mt"]
+[ext_resource type="Texture2D" uid="uid://d0e531bcqyyjy" path="res://Assets/Fondos/ObjetosEscenario/PanueloLM.png" id="2_5x1mt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0d1u"]
+size = Vector2(80, 80)
+
+[node name="panueloLMEscenario" type="Area2D" unique_id=1756300785]
+script = ExtResource("1_5x1mt")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1122037579]
+position = Vector2(21, 0)
+texture = ExtResource("2_5x1mt")
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=1723101688]
+shape = SubResource("RectangleShape2D_x0d1u")

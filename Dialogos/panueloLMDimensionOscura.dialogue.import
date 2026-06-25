@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://pt122ithc63d"
+path="res://.godot/imported/panueloLMDimensionOscura.dialogue-034c67789e76d3e905e7507a7101c2ce.tres"
+
+[deps]
+
+source_file="res://Dialogos/panueloLMDimensionOscura.dialogue"
+dest_files=["res://.godot/imported/panueloLMDimensionOscura.dialogue-034c67789e76d3e905e7507a7101c2ce.tres"]
+
+[params]
+
+defaults=true

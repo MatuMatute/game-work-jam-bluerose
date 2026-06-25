@@ -141,10 +141,12 @@ texture_pressed = ExtResource("2_rf438")
 texture_hover = ExtResource("6_rryay")
 texture_focused = ExtResource("2_rf438")
 
+[node name="Notificacion" parent="ContenedorBotones/BotonInventario" unique_id=627707585 instance=ExtResource("3_62hb2")]
+layout_mode = 0
+
 [node name="Escritura" type="AudioStreamPlayer" parent="." unique_id=96659780]
 stream = ExtResource("5_gi23e")
 volume_db = -4.0
-bus = &"Efectos"
 
 [node name="AnimacionesFondo" type="AnimationPlayer" parent="." unique_id=535885951]
 libraries/ = SubResource("AnimationLibrary_gi23e")

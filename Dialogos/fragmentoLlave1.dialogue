@@ -1,1 +1,4 @@
-Michael: Un pedazo de llave, esto no se ve en todos lados.
+if Inventario.tieneObjeto(load("res://Inventario/items/fragmentoLlave2.tres")):
+	Michael: Un pedazo de llave, ya tengo dos, no puede ser coincidencia.
+else:
+	Michael: Un pedazo de llave, esto no se ve en todos lados.

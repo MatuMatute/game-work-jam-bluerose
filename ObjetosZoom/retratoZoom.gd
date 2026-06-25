@@ -1,9 +1,10 @@
 class_name RetratoZoom extends ObjetoZoom
 
 var retrato : Item = preload("res://Inventario/items/cuadroHombres.tres")
+var PistaHombresCuadro : Pista = preload("res://Pistas/HombresCuadro.tres")
 
 func _ready() -> void:
-	posicionMouse = CENTRO_PANTALLA
+	posicionMouse = Vector2(600.0, 96.0)
 	
 	var animacionAlAparecer : Tween = create_tween()
 	animacionAlAparecer.set_parallel(true)
@@ -12,12 +13,10 @@ func _ready() -> void:
 	animacionAlAparecer.connect("finished", Comportamiento)
 
 func Comportamiento() -> void:
-	var PistaHombresCuadro : Pista = load("res://Pistas/HombresCuadro.tres")
-	
 	DialogueManager.show_dialogue_balloon(load("res://Dialogos/retratoDialogo2.dialogue"))
 	await DialogueManager.dialogue_ended
 	
-	Inventario.agregarObjeto(retrato)
+	Inventario.agregarObjetoYActualizar(retrato)
 	Retrato.haSidoAgarrado = true
 	VariablesJugador.AgregarPista(PistaHombresCuadro)
 	VariablesJugador.progresoActual = VariablesJugador.Progreso.LLEGADO_ESCENA_CRIMEN

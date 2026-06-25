@@ -1,9 +1,9 @@
 class_name Lorenzo extends NPC
 
-var llaveLorenzo : Item = preload("res://Inventario/items/llaveLorenzo.tres")
+var llaveLorenzoZoom : PackedScene = preload("res://ObjetosZoom/llaveLorenzoZoom.tscn")
 
 func _ready() -> void:
-	if VariablesJugador.progresoActual >= VariablesJugador.Progreso.LLEGADO_ESCENA_CRIMEN:
+	if Retrato.haSidoAgarrado:
 		show()
 
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
@@ -14,9 +14,13 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	if !event.is_released():
 		return
 	
+	input_pickable = false
+	
 	if VariablesJugador.progresoActual == VariablesJugador.Progreso.CONVERSACION_LORENZO:
-		var dialogoLorenzoRecepcion : DialogueResource = load("res://Dialogos/LorenzoRecepcion.dialogue")
+		var dialogoLorenzoRecepcion : DialogueResource = load("res://Dialogos/LorenzoRecepcion1.dialogue")
 		DialogueManager.show_dialogue_balloon(dialogoLorenzoRecepcion)
 		await DialogueManager.dialogue_ended
-		VariablesJugador.progresoActual = VariablesJugador.Progreso.OFICINA_LORENZO
-		Inventario.agregarObjeto(llaveLorenzo)
+		var nodoPrincipal : Juego = get_tree().current_scene as Juego
+		nodoPrincipal.acercarObjeto(llaveLorenzoZoom, null)
+	
+	input_pickable = true

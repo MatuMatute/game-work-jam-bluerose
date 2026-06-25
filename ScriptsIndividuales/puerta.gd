@@ -4,7 +4,8 @@ signal cambiarHabitacion(IDMapa : Mapa.IDsMapa, sonidoTransicion : SonidoTransic
 
 enum SonidoTransicion {
 	PUERTA = 0,
-	ASCENSOR = 1
+	ASCENSOR = 1,
+	PORTAL = 2
 }
 
 @export var IDHabitacion : Mapa.IDsMapa

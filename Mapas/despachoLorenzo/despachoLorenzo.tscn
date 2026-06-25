@@ -3,6 +3,11 @@
 [ext_resource type="Script" uid="uid://ikp4ufl8d7hp" path="res://Mapas/despachoLorenzo/despachoLorenzo.gd" id="1_fxl2t"]
 [ext_resource type="Texture2D" uid="uid://c56k58yx4pnce" path="res://Assets/Fondos/despachoLorenzo.png" id="2_fxl2t"]
 [ext_resource type="PackedScene" uid="uid://elpxaqpqa4vj" path="res://Escenas/puerta.tscn" id="3_fv43t"]
+[ext_resource type="PackedScene" uid="uid://cpkmcwue2nbq8" path="res://ObjetosEscenario/fotoEscenario.tscn" id="4_uvawj"]
+[ext_resource type="PackedScene" uid="uid://bbl6vnhmxh71" path="res://ObjetosEscenario/cajonEscenario.tscn" id="5_84cc7"]
+[ext_resource type="PackedScene" uid="uid://c5hn2gnyv8abn" path="res://ObjetosEscenario/cajaEscenario.tscn" id="6_p005f"]
+[ext_resource type="PackedScene" uid="uid://bexihce2u24lb" path="res://ObjetosEscenario/cajoneraEscenario.tscn" id="7_h7x5o"]
+[ext_resource type="Texture2D" uid="uid://d2nwijnb0axv2" path="res://Interfaz/regresar.png" id="8_xkunn"]
 
 [node name="despachoLorenzo" type="Node2D" unique_id=631651522]
 script = ExtResource("1_fxl2t")
@@ -13,8 +18,29 @@ texture = ExtResource("2_fxl2t")
 centered = false
 
 [node name="Puerta" parent="." unique_id=3285009 instance=ExtResource("3_fv43t")]
-position = Vector2(957, 1059)
+position = Vector2(956.99994, 1020)
 rotation = 0.0
-scale = Vector2(5.9038277, -0.049184565)
+scale = Vector2(5.9038277, 0.15081792)
 skew = 0.0
-IDHabitacion = 2
+IDHabitacion = 1
+Sonido = 1
+
+[node name="fotoEscenario" parent="." unique_id=1756300785 instance=ExtResource("4_uvawj")]
+position = Vector2(719, 623)
+
+[node name="cajonEscenario" parent="." unique_id=1724020780 instance=ExtResource("5_84cc7")]
+position = Vector2(1232, 753)
+
+[node name="cajaEscenario" parent="." unique_id=93240914 instance=ExtResource("6_p005f")]
+position = Vector2(698, 389)
+
+[node name="cajoneraEscenario" parent="." unique_id=189201046 instance=ExtResource("7_h7x5o")]
+position = Vector2(97, 702)
+
+[node name="Regresar" type="Sprite2D" parent="." unique_id=1685887852]
+visible = false
+position = Vector2(957, 1020)
+texture = ExtResource("8_xkunn")
+
+[connection signal="mouse_entered" from="Puerta" to="Regresar" method="show"]
+[connection signal="mouse_exited" from="Puerta" to="Regresar" method="hide"]

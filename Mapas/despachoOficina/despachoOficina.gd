@@ -2,7 +2,7 @@ class_name DespachoOficina extends Mapa
 # Por las dudas aclaro que esta clase es unicamente para el mapa del
 # despacho del detective, hereda de la clase Mapa.
 
-@onready var location_card = $LocationCard 
+@onready var location_card = $LocationCanvas/LocationCard
 
 func _ready() -> void:
 	# Chequea el singleton a ver si el jugador esta en el prologo 

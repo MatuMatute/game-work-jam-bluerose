@@ -4,30 +4,39 @@
 [ext_resource type="FontFile" uid="uid://dmwu4vuulk3d7" path="res://Assets/Interfaz/Fuentes/SpecialElite-Regular.ttf" id="1_yt72s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
-bg_color = Color(0.6846476, 0.53167844, 0.30718473, 1)
+bg_color = Color(0.87495023, 0.72126937, 0.5008835, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 expand_margin_left = 20.0
 expand_margin_top = 20.0
 expand_margin_right = 20.0
 expand_margin_bottom = 20.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_17osi"]
+font = ExtResource("1_yt72s")
+font_size = 72
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 0.57254905)
+
 [node name="LocationCard" type="Control" unique_id=829454247]
 visible = false
 layout_mode = 3
-anchor_left = 0.5
-anchor_top = 0.2
-anchor_right = 0.5
-anchor_bottom = 0.2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p6n3p")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=956970588]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.1
+anchor_right = 0.4
+anchor_bottom = 0.1
 offset_left = -98.5
 offset_top = -35.5
 offset_right = 98.5
@@ -38,10 +47,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
 
 [node name="Label" type="Label" parent="PanelContainer" unique_id=2101376465]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 3
-theme_override_fonts/font = ExtResource("1_yt72s")
-theme_override_font_sizes/font_size = 70
 text = "texto"
+label_settings = SubResource("LabelSettings_17osi")
 horizontal_alignment = 1

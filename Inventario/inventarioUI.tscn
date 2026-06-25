@@ -1,50 +1,10 @@
 [gd_scene format=3 uid="uid://cl1o5w7mwivt"]
 
-[ext_resource type="Texture2D" uid="uid://k0mwhiq01imi" path="res://Inventario/imgPrueba/fondoInv.png" id="1_g17rc"]
+[ext_resource type="Script" uid="uid://cecvlvqevt4ed" path="res://Inventario/inventario_ui.gd" id="1_smwm4"]
+[ext_resource type="Texture2D" uid="uid://bpj7voenmdvhu" path="res://Assets/Interfaz/InventarioFondo.png" id="2_smwm4"]
 
-[sub_resource type="GDScript" id="GDScript_smwm4"]
-script/source = "extends Control
-
-@onready var grid = $PanelContainer/GridContainer
-
-var crafteoLlave : RecetaCrafteo = preload(\"res://Inventario/recetasCrafteos/LlaveCompleta.tres\")
-
-func _ready() -> void:
-	ActualizarInventario()
-
-func ActualizarInventario() -> void:
-	if grid.get_child_count() > 0:
-		for node : Node in grid.get_children():
-			node.queue_free()
-	
-	var escenaSlot : PackedScene = load(\"res://Inventario/slotUI.tscn\")
-	
-	#ITERARRRRR 
-	for item : Item in Inventario.objetos: 
-		var slot : Slot = escenaSlot.instantiate()
-		slot.itemBase = item
-		slot.connect(\"fueClickeado\", SlotClickeado)
-		slot.connect(\"fueSoltado\", SlotSoltado)
-		slot.connect(\"hacerCrafting\", Crafting)
-		grid.add_child(slot)
-
-func SlotClickeado(slot : Slot) -> void:
-	slot.reparent.call_deferred(self)
-	VariablesJugador.slotAgarrado = slot
-
-func SlotSoltado(slot : Slot) -> void:
-	slot.reparent.call_deferred(grid)
-
-func Crafting(slot : Slot) -> void:
-	var resultado : Item = crafteoLlave.confirmarCrafteo(VariablesJugador.slotAgarrado.itemBase, slot.itemBase)
-	
-	if resultado != null:
-		Inventario.quitarObjeto(VariablesJugador.slotAgarrado.itemBase)
-		Inventario.quitarObjeto(slot.itemBase)
-		Inventario.agregarObjeto(resultado)
-		VariablesJugador.slotAgarrado.queue_free()
-		ActualizarInventario()
-"
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c8sd8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="InventarioUi" type="Control" unique_id=1575303713]
 layout_mode = 3
@@ -57,7 +17,7 @@ offset_left = -223.0
 offset_right = -223.0
 grow_horizontal = 0
 grow_vertical = 2
-script = SubResource("GDScript_smwm4")
+script = ExtResource("1_smwm4")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=465376897]
 custom_minimum_size = Vector2(195, 195)
@@ -71,11 +31,15 @@ offset_right = 96.0
 offset_bottom = 368.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_c8sd8")
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=423066602]
 layout_mode = 2
-texture = ExtResource("1_g17rc")
+mouse_filter = 0
+texture = ExtResource("2_smwm4")
 
 [node name="GridContainer" type="GridContainer" parent="PanelContainer" unique_id=1184607388]
 layout_mode = 2
+mouse_filter = 0
+theme_override_constants/h_separation = 30
 columns = 3

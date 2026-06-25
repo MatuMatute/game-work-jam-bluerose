@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RecetaIdea" format=3 uid="uid://cbyf5fafjsh38"]
+
+[ext_resource type="Resource" uid="uid://csj71fncq78wo" path="res://Inventario/items/panueloLM.tres" id="1_5ccyo"]
+[ext_resource type="Resource" uid="uid://bltg4turu5jwy" path="res://Dialogos/CasoResuelto.dialogue" id="1_auhpx"]
+[ext_resource type="Resource" uid="uid://bwdx1jxg2h5l5" path="res://Pistas/InicialesLorenzo.tres" id="2_auhpx"]
+[ext_resource type="Script" uid="uid://ba1es12swkwrj" path="res://Inventario/recetasIdeas/recetaIdea.gd" id="3_x7lcb"]
+[ext_resource type="Resource" uid="uid://cf7wffjuw32xo" path="res://Inventario/items/llaveLorenzo.tres" id="4_e7mjh"]
+
+[resource]
+script = ExtResource("3_x7lcb")
+primerItem = ExtResource("1_5ccyo")
+segundoItem = ExtResource("4_e7mjh")
+resultado = ExtResource("2_auhpx")
+dialogoAlTenerExito = ExtResource("1_auhpx")
+metadata/_custom_type_script = "uid://ba1es12swkwrj"

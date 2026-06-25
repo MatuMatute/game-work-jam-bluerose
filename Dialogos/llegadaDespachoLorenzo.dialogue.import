@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dspqxr6nenyli"
+path="res://.godot/imported/llegadaDespachoLorenzo.dialogue-b362ee98c9bbe13234e609f77ba6d99c.tres"
+
+[deps]
+
+source_file="res://Dialogos/llegadaDespachoLorenzo.dialogue"
+dest_files=["res://.godot/imported/llegadaDespachoLorenzo.dialogue-b362ee98c9bbe13234e609f77ba6d99c.tres"]
+
+[params]
+
+defaults=true

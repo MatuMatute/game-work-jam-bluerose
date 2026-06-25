@@ -33,21 +33,20 @@ skew = -1.0471976
 IDHabitacion = 2
 
 [node name="PuertaCerrada" parent="." unique_id=13828757 instance=ExtResource("6_aj64q")]
-position = Vector2(311, 367)
+position = Vector2(308.00003, 204)
 rotation = 0.0
-scale = Vector2(0.91999996, 0.88)
+scale = Vector2(0.91999996, 0.5595639)
 skew = 0.0
 dialogoCerrado = ExtResource("7_6g6m0")
 llave = ExtResource("7_17osi")
 IDHabitacion = 6
 Sonido = 1
 
-[node name="LocationCard" parent="." unique_id=829454247 instance=ExtResource("7_45ibf")]
-offset_left = 1006.0
-offset_top = 122.0
-offset_right = 1006.0
-offset_bottom = 122.0
-
 [node name="Lorenzo" parent="." unique_id=1521574208 instance=ExtResource("7_nlvpe")]
 visible = false
-position = Vector2(207, 675)
+z_index = 1000
+position = Vector2(181, 722)
+
+[node name="LocationCanvas" type="CanvasLayer" parent="." unique_id=1841381473]
+
+[node name="LocationCard" parent="LocationCanvas" unique_id=829454247 instance=ExtResource("7_45ibf")]

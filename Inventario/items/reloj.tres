@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://02mq8jeaqmyk"]
+
+[ext_resource type="Texture2D" uid="uid://bv2qjlkxcbyg1" path="res://Assets/Interfaz/ZoomObjetos/relojZoom.png" id="1_p6a3y"]
+[ext_resource type="Script" uid="uid://b1l8o08s1utn1" path="res://Inventario/item.gd" id="1_ty2c6"]
+
+[resource]
+script = ExtResource("1_ty2c6")
+nombre = "Reloj"
+icono = ExtResource("1_p6a3y")
+metadata/_custom_type_script = "uid://b1l8o08s1utn1"

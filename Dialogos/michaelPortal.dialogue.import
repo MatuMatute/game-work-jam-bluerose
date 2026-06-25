@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dfvkvmew3b5lh"
+path="res://.godot/imported/michaelPortal.dialogue-2b2d806f722c8d4722ae464e04a049c1.tres"
+
+[deps]
+
+source_file="res://Dialogos/michaelPortal.dialogue"
+dest_files=["res://.godot/imported/michaelPortal.dialogue-2b2d806f722c8d4722ae464e04a049c1.tres"]
+
+[params]
+
+defaults=true

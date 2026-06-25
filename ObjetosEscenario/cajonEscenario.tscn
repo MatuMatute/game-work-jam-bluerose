@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bbl6vnhmxh71"]
+
+[ext_resource type="Script" uid="uid://dn4i6luutedvw" path="res://ObjetosEscenario/cajonEscenario.gd" id="1_3c6eh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0d1u"]
+size = Vector2(144, 64)
+
+[node name="cajonEscenario" type="Area2D" unique_id=1756300785]
+script = ExtResource("1_3c6eh")
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=1723101688]
+shape = SubResource("RectangleShape2D_x0d1u")

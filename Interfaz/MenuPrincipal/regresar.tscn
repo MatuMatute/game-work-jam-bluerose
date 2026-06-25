@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dh5wu1ccgj51p"]
+
+[ext_resource type="FontFile" uid="uid://dmwu4vuulk3d7" path="res://Assets/Interfaz/Fuentes/SpecialElite-Regular.ttf" id="1_g62j1"]
+
+[node name="Regresar" type="Button" unique_id=1059544962]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.8352941, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8352941, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8352941, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_g62j1")
+theme_override_font_sizes/font_size = 48
+text = "Regresar"
+flat = true
+alignment = 0
