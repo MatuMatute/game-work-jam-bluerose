@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lssyf4h480dv"
-path="res://.godot/imported/GemaTallada.png-2a8e52c210dea290c79f439263bd7ce7.ctex"
+uid="uid://up2nfvlexdw6"
+path="res://.godot/imported/GemaTalladaZoom.png-159943b65c22a3a04c55a43d5d776409.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Interfaz/ZoomObjetos/GemaTallada.png"
-dest_files=["res://.godot/imported/GemaTallada.png-2a8e52c210dea290c79f439263bd7ce7.ctex"]
+source_file="res://Assets/Interfaz/ZoomObjetos/GemaTalladaZoom.png"
+dest_files=["res://.godot/imported/GemaTalladaZoom.png-159943b65c22a3a04c55a43d5d776409.ctex"]
 
 [params]
 

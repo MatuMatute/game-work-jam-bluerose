@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://csqjcr23iy7n1" path="res://Escenas/Pizzas.tscn" id="7_lxmgf"]
 [ext_resource type="PackedScene" uid="uid://c0xsqpl05pt21" path="res://Mapas/comedorPrivado/cadaverDiPista.tscn" id="8_kjwm2"]
 [ext_resource type="PackedScene" uid="uid://cfe3x8i835lc8" path="res://Escenas/retratos.tscn" id="9_8oegb"]
+[ext_resource type="Texture2D" uid="uid://d2nwijnb0axv2" path="res://Interfaz/regresar.png" id="10_iv2q6"]
 
 [node name="comedorPrivado" type="Node2D" unique_id=631651522]
 script = ExtResource("1_3nou3")
@@ -44,3 +45,11 @@ scale = Vector2(2.28868, 1.6733142)
 
 [node name="Retratos" parent="." unique_id=859463479 instance=ExtResource("9_8oegb")]
 position = Vector2(295, 84)
+
+[node name="Regresar" type="Sprite2D" parent="." unique_id=1951746635]
+visible = false
+position = Vector2(957, 1024)
+texture = ExtResource("10_iv2q6")
+
+[connection signal="mouse_entered" from="Puerta" to="Regresar" method="show"]
+[connection signal="mouse_exited" from="Puerta" to="Regresar" method="hide"]

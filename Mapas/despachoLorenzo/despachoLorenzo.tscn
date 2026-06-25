@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bbl6vnhmxh71" path="res://ObjetosEscenario/cajonEscenario.tscn" id="5_84cc7"]
 [ext_resource type="PackedScene" uid="uid://c5hn2gnyv8abn" path="res://ObjetosEscenario/cajaEscenario.tscn" id="6_p005f"]
 [ext_resource type="PackedScene" uid="uid://bexihce2u24lb" path="res://ObjetosEscenario/cajoneraEscenario.tscn" id="7_h7x5o"]
+[ext_resource type="Texture2D" uid="uid://d2nwijnb0axv2" path="res://Interfaz/regresar.png" id="8_xkunn"]
 
 [node name="despachoLorenzo" type="Node2D" unique_id=631651522]
 script = ExtResource("1_fxl2t")
@@ -35,3 +36,11 @@ position = Vector2(698, 389)
 
 [node name="cajoneraEscenario" parent="." unique_id=189201046 instance=ExtResource("7_h7x5o")]
 position = Vector2(97, 702)
+
+[node name="Regresar" type="Sprite2D" parent="." unique_id=1685887852]
+visible = false
+position = Vector2(957, 1020)
+texture = ExtResource("8_xkunn")
+
+[connection signal="mouse_entered" from="Puerta" to="Regresar" method="show"]
+[connection signal="mouse_exited" from="Puerta" to="Regresar" method="hide"]

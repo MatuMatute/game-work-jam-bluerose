@@ -33,15 +33,18 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 0
 
 [node name="Continuara" type="Label" parent="Textos" unique_id=1667178780]
 layout_mode = 2
+mouse_filter = 0
 text = "Continuará..."
 label_settings = SubResource("LabelSettings_alxc1")
 horizontal_alignment = 1
 
 [node name="Gracias" type="Label" parent="Textos" unique_id=792225185]
 layout_mode = 2
+mouse_filter = 0
 text = "¡Gracias por jugar la demo!"
 label_settings = SubResource("LabelSettings_pcncc")
 horizontal_alignment = 1

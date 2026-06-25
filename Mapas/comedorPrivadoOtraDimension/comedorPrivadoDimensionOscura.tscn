@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cfe3x8i835lc8" path="res://Escenas/retratos.tscn" id="8_mffcd"]
 [ext_resource type="PackedScene" uid="uid://cb8e70527xe0r" path="res://ObjetosEscenario/panueloLMEscenario.tscn" id="8_wkh0h"]
 [ext_resource type="PackedScene" uid="uid://bvqtiu67nbp7" path="res://Mapas/comedorPrivadoOtraDimension/cadaverOtraDimension.tscn" id="9_kqwpq"]
+[ext_resource type="Texture2D" uid="uid://d2nwijnb0axv2" path="res://Interfaz/regresar.png" id="10_7h258"]
 
 [node name="comedorPrivadoDimensionOscura" type="Node2D" unique_id=631651522]
 script = ExtResource("1_wkh0h")
@@ -42,3 +43,11 @@ position = Vector2(553, 847)
 [node name="CadaverOtraDimension" parent="." unique_id=558130018 instance=ExtResource("9_kqwpq")]
 position = Vector2(438.99997, 684)
 scale = Vector2(3.1084785, 1.8993909)
+
+[node name="Regresar" type="Sprite2D" parent="." unique_id=7772789]
+visible = false
+position = Vector2(959, 1038)
+texture = ExtResource("10_7h258")
+
+[connection signal="mouse_entered" from="PuertaCerrada" to="Regresar" method="show"]
+[connection signal="mouse_exited" from="PuertaCerrada" to="Regresar" method="hide"]

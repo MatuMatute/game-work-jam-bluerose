@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://c644tib6ig81"]
+
+[ext_resource type="Script" uid="uid://cf78ky2yaur7c" path="res://Interfaz/MenuPrincipal/menuPrincipal.gd" id="1_dknr4"]
+[ext_resource type="Texture2D" uid="uid://cx0l36x3r6nkq" path="res://icon.png" id="2_ow2b8"]
+[ext_resource type="FontFile" uid="uid://dmwu4vuulk3d7" path="res://Assets/Interfaz/Fuentes/SpecialElite-Regular.ttf" id="3_b0t48"]
+[ext_resource type="PackedScene" uid="uid://cwfoplwmp721d" path="res://Interfaz/MenuPrincipal/opciones.tscn" id="4_b0t48"]
+[ext_resource type="PackedScene" uid="uid://clg4atwqyvf17" path="res://Interfaz/MenuPrincipal/salir.tscn" id="4_ow2b8"]
+
+[sub_resource type="Gradient" id="Gradient_1nedv"]
+colors = PackedColorArray(0, 0, 0, 1, 0.18431373, 0.18431373, 0.18431373, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_alxc1"]
+gradient = SubResource("Gradient_1nedv")
+
+[sub_resource type="Animation" id="Animation_jtpvo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContenedorMargen:theme_override_constants/margin_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [16]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_cv8x7"]
+resource_name = "aparecer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContenedorMargen:theme_override_constants/margin_left")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-400, 16]
+}
+
+[sub_resource type="Animation" id="Animation_b0t48"]
+resource_name = "desaparecer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContenedorMargen:theme_override_constants/margin_left")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [16, -400]
+}
+
+[sub_resource type="Animation" id="Animation_33k1w"]
+resource_name = "transicion"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1t7qq"]
+_data = {
+&"RESET": SubResource("Animation_jtpvo"),
+&"aparecer": SubResource("Animation_cv8x7"),
+&"desaparecer": SubResource("Animation_b0t48"),
+&"transicion": SubResource("Animation_33k1w")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_alxc1"]
+font = ExtResource("3_b0t48")
+font_size = 24
+
+[node name="MenuPrincipal" type="CanvasLayer" unique_id=983531362]
+layer = 6
+script = ExtResource("1_dknr4")
+
+[node name="FondoGradiente" type="TextureRect" parent="." unique_id=49367358]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_alxc1")
+
+[node name="Logotipo" type="TextureRect" parent="." unique_id=1202226549]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1214.0
+offset_bottom = 1046.0
+grow_horizontal = 0
+texture = ExtResource("2_ow2b8")
+
+[node name="ContenedorMargen" type="MarginContainer" parent="." unique_id=95429032]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+
+[node name="ContenedorVertical" type="VBoxContainer" parent="ContenedorMargen" unique_id=1411534906]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 48
+
+[node name="IniciarPartida" type="Button" parent="ContenedorMargen/ContenedorVertical" unique_id=81646779]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.8352941, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8352941, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8352941, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_b0t48")
+theme_override_font_sizes/font_size = 48
+text = "Iniciar partida"
+flat = true
+alignment = 0
+
+[node name="Opciones" parent="ContenedorMargen/ContenedorVertical" unique_id=752059728 instance=ExtResource("4_b0t48")]
+layout_mode = 2
+alignment = 0
+
+[node name="Salir" parent="ContenedorMargen/ContenedorVertical" unique_id=389619272 instance=ExtResource("4_ow2b8")]
+layout_mode = 2
+
+[node name="AnimacionesMenu" type="AnimationPlayer" parent="." unique_id=1680494221]
+libraries/ = SubResource("AnimationLibrary_1t7qq")
+autoplay = &"aparecer"
+
+[node name="Version" type="Label" parent="." unique_id=681594071]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "v0.7.0-demobeta"
+label_settings = SubResource("LabelSettings_alxc1")
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1655349073]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="cambiarAMenuDeOpciones" from="ContenedorMargen/ContenedorVertical/Opciones" to="." method="cambiarMenu"]

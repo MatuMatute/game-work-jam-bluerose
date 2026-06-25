@@ -64,6 +64,7 @@ func _input(event: InputEvent) -> void:
 		if fondo.get_global_rect().has_point(event.global_position):
 			if VariablesJugador.slotAgarrado.itemBase == gemaNecesaria:
 				EspejoEscenario.estado = EspejoEscenario.EstadoDelEspejo.GEMA_COLOCADA
+				(objetoBase as EspejoEscenario).spriteGemaFaltante.show()
 				VariablesJugador.slotAgarrado.queue_free()
 				Inventario.quitarObjeto(gemaNecesaria)
 				fondo.texture = texturaEspejoCompleto

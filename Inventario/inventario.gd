@@ -1,11 +1,13 @@
 extends Node
 
 var objetos : Array[Item]
+var interfazPrincipal : InterfazPrincipal
 var interfazInventario : InterfazInventario
 
 #agrega en el array
 func agregarObjeto(objetoId:Item):
 	objetos.append(objetoId)
+	interfazPrincipal.activarNotificacionInventario()
 
 #agrega en el array
 func agregarObjetoYActualizar(objetoId:Item):

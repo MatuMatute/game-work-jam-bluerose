@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cwfoplwmp721d"]
+
+[ext_resource type="FontFile" uid="uid://dmwu4vuulk3d7" path="res://Assets/Interfaz/Fuentes/SpecialElite-Regular.ttf" id="1_o52f6"]
+[ext_resource type="Script" uid="uid://jx6ulnuj338c" path="res://Interfaz/MenuPrincipal/opciones.gd" id="1_wgusv"]
+
+[node name="Opciones" type="Button" unique_id=752059728]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.8352941, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8352941, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8352941, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_o52f6")
+theme_override_font_sizes/font_size = 48
+text = "Opciones"
+flat = true
+script = ExtResource("1_wgusv")

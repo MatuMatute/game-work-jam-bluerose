@@ -8,14 +8,20 @@ var inventarioUI
 @onready var sonidoEscritura : AudioStreamPlayer = $Escritura
 @onready var animacionesFondo : AnimationPlayer = $AnimacionesFondo
 @onready var notificacionLibroPistas : Panel = $ContenedorBotones/BotonLibroPistas/Notificacion
+@onready var notificacionInventario : Panel = $ContenedorBotones/BotonInventario/Notificacion
 
 func _ready() -> void:
 	VariablesJugador.interfazPrincipal = self
+	Inventario.interfazPrincipal = self
 
 func activarNotificacionLibroPistas() -> void:
 	if not sonidoEscritura.playing: sonidoEscritura.play()
 	if libroPistas == null:
 		notificacionLibroPistas.show()
+
+func activarNotificacionInventario() -> void:
+	if inventarioUI == null:
+		notificacionInventario.show()
 
 func BotonLibroPistasPresionado() -> void:
 	if notificacionLibroPistas.is_visible_in_tree():
@@ -33,6 +39,9 @@ func BotonLibroPistasPresionado() -> void:
 
 
 func BotonInventarioPresionado() -> void:
+	if notificacionInventario.is_visible_in_tree():
+		notificacionInventario.hide()
+	
 	if inventarioUI == null:
 		inventarioUI = escenaInventario.instantiate()
 		add_child(inventarioUI)

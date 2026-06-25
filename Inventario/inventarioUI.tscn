@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://cl1o5w7mwivt"]
 
-[ext_resource type="Texture2D" uid="uid://k0mwhiq01imi" path="res://Inventario/imgPrueba/fondoInv.png" id="1_g17rc"]
 [ext_resource type="Script" uid="uid://cecvlvqevt4ed" path="res://Inventario/inventario_ui.gd" id="1_smwm4"]
+[ext_resource type="Texture2D" uid="uid://bpj7voenmdvhu" path="res://Assets/Interfaz/InventarioFondo.png" id="2_smwm4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c8sd8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="InventarioUi" type="Control" unique_id=1575303713]
 layout_mode = 3
@@ -28,11 +31,12 @@ offset_right = 96.0
 offset_bottom = 368.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_c8sd8")
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=423066602]
 layout_mode = 2
 mouse_filter = 0
-texture = ExtResource("1_g17rc")
+texture = ExtResource("2_smwm4")
 
 [node name="GridContainer" type="GridContainer" parent="PanelContainer" unique_id=1184607388]
 layout_mode = 2

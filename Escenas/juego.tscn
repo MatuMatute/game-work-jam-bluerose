@@ -28,6 +28,7 @@ bus = &"Efectos"
 stream = ExtResource("5_i3j75")
 volume_db = -15.0
 bus = &"Musica"
+parameters/looping = true
 
 [node name="MusicaFondoInvestigacion" type="AudioStreamPlayer" parent="." unique_id=1215451485]
 stream = ExtResource("5_aoscc")
@@ -39,6 +40,7 @@ parameters/looping = true
 stream = ExtResource("6_74bab")
 volume_db = -10.0
 bus = &"Musica"
+parameters/looping = true
 
 [node name="Ascensor" type="AudioStreamPlayer" parent="." unique_id=2019444448]
 stream = ExtResource("8_irylq")
