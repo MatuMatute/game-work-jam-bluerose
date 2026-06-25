@@ -92,6 +92,7 @@ _data = {
 }
 
 [node name="libroPistas" type="TextureRect" unique_id=1333721456]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -111,6 +112,7 @@ libraries/ = SubResource("AnimationLibrary_pjm65")
 autoplay = &"aparecer"
 
 [node name="PrimeraPagina" type="VBoxContainer" parent="." unique_id=711970319]
+custom_minimum_size = Vector2(0, 620)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05

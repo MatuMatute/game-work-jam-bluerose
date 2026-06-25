@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RecetaCrafteo" format=3 uid="uid://bnvje4r3jjiaq"]
+
+[ext_resource type="Script" uid="uid://dt4q1w1qqteu4" path="res://Inventario/recetasCrafteos/recetaCrafteo.gd" id="1_300ph"]
+[ext_resource type="Resource" uid="uid://ccaupkrpn85fc" path="res://Inventario/items/gemaBase.tres" id="1_d17s7"]
+[ext_resource type="Resource" uid="uid://b817g4w8ha1bp" path="res://Inventario/items/gemaTallada.tres" id="2_jj28x"]
+[ext_resource type="Resource" uid="uid://cnkn5ilcsb1m2" path="res://Inventario/items/cuchillo.tres" id="4_24qw7"]
+
+[resource]
+script = ExtResource("1_300ph")
+primerItem = ExtResource("1_d17s7")
+segundoItem = ExtResource("4_24qw7")
+resultado = ExtResource("2_jj28x")
+metadata/_custom_type_script = "uid://dt4q1w1qqteu4"

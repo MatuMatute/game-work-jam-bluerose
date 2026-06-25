@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bvqtiu67nbp7"]
+
+[ext_resource type="Script" uid="uid://dmy3nlujx3vk7" path="res://Mapas/comedorPrivadoOtraDimension/cadaverOtraDimension.gd" id="1_hpcrr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(146.90625, 85.3125)
+
+[node name="CadaverOtraDimension" type="Area2D" unique_id=558130018]
+rotation = -0.78365284
+scale = Vector2(1.7515267, 1.6733142)
+script = ExtResource("1_hpcrr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1673324377]
+position = Vector2(-2, 1)
+shape = SubResource("RectangleShape2D_g4v7s")

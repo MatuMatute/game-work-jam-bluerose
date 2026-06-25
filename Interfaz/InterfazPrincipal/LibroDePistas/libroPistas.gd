@@ -16,15 +16,23 @@ func _ready() -> void:
 func ActualizarPistas() -> void:
 	if VariablesJugador.pistas.size() > 0:
 		if pistas.size() > 0:
-			for pista in pistas:
-				pista.queue_free()
+			for botonPista : BotonPista in pistas:
+				botonPista.queue_free()
+		
+		pistas.clear()
+		
+		var cantidadDePistas : int = 0
 		
 		for pista : Pista in VariablesJugador.pistas:
 			var botonPista : BotonPista = escenaBotonPista.instantiate()
 			botonPista.pista = pista
+			botonPista._ready()
 			botonPista.haSidoCliqueado.connect(controlDeDeduccion.RecibirPista)
 			pistas.append(botonPista)
-			if primeraPagina.size.y < 620.0:
-				primeraPagina.add_child(botonPista)
-			else:
+			
+			cantidadDePistas += 1
+			
+			if cantidadDePistas > 8:
 				segundaPagina.add_child(botonPista)
+			else:
+				primeraPagina.add_child(botonPista)

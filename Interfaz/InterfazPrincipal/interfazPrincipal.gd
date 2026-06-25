@@ -40,3 +40,4 @@ func BotonInventarioPresionado() -> void:
 		inventarioUI.queue_free()
 		inventarioUI = null
 	
+	Inventario.interfazInventario = inventarioUI

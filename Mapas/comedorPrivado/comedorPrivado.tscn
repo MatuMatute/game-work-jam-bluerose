@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://xbnog8xortbf" path="res://ObjetosEscenario/espejoEscenario.tscn" id="4_ej64i"]
 [ext_resource type="PackedScene" uid="uid://do24ag8fakvah" path="res://ObjetosEscenario/fragmentoLlave2Escenario.tscn" id="5_wk0ft"]
 [ext_resource type="PackedScene" uid="uid://csqjcr23iy7n1" path="res://Escenas/Pizzas.tscn" id="7_lxmgf"]
-[ext_resource type="PackedScene" uid="uid://c0xsqpl05pt21" path="res://Escenas/cadaverDiPista.tscn" id="8_kjwm2"]
+[ext_resource type="PackedScene" uid="uid://c0xsqpl05pt21" path="res://Mapas/comedorPrivado/cadaverDiPista.tscn" id="8_kjwm2"]
 [ext_resource type="PackedScene" uid="uid://cfe3x8i835lc8" path="res://Escenas/retratos.tscn" id="9_8oegb"]
 
 [node name="comedorPrivado" type="Node2D" unique_id=631651522]
@@ -23,9 +23,9 @@ position = Vector2(356, 704)
 texture = ExtResource("3_6yi4e")
 
 [node name="Puerta" parent="." unique_id=3285009 instance=ExtResource("3_73p82")]
-position = Vector2(957, 1059)
+position = Vector2(956.99994, 1024)
 rotation = 0.0
-scale = Vector2(5.9038277, -0.049184565)
+scale = Vector2(5.9038277, 0.15081547)
 skew = 0.0
 IDHabitacion = 2
 

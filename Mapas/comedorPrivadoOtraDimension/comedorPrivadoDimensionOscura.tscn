@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://x8ofdxwhhxur" path="res://Mapas/comedorPrivadoOtraDimension/comedorPrivadoDimensionOscura.gd" id="1_wkh0h"]
 [ext_resource type="Texture2D" uid="uid://dpncxkatpli07" path="res://Assets/Fondos/ComedorPrivadoOtraDimension.png" id="2_kqwpq"]
-[ext_resource type="Texture2D" uid="uid://dnpfwvx2y16qo" path="res://Assets/Personajes/cadaver.png" id="3_7h258"]
-[ext_resource type="PackedScene" uid="uid://elpxaqpqa4vj" path="res://Escenas/puerta.tscn" id="4_fgda7"]
+[ext_resource type="Texture2D" uid="uid://clfgy8nfvt6c" path="res://Assets/Personajes/cadaverOtraDimension.png" id="3_oibnv"]
 [ext_resource type="PackedScene" uid="uid://xbnog8xortbf" path="res://ObjetosEscenario/espejoEscenario.tscn" id="5_au2a8"]
-[ext_resource type="PackedScene" uid="uid://csqjcr23iy7n1" path="res://Escenas/Pizzas.tscn" id="6_2dm8e"]
-[ext_resource type="PackedScene" uid="uid://c0xsqpl05pt21" path="res://Escenas/cadaverDiPista.tscn" id="7_dmr68"]
+[ext_resource type="PackedScene" uid="uid://bi0ykl7anst36" path="res://Escenas/puertaCerrada.tscn" id="6_li13r"]
+[ext_resource type="Resource" uid="uid://brqafadbvu03i" path="res://Dialogos/puertaCerrada.dialogue" id="7_wkh0h"]
 [ext_resource type="PackedScene" uid="uid://cfe3x8i835lc8" path="res://Escenas/retratos.tscn" id="8_mffcd"]
+[ext_resource type="PackedScene" uid="uid://cb8e70527xe0r" path="res://ObjetosEscenario/panueloLMEscenario.tscn" id="8_wkh0h"]
+[ext_resource type="PackedScene" uid="uid://bvqtiu67nbp7" path="res://Mapas/comedorPrivadoOtraDimension/cadaverOtraDimension.tscn" id="9_kqwpq"]
 
 [node name="comedorPrivadoDimensionOscura" type="Node2D" unique_id=631651522]
 script = ExtResource("1_wkh0h")
@@ -17,26 +18,27 @@ texture = ExtResource("2_kqwpq")
 centered = false
 
 [node name="Cadaver" type="Sprite2D" parent="." unique_id=390450621]
-modulate = Color(1, 0, 0, 1)
 position = Vector2(356, 704)
-texture = ExtResource("3_7h258")
-
-[node name="Puerta" parent="." unique_id=3285009 instance=ExtResource("4_fgda7")]
-position = Vector2(957, 1059)
-rotation = 0.0
-scale = Vector2(5.9038277, -0.049184565)
-skew = 0.0
-IDHabitacion = 2
+texture = ExtResource("3_oibnv")
 
 [node name="espejoEscenario" parent="." unique_id=1756300785 instance=ExtResource("5_au2a8")]
+modulate = Color(0.20392033, 0.20392033, 0.20392033, 1)
 position = Vector2(1813, 333)
-
-[node name="Pizzas" parent="." unique_id=558130018 instance=ExtResource("6_2dm8e")]
-position = Vector2(979, 563)
-
-[node name="CadaverArea" parent="." unique_id=2091613232 instance=ExtResource("7_dmr68")]
-position = Vector2(445, 663)
-scale = Vector2(2.28868, 1.6733142)
+input_pickable = false
 
 [node name="Retratos" parent="." unique_id=859463479 instance=ExtResource("8_mffcd")]
 position = Vector2(295, 84)
+
+[node name="PuertaCerrada" parent="." unique_id=3285009 instance=ExtResource("6_li13r")]
+position = Vector2(959, 1038)
+rotation = 0.0
+scale = Vector2(5.96, 0.12000756)
+skew = 0.0
+dialogoCerrado = ExtResource("7_wkh0h")
+
+[node name="panueloLMEscenario" parent="." unique_id=603175796 instance=ExtResource("8_wkh0h")]
+position = Vector2(553, 847)
+
+[node name="CadaverOtraDimension" parent="." unique_id=558130018 instance=ExtResource("9_kqwpq")]
+position = Vector2(438.99997, 684)
+scale = Vector2(3.1084785, 1.8993909)

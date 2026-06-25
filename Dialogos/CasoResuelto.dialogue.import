@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bltg4turu5jwy"
+path="res://.godot/imported/CasoResuelto.dialogue-9e10251c33821731e223e7fc3345516f.tres"
+
+[deps]
+
+source_file="res://Dialogos/CasoResuelto.dialogue"
+dest_files=["res://.godot/imported/CasoResuelto.dialogue-9e10251c33821731e223e7fc3345516f.tres"]
+
+[params]
+
+defaults=true

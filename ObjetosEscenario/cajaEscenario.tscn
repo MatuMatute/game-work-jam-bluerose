@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c5hn2gnyv8abn"]
+
+[ext_resource type="Script" uid="uid://b7bhepcvhp677" path="res://ObjetosEscenario/cajaEscenario.gd" id="1_nbv5c"]
+[ext_resource type="Texture2D" uid="uid://ljhw6pxg24bb" path="res://Assets/Fondos/ObjetosEscenario/Caja.png" id="2_j1lf5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0d1u"]
+size = Vector2(128, 48)
+
+[node name="cajaEscenario" type="Area2D" unique_id=1756300785]
+script = ExtResource("1_nbv5c")
+
+[node name="Caja" type="Sprite2D" parent="." unique_id=1122037579]
+texture = ExtResource("2_j1lf5")
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=1723101688]
+shape = SubResource("RectangleShape2D_x0d1u")

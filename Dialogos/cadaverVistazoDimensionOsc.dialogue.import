@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c5blau337yfdq"
+path="res://.godot/imported/cadaverVistazoDimensionOsc.dialogue-9cc3e2e1e88194e2202a506cfd8f059f.tres"
+
+[deps]
+
+source_file="res://Dialogos/cadaverVistazoDimensionOsc.dialogue"
+dest_files=["res://.godot/imported/cadaverVistazoDimensionOsc.dialogue-9cc3e2e1e88194e2202a506cfd8f059f.tres"]
+
+[params]
+
+defaults=true

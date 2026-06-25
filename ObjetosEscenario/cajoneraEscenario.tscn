@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bexihce2u24lb"]
+
+[ext_resource type="Script" uid="uid://brruff57dfurn" path="res://ObjetosEscenario/cajoneraEscenario.gd" id="1_buxou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0d1u"]
+size = Vector2(288, 80)
+
+[node name="cajoneraEscenario" type="Area2D" unique_id=1756300785]
+rotation = -0.83775806
+skew = 0.83775806
+script = ExtResource("1_buxou")
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=1723101688]
+shape = SubResource("RectangleShape2D_x0d1u")

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dhx7tmpxh81v0"]
+
+[ext_resource type="Script" uid="uid://cfw7lwg3jyb57" path="res://ObjetosZoom/cajaZoom.gd" id="1_w47i2"]
+[ext_resource type="Texture2D" uid="uid://bm27mtr7mwmns" path="res://Assets/Interfaz/ZoomObjetos/cajaZoom.png" id="2_w47i2"]
+[ext_resource type="AudioStream" uid="uid://b7w1er1beayxh" path="res://Assets/Sonidos/AbrirCerradura.wav" id="3_iinro"]
+
+[node name="cajaZoom" type="CanvasLayer" unique_id=1879841724]
+layer = 2
+script = ExtResource("1_w47i2")
+
+[node name="Bloqueo" type="Control" parent="." unique_id=128568875]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=88507700]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 0
+texture = ExtResource("2_w47i2")
+
+[node name="Abrir" type="AudioStreamPlayer" parent="." unique_id=1007462133]
+stream = ExtResource("3_iinro")
+
+[connection signal="gui_input" from="Bloqueo" to="." method="Regresar"]

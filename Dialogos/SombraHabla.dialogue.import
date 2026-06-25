@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://7nc54b2i5tff"
+path="res://.godot/imported/SombraHabla.dialogue-5ba4cd17618704b2d00e8b898a634f64.tres"
+
+[deps]
+
+source_file="res://Dialogos/SombraHabla.dialogue"
+dest_files=["res://.godot/imported/SombraHabla.dialogue-5ba4cd17618704b2d00e8b898a634f64.tres"]
+
+[params]
+
+defaults=true

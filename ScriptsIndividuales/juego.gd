@@ -1,21 +1,23 @@
 class_name Juego extends Node
 
 var mapaActual : Mapa
+var escenaFinalDemo : PackedScene = preload("res://Escenas/finalDemo.tscn")
 
 @onready var fondoInterfaz : FondoInterfaz = $FondoInterfaz
 @onready var sonidoPisadas : AudioStreamPlayer = $Pisadas
 @onready var sonidoPuerta : AudioStreamPlayer = $Puerta
 @onready var sonidoAscensor : AudioStreamPlayer = $Ascensor
+@onready var sonidoPortal : AudioStreamPlayer = $Portal
 @onready var musicaIntro : AudioStreamPlayer = $Inicio
 @onready var musicaFondoInvestigacion : AudioStreamPlayer = $MusicaFondoInvestigacion
-@onready var mensajeErrorCargarArea : PackedScene = preload("res://Escenas/mensajeErrorCargarArea.tscn")
+@onready var musicaDimensionOscura : AudioStreamPlayer = $DimensionOscura
 
 var habitaciones : Array[String] = [
 	"res://Mapas/despachoOficina/despachoOficina.tscn",
 	"res://Mapas/restauranteRecepcion/restauranteRecepcion.tscn",
 	"res://Mapas/comedorPublico/comedorPublico.tscn",
 	"res://Mapas/comedorPrivado/comedorPrivado.tscn",
-	"DimensionParalela",
+	"res://Mapas/comedorPrivadoOtraDimension/comedorPrivadoDimensionOscura.tscn",
 	"Pasillo",
 	"res://Mapas/despachoLorenzo/despachoLorenzo.tscn"
 ]
@@ -25,9 +27,10 @@ func _ready() -> void:
 	musicaIntro.play()
 
 func cambiarMapa(IDHabitacion : Mapa.IDsMapa, Sonido : Puerta.SonidoTransicion) -> void:
-	# Sonido que se reproducira al 
-	if Sonido == Puerta.SonidoTransicion.PUERTA: sonidoPuerta.play()
-	if Sonido == Puerta.SonidoTransicion.ASCENSOR: sonidoAscensor.play()
+	# Sonido que se reproducira al transicionar
+	match Sonido:
+		Puerta.SonidoTransicion.PUERTA: sonidoPuerta.play()
+		Puerta.SonidoTransicion.ASCENSOR: sonidoAscensor.play()
 	
 	fondoInterfaz.animacionesInterfaz.play("fundidoANegro")
 	await fondoInterfaz.animacionesInterfaz.animation_finished
@@ -45,6 +48,21 @@ func cargarMapa(ubicacion : String) -> void:
 	add_child(mapaInstanciado)
 	fondoInterfaz.animacionesInterfaz.play("fundidoATransparente")
 
+func cambiarDimension(dimensionOscura : bool) -> void:
+	sonidoPortal.play()
+	fondoInterfaz.animacionesInterfaz.play("fundidoANegro")
+	await fondoInterfaz.animacionesInterfaz.animation_finished
+	if mapaActual != null: mapaActual.queue_free()
+	
+	if dimensionOscura:
+		cargarMapa(habitaciones[Mapa.IDsMapa.RESTAURANTE_DIMENSION_PARALELA])
+		apagarMusicaEspecifica(musicaFondoInvestigacion)
+		musicaDimensionOscura.play()
+	else:
+		cargarMapa(habitaciones[Mapa.IDsMapa.RESTAURANTE_COMEDOR_PRIVADO])
+		apagarMusicaEspecifica(musicaDimensionOscura)
+		regresarMusica(musicaFondoInvestigacion)
+
 func acercarObjeto(objeto : PackedScene, objetoEscenario : ObjetoEscenario) -> void:
 	var objetoAcercado : ObjetoZoom = objeto.instantiate()
 	objetoAcercado.objetoBase = objetoEscenario
@@ -59,7 +77,11 @@ func apagarMusicaEspecifica(musica : AudioStreamPlayer) -> void:
 func regresarMusica(musica : AudioStreamPlayer) -> void:
 	musica.play()
 	var animacionEncendida : Tween = create_tween()
-	animacionEncendida.tween_property(musica, "volume_linear", 1.0, 1.0).from(0.0)
+	animacionEncendida.tween_property(musica, "volume_db", -10.0, 1.0).from(-80.0)
 
 func iniciarMusicaDeInvestigacion() -> void:
 	musicaFondoInvestigacion.play()
+
+func terminarDemo() -> void:
+	var finalDemo : Node = escenaFinalDemo.instantiate()
+	add_child(finalDemo)

@@ -31,3 +31,5 @@ scale = Vector2(0.5, 0.5)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 0
 texture = ExtResource("2_2ug1t")
+
+[connection signal="gui_input" from="Bloqueo" to="." method="Regresar"]
