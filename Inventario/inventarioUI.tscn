@@ -38,7 +38,10 @@ layout_mode = 2
 mouse_filter = 0
 texture = ExtResource("2_smwm4")
 
-[node name="GridContainer" type="GridContainer" parent="PanelContainer" unique_id=1184607388]
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer" unique_id=699420977]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/CenterContainer" unique_id=1184607388]
 layout_mode = 2
 mouse_filter = 0
 theme_override_constants/h_separation = 30
