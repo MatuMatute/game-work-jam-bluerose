@@ -42,6 +42,7 @@ func SlotSoltado(slot : Slot) -> void:
 	slot.reparent.call_deferred(grid)
 
 func Crafting(slot : Slot) -> void:
+	if VariablesJugador.slotAgarrado == null: return
 	var resultado : Item
 	
 	for receta : RecetaCrafteo in recetas:
@@ -55,11 +56,15 @@ func Crafting(slot : Slot) -> void:
 		VariablesJugador.slotAgarrado.queue_free()
 		ActualizarInventario()
 	
+	var ideaResultante : Pista
+	
 	for recetaIdea : RecetaIdea in recetasIdeas:
-		var ideaResultante : Pista = recetaIdea.confirmarCrafteo(VariablesJugador.slotAgarrado.itemBase, slot.itemBase)
-		
-		if ideaResultante != null:
-			await DialogueManager.dialogue_ended
-			VariablesJugador.AgregarPista(ideaResultante)
-			terminarDemo.emit()
-			break
+		ideaResultante = recetaIdea.confirmarCrafteo(VariablesJugador.slotAgarrado.itemBase, slot.itemBase)
+		if ideaResultante != null: break
+	
+	if ideaResultante != null:
+		print(VariablesJugador.slotAgarrado.itemBase.nombre)
+		print(slot.itemBase.nombre)
+		await DialogueManager.dialogue_ended
+		VariablesJugador.AgregarPista(ideaResultante)
+		terminarDemo.emit()

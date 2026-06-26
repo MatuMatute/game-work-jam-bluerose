@@ -13,14 +13,13 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 		return
 	if !event.is_released():
 		return
-	
-	input_pickable = false
+	if event.is_echo():
+		return
 	
 	if VariablesJugador.progresoActual == VariablesJugador.Progreso.CONVERSACION_LORENZO:
+		input_pickable = false
 		var dialogoLorenzoRecepcion : DialogueResource = load("res://Dialogos/LorenzoRecepcion1.dialogue")
 		DialogueManager.show_dialogue_balloon(dialogoLorenzoRecepcion)
 		await DialogueManager.dialogue_ended
 		var nodoPrincipal : Juego = get_tree().current_scene as Juego
 		nodoPrincipal.acercarObjeto(llaveLorenzoZoom, null)
-	
-	input_pickable = true
