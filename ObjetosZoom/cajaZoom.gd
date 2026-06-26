@@ -42,4 +42,5 @@ func _input(event: InputEvent) -> void:
 				CajaEscenario.estado = CajaEscenario.EstadoDeLaCaja.ABIERTO
 				sonidoAbrir.play()
 				Inventario.agregarObjetoYActualizar(gemaBase)
+				objetoBase.input_pickable = false
 				super.Comportamiento()

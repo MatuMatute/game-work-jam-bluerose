@@ -13,6 +13,8 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 		return
 	if !event.is_released():
 		return
+	if event.is_echo():
+		return
 	
 	input_pickable = false
 	
@@ -22,5 +24,3 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 		await DialogueManager.dialogue_ended
 		var nodoPrincipal : Juego = get_tree().current_scene as Juego
 		nodoPrincipal.acercarObjeto(llaveLorenzoZoom, null)
-	
-	input_pickable = true
