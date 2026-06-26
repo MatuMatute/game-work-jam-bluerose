@@ -2,8 +2,9 @@ class_name Juego extends Node
 
 var mapaActual : Mapa
 var escenaFinalDemo : PackedScene = preload("res://Escenas/finalDemo.tscn")
+var escenaFondoInterfaz : PackedScene = preload("res://Interfaz/Fondo/fondoInterfaz.tscn")
+var escenaInterfazPrincipal : PackedScene = preload("res://Interfaz/InterfazPrincipal/interfazPrincipal.tscn")
 
-@onready var fondoInterfaz : FondoInterfaz = $FondoInterfaz
 @onready var sonidoPisadas : AudioStreamPlayer = $Pisadas
 @onready var sonidoPuerta : AudioStreamPlayer = $Puerta
 @onready var sonidoAscensor : AudioStreamPlayer = $Ascensor
@@ -11,6 +12,8 @@ var escenaFinalDemo : PackedScene = preload("res://Escenas/finalDemo.tscn")
 @onready var musicaIntro : AudioStreamPlayer = $Inicio
 @onready var musicaFondoInvestigacion : AudioStreamPlayer = $MusicaFondoInvestigacion
 @onready var musicaDimensionOscura : AudioStreamPlayer = $DimensionOscura
+
+var fondoInterfaz : FondoInterfaz
 
 var habitaciones : Array[String] = [
 	"res://Mapas/despachoOficina/despachoOficina.tscn",
@@ -22,9 +25,14 @@ var habitaciones : Array[String] = [
 	"res://Mapas/despachoLorenzo/despachoLorenzo.tscn"
 ]
 
-func _ready() -> void:
+func empezarPartida(menuPrincipal : MenuPrincipal) -> void:
+	var interfazPrincipal : InterfazPrincipal = escenaInterfazPrincipal.instantiate()
+	fondoInterfaz = escenaFondoInterfaz.instantiate()
+	add_child(fondoInterfaz)
+	add_child(interfazPrincipal)
 	cargarMapa(habitaciones[Mapa.IDsMapa.DESPACHO_DETECTIVE])
 	musicaIntro.play()
+	menuPrincipal.queue_free()
 
 func cambiarMapa(IDHabitacion : Mapa.IDsMapa, Sonido : Puerta.SonidoTransicion) -> void:
 	# Sonido que se reproducira al transicionar
