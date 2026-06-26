@@ -16,9 +16,8 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 	if event.is_echo():
 		return
 	
-	input_pickable = false
-	
 	if VariablesJugador.progresoActual == VariablesJugador.Progreso.CONVERSACION_LORENZO:
+		input_pickable = false
 		var dialogoLorenzoRecepcion : DialogueResource = load("res://Dialogos/LorenzoRecepcion1.dialogue")
 		DialogueManager.show_dialogue_balloon(dialogoLorenzoRecepcion)
 		await DialogueManager.dialogue_ended
