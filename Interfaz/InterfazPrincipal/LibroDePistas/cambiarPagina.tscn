@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ti03oxk7u0vw"]
+
+[ext_resource type="Texture2D" uid="uid://depuamh4nhqor" path="res://Assets/Interfaz/CambiarPágina.png" id="1_x5r46"]
+
+[node name="cambiarPagina" type="TextureButton" unique_id=1308883226]
+modulate = Color(1, 1, 1, 0.5019608)
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_x5r46")
+texture_pressed = ExtResource("1_x5r46")
+texture_hover = ExtResource("1_x5r46")
+texture_focused = ExtResource("1_x5r46")

@@ -1,5 +1,11 @@
 extends Node
 
+const tamañoFuenteLetras : Array[int] = [
+	32,
+	40,
+	48
+]
+
 enum Progreso {
 	PROLOGO = 0,
 	CONVERSACION_ELENA = 1,
@@ -18,6 +24,7 @@ var pistas : Array[Pista]
 var progresoActual : Progreso
 var interfazPrincipal : InterfazPrincipal
 var slotAgarrado : Slot
+var indiceFuenteLetras : int
 
 func AgregarPista(pista : Pista) -> void:
 	pistas.append(pista)
@@ -29,3 +36,12 @@ func RemoverPistas(pistasAEliminar : Array[Pista]) -> void:
 
 func TienePista(pista : Pista) -> bool:
 	return pista in pistas
+
+func AjustarIndiceFuente(indice : int) -> void:
+	indiceFuenteLetras = indice
+
+func ConseguirIndiceFuente() -> int:
+	return indiceFuenteLetras;
+
+func ConseguirTamañoFuente() -> int:
+	return tamañoFuenteLetras[indiceFuenteLetras]

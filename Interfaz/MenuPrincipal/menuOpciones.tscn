@@ -1,13 +1,22 @@
 [gd_scene format=3 uid="uid://dikp7vwnqu27w"]
 
 [ext_resource type="FontFile" uid="uid://dmwu4vuulk3d7" path="res://Assets/Interfaz/Fuentes/SpecialElite-Regular.ttf" id="1_dgm31"]
+[ext_resource type="PackedScene" uid="uid://b1ejqj5up61na" path="res://Interfaz/MenuPrincipal/cambiarTamañoLetras.tscn" id="2_4merj"]
 [ext_resource type="Texture2D" uid="uid://dnvrtbrxnxec3" path="res://Assets/Interfaz/sliderVolumen.png" id="2_kvtlm"]
 [ext_resource type="Texture2D" uid="uid://bq66ai58a4raw" path="res://Assets/Interfaz/sliderVolumenHover.png" id="3_4merj"]
 [ext_resource type="Script" uid="uid://blspko41f8r3o" path="res://Interfaz/MenuPrincipal/sliderVolumen.gd" id="4_7hwhy"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_dgm31"]
+font = ExtResource("1_dgm31")
+font_size = 72
+
 [sub_resource type="LabelSettings" id="LabelSettings_alxc1"]
 font = ExtResource("1_dgm31")
 font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_kvtlm"]
+font = ExtResource("1_dgm31")
+font_size = 72
 
 [node name="MenuOpciones" type="VBoxContainer" unique_id=1695863633]
 offset_right = 40.0
@@ -15,6 +24,28 @@ offset_bottom = 40.0
 size_flags_horizontal = 0
 size_flags_vertical = 4
 theme_override_constants/separation = 48
+
+[node name="Accesibilidad" type="Label" parent="." unique_id=2092393201]
+layout_mode = 2
+text = "Accesibilidad"
+label_settings = SubResource("LabelSettings_dgm31")
+
+[node name="FuenteLibroPistas" type="VBoxContainer" parent="." unique_id=608050684]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="LabelFuenteLibroPistas" type="Label" parent="FuenteLibroPistas" unique_id=285055414]
+layout_mode = 2
+text = "Letras del libro de pistas"
+label_settings = SubResource("LabelSettings_alxc1")
+
+[node name="CambiarTamañoLetras" parent="FuenteLibroPistas" unique_id=57567135 instance=ExtResource("2_4merj")]
+layout_mode = 2
+
+[node name="Audio" type="Label" parent="." unique_id=390963754]
+layout_mode = 2
+text = "Audio"
+label_settings = SubResource("LabelSettings_kvtlm")
 
 [node name="VolumenGeneral" type="VBoxContainer" parent="." unique_id=289466229]
 layout_mode = 2
@@ -26,7 +57,9 @@ text = "Volumen general"
 label_settings = SubResource("LabelSettings_alxc1")
 
 [node name="SliderVolumenGeneral" type="HSlider" parent="VolumenGeneral" unique_id=1072054002]
+custom_minimum_size = Vector2(404, 0)
 layout_mode = 2
+size_flags_horizontal = 0
 theme_override_icons/grabber = ExtResource("2_kvtlm")
 theme_override_icons/grabber_highlight = ExtResource("3_4merj")
 max_value = 1.0
@@ -44,7 +77,9 @@ text = "Música"
 label_settings = SubResource("LabelSettings_alxc1")
 
 [node name="SliderVolumenMusica" type="HSlider" parent="VolumenMusica" unique_id=1372687102]
+custom_minimum_size = Vector2(404, 0)
 layout_mode = 2
+size_flags_horizontal = 0
 theme_override_icons/grabber = ExtResource("2_kvtlm")
 theme_override_icons/grabber_highlight = ExtResource("3_4merj")
 max_value = 1.0
@@ -63,7 +98,9 @@ text = "Sonido"
 label_settings = SubResource("LabelSettings_alxc1")
 
 [node name="SliderVolumenSonido" type="HSlider" parent="VolumenSonido" unique_id=1154727815]
+custom_minimum_size = Vector2(404, 0)
 layout_mode = 2
+size_flags_horizontal = 0
 theme_override_icons/grabber = ExtResource("2_kvtlm")
 theme_override_icons/grabber_highlight = ExtResource("3_4merj")
 max_value = 1.0
