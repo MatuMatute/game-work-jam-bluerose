@@ -6,6 +6,7 @@ var pista : Pista
 var estaSeleccionado : bool
 
 func _ready() -> void:
+	add_theme_font_size_override("font_size", VariablesJugador.ConseguirTamañoFuente())
 	text = pista.informacion
 	estaSeleccionado = false
 

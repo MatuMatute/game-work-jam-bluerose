@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b1ejqj5up61na"]
+
+[ext_resource type="FontFile" uid="uid://dmwu4vuulk3d7" path="res://Assets/Interfaz/Fuentes/SpecialElite-Regular.ttf" id="1_f757l"]
+[ext_resource type="Script" uid="uid://dug485vtb6ouk" path="res://Interfaz/MenuPrincipal/cambiarTamañoLetras.gd" id="1_r7cmq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iu5wn"]
+bg_color = Color(0.9184673, 0.75971013, 0.4210685, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f757l"]
+bg_color = Color(0.8942719, 0.7300513, 0.37459505, 1)
+
+[node name="CambiarTamañoLetras" type="OptionButton" unique_id=57567135]
+offset_right = 32.0
+offset_bottom = 20.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.9411765, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.9411765, 0, 1)
+theme_override_fonts/font = ExtResource("1_f757l")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_iu5wn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f757l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iu5wn")
+alignment = 1
+selected = 0
+item_count = 3
+popup/item_0/text = "Pequeña"
+popup/item_0/id = 0
+popup/item_1/text = "Mediana"
+popup/item_1/id = 1
+popup/item_2/text = "Grande"
+popup/item_2/id = 2
+script = ExtResource("1_r7cmq")

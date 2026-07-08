@@ -63,7 +63,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-400, 16]
+"values": [-650, 16]
 }
 
 [sub_resource type="Animation" id="Animation_b0t48"]
@@ -78,7 +78,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [16, -400]
+"values": [16, -650]
 }
 
 [sub_resource type="Animation" id="Animation_33k1w"]
@@ -188,7 +188,7 @@ offset_left = -40.0
 offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "v0.7.4-demobeta"
+text = "v0.7.5-demobeta"
 label_settings = SubResource("LabelSettings_alxc1")
 vertical_alignment = 1
 
