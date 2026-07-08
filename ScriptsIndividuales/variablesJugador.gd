@@ -26,6 +26,10 @@ var interfazPrincipal : InterfazPrincipal
 var slotAgarrado : Slot
 var indiceFuenteLetras : int
 
+func _ready() -> void:
+	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
+		indiceFuenteLetras = 2
+
 func AgregarPista(pista : Pista) -> void:
 	pistas.append(pista)
 	interfazPrincipal.activarNotificacionLibroPistas()

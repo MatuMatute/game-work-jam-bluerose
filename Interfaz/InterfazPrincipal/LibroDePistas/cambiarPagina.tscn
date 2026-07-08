@@ -10,3 +10,5 @@ texture_normal = ExtResource("1_x5r46")
 texture_pressed = ExtResource("1_x5r46")
 texture_hover = ExtResource("1_x5r46")
 texture_focused = ExtResource("1_x5r46")
+
+[connection signal="pressed" from="." to="." method="queue_free"]
