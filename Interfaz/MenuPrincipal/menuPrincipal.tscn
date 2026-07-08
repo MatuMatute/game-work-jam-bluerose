@@ -188,7 +188,7 @@ offset_left = -40.0
 offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "v0.7.5-demobeta"
+text = "v0.7.6-demobeta"
 label_settings = SubResource("LabelSettings_alxc1")
 vertical_alignment = 1
 

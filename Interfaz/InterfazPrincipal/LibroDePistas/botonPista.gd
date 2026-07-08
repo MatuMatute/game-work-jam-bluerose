@@ -20,6 +20,10 @@ func Presionado() -> void:
 	
 	haSidoCliqueado.emit(self)
 
+func SeleccionarMientrasSeDeduce() -> void:
+	add_theme_color_override("font_color", Color.RED)
+	estaSeleccionado = true
+
 func DeseleccionarTrasDeduccionFallida() -> void:
 	add_theme_color_override("font_color", Color.BLACK)
 	estaSeleccionado = false
