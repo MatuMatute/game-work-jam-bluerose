@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://dt8ybb73aswp8"]
+
+[ext_resource type="Script" uid="uid://6g3532ug7vey" path="res://Interfaz/MenuPausa/menuPausa.gd" id="1_lg406"]
+[ext_resource type="FontFile" uid="uid://dmwu4vuulk3d7" path="res://Assets/Interfaz/Fuentes/SpecialElite-Regular.ttf" id="2_1gd10"]
+[ext_resource type="PackedScene" uid="uid://cwfoplwmp721d" path="res://Interfaz/MenuPrincipal/opciones.tscn" id="3_yxc8r"]
+[ext_resource type="PackedScene" uid="uid://clg4atwqyvf17" path="res://Interfaz/MenuPrincipal/salir.tscn" id="4_kgejj"]
+
+[sub_resource type="Animation" id="Animation_lg406"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ContenedorMargen:theme_override_constants/margin_left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [16]
+}
+
+[sub_resource type="Animation" id="Animation_1gd10"]
+resource_name = "aparecer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContenedorMargen:theme_override_constants/margin_left")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-650, 16]
+}
+
+[sub_resource type="Animation" id="Animation_6mgdd"]
+resource_name = "desaparecer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContenedorMargen:theme_override_constants/margin_left")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [16, -650]
+}
+
+[sub_resource type="Animation" id="Animation_yxc8r"]
+resource_name = "iniciar"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.5019608)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ContenedorMargen:theme_override_constants/margin_left")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-650, -650, 16]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6mgdd"]
+_data = {
+&"RESET": SubResource("Animation_lg406"),
+&"aparecer": SubResource("Animation_1gd10"),
+&"desaparecer": SubResource("Animation_6mgdd"),
+&"iniciar": SubResource("Animation_yxc8r")
+}
+
+[node name="MenuPausa" type="CanvasLayer" unique_id=1020421535]
+process_mode = 2
+layer = 5
+script = ExtResource("1_lg406")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1636099358]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ContenedorMargen" type="MarginContainer" parent="." unique_id=1386773660]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+
+[node name="ContenedorVertical" type="VBoxContainer" parent="ContenedorMargen" unique_id=1273530481]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 48
+
+[node name="Continuar" type="Button" parent="ContenedorMargen/ContenedorVertical" unique_id=2139850981]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.8352941, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8352941, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1gd10")
+theme_override_font_sizes/font_size = 48
+text = "Continuar"
+flat = true
+
+[node name="Opciones" parent="ContenedorMargen/ContenedorVertical" unique_id=752059728 instance=ExtResource("3_yxc8r")]
+layout_mode = 2
+
+[node name="Salir" parent="ContenedorMargen/ContenedorVertical" unique_id=389619272 instance=ExtResource("4_kgejj")]
+layout_mode = 2
+
+[node name="AnimacionesMenu" type="AnimationPlayer" parent="." unique_id=1707557268]
+libraries/ = SubResource("AnimationLibrary_6mgdd")
+autoplay = &"iniciar"
+
+[connection signal="pressed" from="ContenedorMargen/ContenedorVertical/Continuar" to="." method="continuarJuego"]
+[connection signal="cambiarAMenuDeOpciones" from="ContenedorMargen/ContenedorVertical/Opciones" to="." method="cambiarMenu"]

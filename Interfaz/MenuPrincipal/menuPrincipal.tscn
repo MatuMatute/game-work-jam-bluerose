@@ -121,6 +121,7 @@ font = ExtResource("3_b0t48")
 font_size = 24
 
 [node name="MenuPrincipal" type="CanvasLayer" unique_id=983531362]
+process_mode = 2
 layer = 6
 script = ExtResource("1_dknr4")
 
@@ -169,7 +170,6 @@ alignment = 0
 
 [node name="Opciones" parent="ContenedorMargen/ContenedorVertical" unique_id=752059728 instance=ExtResource("4_b0t48")]
 layout_mode = 2
-alignment = 0
 
 [node name="Salir" parent="ContenedorMargen/ContenedorVertical" unique_id=389619272 instance=ExtResource("4_ow2b8")]
 layout_mode = 2
@@ -188,7 +188,7 @@ offset_left = -40.0
 offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "v0.8.0-demobeta"
+text = "v0.8.1-demobeta"
 label_settings = SubResource("LabelSettings_alxc1")
 vertical_alignment = 1
 

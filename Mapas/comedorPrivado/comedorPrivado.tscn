@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d2nwijnb0axv2" path="res://Interfaz/regresar.png" id="10_iv2q6"]
 
 [node name="comedorPrivado" type="Node2D" unique_id=631651522]
+process_mode = 1
 script = ExtResource("1_3nou3")
 IDMapa = 3
 

@@ -801,7 +801,7 @@ _data = {
 }
 
 [node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376]
-layer = 100
+layer = 4
 script = ExtResource("1_36de5")
 
 [node name="Fondo" type="ColorRect" parent="." unique_id=1660735886]
