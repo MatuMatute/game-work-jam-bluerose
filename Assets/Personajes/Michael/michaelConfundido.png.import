@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bguvdb6swqr1k"
-path="res://.godot/imported/elena 3.png-aeb0af4ecfda8cd1b9212bec86d7793a.ctex"
+uid="uid://00wnrn31qqx8"
+path="res://.godot/imported/michaelConfundido.png-a50f4ab69a9808b28ca93131b533f5da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Personajes/Elena/elena 3.png"
-dest_files=["res://.godot/imported/elena 3.png-aeb0af4ecfda8cd1b9212bec86d7793a.ctex"]
+source_file="res://Assets/Personajes/Michael/michaelConfundido.png"
+dest_files=["res://.godot/imported/michaelConfundido.png-a50f4ab69a9808b28ca93131b533f5da.ctex"]
 
 [params]
 

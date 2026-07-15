@@ -63,8 +63,6 @@ func Crafting(slot : Slot) -> void:
 		if ideaResultante != null: break
 	
 	if ideaResultante != null:
-		print(VariablesJugador.slotAgarrado.itemBase.nombre)
-		print(slot.itemBase.nombre)
 		await DialogueManager.dialogue_ended
 		VariablesJugador.AgregarPista(ideaResultante)
 		terminarDemo.emit()

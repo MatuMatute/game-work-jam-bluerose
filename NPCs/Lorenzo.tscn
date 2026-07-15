@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5ukrlqtof4mn"]
 
 [ext_resource type="Script" uid="uid://mrypqmv6wi2n" path="res://NPCs/lorenzoDialogo.gd" id="1_6oimb"]
-[ext_resource type="Texture2D" uid="uid://dd2pb52f5xwpq" path="res://Assets/Personajes/Lorenzo/lorenzo.png" id="2_6oimb"]
+[ext_resource type="Texture2D" uid="uid://dd2pb52f5xwpq" path="res://Assets/Personajes/Lorenzo/lorenzoNormal.png" id="2_6oimb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qwpyb"]
 size = Vector2(298, 567)
