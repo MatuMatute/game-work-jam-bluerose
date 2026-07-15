@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xdikmvrkfkxw"
-path="res://.godot/imported/chiaraConfundida.png-7c74fd9fa86ecef337550f4399e6eeb4.ctex"
+uid="uid://dgm1jsul2y6nm"
+path="res://.godot/imported/chiaraSerio.png-8b0e20235bbfbdb44a37cde4bf49e680.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Personajes/Chiara/chiaraConfundida.png"
-dest_files=["res://.godot/imported/chiaraConfundida.png-7c74fd9fa86ecef337550f4399e6eeb4.ctex"]
+source_file="res://Assets/Personajes/Chiara/chiaraSerio.png"
+dest_files=["res://.godot/imported/chiaraSerio.png-8b0e20235bbfbdb44a37cde4bf49e680.ctex"]
 
 [params]
 

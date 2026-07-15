@@ -46,6 +46,9 @@ var dialogue_line: DialogueLine:
 		else:
 			# The dialogue has finished so close the balloon
 			if owner == null:
+				balloon.hide()
+				fundidoFondo.play("fundidoATransparente")
+				await fundidoFondo.animation_finished
 				queue_free()
 			else:
 				hide()
@@ -57,6 +60,15 @@ var mutation_cooldown: Timer = Timer.new()
 
 ## The base balloon anchor
 @onready var balloon: Control = %Balloon
+
+## El sprite de Michael en los dialogos
+@onready var michael : TextureRect = %Michael
+
+## El sprite del personaje que dialoga con michael
+@onready var personaje : TextureRect = %Personaje
+
+## Animacion de inicio y final
+@onready var fundidoFondo : AnimationPlayer = %FundidoFondo
 
 ## The label showing the name of the currently speaking character
 @onready var character_label: RichTextLabel = %CharacterLabel
@@ -111,6 +123,9 @@ func _notification(what: int) -> void:
 
 ## Start some dialogue
 func start(with_dialogue_resource: DialogueResource = null, title: String = "", extra_game_states: Array = []) -> void:
+	fundidoFondo.play("fundidoAOscuro")
+	await fundidoFondo.animation_finished
+
 	temporary_game_states = [self] + extra_game_states
 	is_waiting_for_input = false
 	if is_instance_valid(with_dialogue_resource):
@@ -123,6 +138,28 @@ func start(with_dialogue_resource: DialogueResource = null, title: String = "", 
 
 ## Apply any changes to the balloon given a new [DialogueLine].
 func apply_dialogue_line() -> void:
+	var reaccionPersonaje : String = "Normal"
+
+	if dialogue_line.character.contains("(Confundido)"):
+		reaccionPersonaje = "Confundido"
+		dialogue_line.character = dialogue_line.character.replace(" (Confundido)", "")
+
+	if dialogue_line.character.contains("(Serio)"):
+		reaccionPersonaje = "Serio"
+		dialogue_line.character = dialogue_line.character.replace(" (Serio)", "")
+
+	if dialogue_line.character.contains("(Sonriente)"):
+		reaccionPersonaje = "Sonriente"
+		dialogue_line.character = dialogue_line.character.replace(" (Sonriente)", "")
+
+	if dialogue_line.character.contains("(Engreido)"):
+		reaccionPersonaje = "Engreido"
+		dialogue_line.character = dialogue_line.character.replace(" (Engreido)", "")
+
+	if dialogue_line.character.contains("(Pensando)"):
+		reaccionPersonaje = "Pensando"
+		dialogue_line.character = dialogue_line.character.replace(" (Pensando)", "")
+
 	mutation_cooldown.stop()
 
 	progress.hide()
@@ -132,6 +169,28 @@ func apply_dialogue_line() -> void:
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
+
+	if dialogue_line.character != "Michael":
+		michael.modulate = Color(0.5, 0.5, 0.5, 1.0)
+		personaje.modulate = Color(1.0, 1.0, 1.0, 1.0)
+
+		var nombrePersonaje = dialogue_line.character
+		if nombrePersonaje == "Niña": nombrePersonaje = "Chiara"
+
+		var rutaPersonaje : String = "res://Assets/Personajes/" + nombrePersonaje + "/%s" % nombrePersonaje.to_lower() + reaccionPersonaje + ".png"
+		if FileAccess.file_exists(rutaPersonaje):
+			personaje.texture = load(rutaPersonaje)
+		else:
+			personaje.texture = null
+	else: 
+		michael.modulate = Color(1.0, 1.0, 1.0, 1.0)
+		personaje.modulate = Color(0.5, 0.5, 0.5, 1.0)
+		
+		var rutaMichael : String = "res://Assets/Personajes/Michael/michael" + reaccionPersonaje + ".png"
+		if FileAccess.file_exists(rutaMichael):
+			michael.texture = load(rutaMichael)
+		else:
+			michael.texture = null
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line

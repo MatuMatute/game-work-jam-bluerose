@@ -14,7 +14,7 @@ var next_id: String = ""
 ## The character name that is saying this line.
 var character: String = ""
 
-## A dictionary of variable replacements fo the character name. Generally for internal use only.
+## A dictionary of variable replacements for the character name. Generally for internal use only.
 var character_replacements: Array[Dictionary] = []
 
 ## The dialogue being spoken.

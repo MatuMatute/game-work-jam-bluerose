@@ -65,10 +65,10 @@ func _input(event: InputEvent) -> void:
 			if VariablesJugador.slotAgarrado.itemBase == gemaNecesaria:
 				EspejoEscenario.estado = EspejoEscenario.EstadoDelEspejo.GEMA_COLOCADA
 				(objetoBase as EspejoEscenario).spriteGemaFaltante.show()
-				VariablesJugador.slotAgarrado.queue_free()
-				Inventario.quitarObjeto(gemaNecesaria)
 				fondo.texture = texturaEspejoCompleto
 				timerActivacionPortal.start()
+				VariablesJugador.slotAgarrado.queue_free()
+				Inventario.quitarObjeto(gemaNecesaria)
 
 func ActivarPortal() -> void:
 	EspejoEscenario.estado = EspejoEscenario.EstadoDelEspejo.PORTAL_DIMENSIONAL

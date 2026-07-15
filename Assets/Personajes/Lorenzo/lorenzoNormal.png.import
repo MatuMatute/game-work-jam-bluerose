@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd2pb52f5xwpq"
-path="res://.godot/imported/lorenzo.png-524507da869a23c25c868af52a5f75d7.ctex"
+path="res://.godot/imported/lorenzoNormal.png-345403428acb1604c448b86801aee333.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Personajes/Lorenzo/lorenzo.png"
-dest_files=["res://.godot/imported/lorenzo.png-524507da869a23c25c868af52a5f75d7.ctex"]
+source_file="res://Assets/Personajes/Lorenzo/lorenzoNormal.png"
+dest_files=["res://.godot/imported/lorenzoNormal.png-345403428acb1604c448b86801aee333.ctex"]
 
 [params]
 

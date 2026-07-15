@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgm1jsul2y6nm"
-path="res://.godot/imported/chiaraSeria.png-1e707368dbed882cf200b2dbbe7cec7e.ctex"
+uid="uid://chc3iiir8043i"
+path="res://.godot/imported/michaelNormal.png-cb6f5287cd54b4717f45dd724a19c2e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Personajes/Chiara/chiaraSeria.png"
-dest_files=["res://.godot/imported/chiaraSeria.png-1e707368dbed882cf200b2dbbe7cec7e.ctex"]
+source_file="res://Assets/Personajes/Michael/michaelNormal.png"
+dest_files=["res://.godot/imported/michaelNormal.png-cb6f5287cd54b4717f45dd724a19c2e3.ctex"]
 
 [params]
 
