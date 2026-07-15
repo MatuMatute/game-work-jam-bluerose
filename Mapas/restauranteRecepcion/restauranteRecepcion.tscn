@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://5ukrlqtof4mn" path="res://NPCs/Lorenzo.tscn" id="7_nlvpe"]
 
 [node name="restauranteRecepcion" type="Node2D" unique_id=839677619]
+process_mode = 1
 script = ExtResource("1_eweqs")
 
 [node name="Fondo1" type="Sprite2D" parent="." unique_id=1316702881]

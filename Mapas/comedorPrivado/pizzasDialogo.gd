@@ -1,7 +1,7 @@
 class_name Pizzas extends NPC
 
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
-	if not VariablesJugador.slotAgarrado == null:
+	if EspejoEscenario.estado == EspejoEscenario.EstadoDelEspejo.GEMA_COLOCADA:
 		return
 	if !event is InputEventMouseButton:
 		return

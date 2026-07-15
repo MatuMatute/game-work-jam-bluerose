@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://u8j66nxxsb3o" path="res://Assets/Sonidos/Portal.wav" id="9_va84l"]
 
 [node name="Juego" type="Node" unique_id=956810490]
+process_mode = 3
 script = ExtResource("1_spkme")
 
 [node name="MenuPrincipal" parent="." unique_id=983531362 instance=ExtResource("2_irylq")]

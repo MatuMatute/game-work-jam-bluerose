@@ -14,4 +14,5 @@ theme_override_fonts/font = ExtResource("1_o52f6")
 theme_override_font_sizes/font_size = 48
 text = "Opciones"
 flat = true
+alignment = 0
 script = ExtResource("1_wgusv")

@@ -43,6 +43,14 @@ naming/script_name_casing=4
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
+[input]
+
+PausarJuego={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
 [internationalization]
 
 locale/translations_pot_files=PackedStringArray("res://Dialogos/ChiaraMichaelPrologo.dialogue", "res://Dialogos/primerEncuentroElena.dialogue", "res://Dialogos/cuchillo.dialogue", "res://Dialogos/fragmentoLlave1.dialogue", "res://Dialogos/fragmentoLlave2.dialogue", "res://Dialogos/introComedorPrivado.dialogue", "res://Dialogos/pizzas.dialogue", "res://Dialogos/cadaverPrimerVistazo.dialogue", "res://Dialogos/segundoEncuentroElena.dialogue", "res://Dialogos/dialogoEspejoDescubre.dialogue", "res://Dialogos/puertaCerrada.dialogue", "res://Dialogos/ascensorCerrado.dialogue", "res://Dialogos/retratoDialogo2.dialogue", "res://Dialogos/retratoDialogo1.dialogue", "res://Dialogos/LorenzoRecepcion1.dialogue", "res://Dialogos/LorenzoRecepcion2.dialogue", "res://Dialogos/llegadaDespachoLorenzo.dialogue", "res://Dialogos/relojDialogo.dialogue", "res://Dialogos/tercerEncuentroElena.dialogue", "res://Dialogos/SombraHabla.dialogue", "res://Dialogos/michaelPortal.dialogue", "res://Dialogos/entradaDimensionOscura.dialogue", "res://Dialogos/panueloLMDimensionOscura.dialogue", "res://Dialogos/cadaverVistazoDimensionOsc.dialogue", "res://Dialogos/CasoResuelto.dialogue")

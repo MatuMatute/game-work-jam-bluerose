@@ -4,6 +4,7 @@ var mapaActual : Mapa
 var escenaFinalDemo : PackedScene = preload("res://Escenas/finalDemo.tscn")
 var escenaFondoInterfaz : PackedScene = preload("res://Interfaz/Fondo/fondoInterfaz.tscn")
 var escenaInterfazPrincipal : PackedScene = preload("res://Interfaz/InterfazPrincipal/interfazPrincipal.tscn")
+var escenaMenuPausa : PackedScene = preload("res://Interfaz/MenuPausa/menuPausa.tscn")
 
 @onready var sonidoPisadas : AudioStreamPlayer = $Pisadas
 @onready var sonidoPuerta : AudioStreamPlayer = $Puerta
@@ -25,6 +26,9 @@ var habitaciones : Array[String] = [
 	"res://Mapas/despachoLorenzo/despachoLorenzo.tscn"
 ]
 
+func _ready() -> void:
+	get_tree().paused = true
+
 func empezarPartida(menuPrincipal : MenuPrincipal) -> void:
 	var interfazPrincipal : InterfazPrincipal = escenaInterfazPrincipal.instantiate()
 	fondoInterfaz = escenaFondoInterfaz.instantiate()
@@ -33,6 +37,13 @@ func empezarPartida(menuPrincipal : MenuPrincipal) -> void:
 	cargarMapa(habitaciones[Mapa.IDsMapa.DESPACHO_DETECTIVE])
 	musicaIntro.play()
 	menuPrincipal.queue_free()
+	get_tree().paused = false
+
+func _input(event: InputEvent) -> void:
+	if (event.is_action_pressed("PausarJuego") and !get_tree().paused):
+		get_tree().paused = true
+		var menuPausa : MenuPausa = escenaMenuPausa.instantiate()
+		add_child(menuPausa)
 
 func cambiarMapa(IDHabitacion : Mapa.IDsMapa, Sonido : Puerta.SonidoTransicion) -> void:
 	# Sonido que se reproducira al transicionar

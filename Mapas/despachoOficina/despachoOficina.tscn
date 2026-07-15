@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dqgxrpnf2t5ts" path="res://NPCs/Chiara.tscn" id="5_vrov2"]
 
 [node name="despachoOficina" type="Node2D" unique_id=631651522]
+process_mode = 1
 script = ExtResource("1_8dxnp")
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1429677629]
@@ -25,4 +26,3 @@ position = Vector2(962, 622)
 [node name="LocationCanvas" type="CanvasLayer" parent="." unique_id=1672029222]
 
 [node name="LocationCard" parent="LocationCanvas" unique_id=829454247 instance=ExtResource("4_j3b6v")]
-visible = false

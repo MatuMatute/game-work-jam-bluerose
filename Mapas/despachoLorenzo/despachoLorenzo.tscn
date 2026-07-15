@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://d2nwijnb0axv2" path="res://Interfaz/regresar.png" id="8_xkunn"]
 
 [node name="despachoLorenzo" type="Node2D" unique_id=631651522]
+process_mode = 1
 script = ExtResource("1_fxl2t")
 IDMapa = 6
 
