@@ -177,8 +177,8 @@ func apply_dialogue_line() -> void:
 		var nombrePersonaje = dialogue_line.character
 		if nombrePersonaje == "Niña": nombrePersonaje = "Chiara"
 
-		var rutaPersonaje : String = "res://Assets/Personajes/" + nombrePersonaje + "/%s" % nombrePersonaje.to_lower() + reaccionPersonaje + ".png"
-		if FileAccess.file_exists(rutaPersonaje):
+		var rutaPersonaje : String = "res://Assets/Personajes/" + nombrePersonaje + "/" + nombrePersonaje.to_lower()  + reaccionPersonaje + ".png"
+		if ResourceLoader.exists(rutaPersonaje):
 			personaje.texture = load(rutaPersonaje)
 		else:
 			personaje.texture = null
@@ -187,7 +187,7 @@ func apply_dialogue_line() -> void:
 		personaje.modulate = Color(0.5, 0.5, 0.5, 1.0)
 		
 		var rutaMichael : String = "res://Assets/Personajes/Michael/michael" + reaccionPersonaje + ".png"
-		if FileAccess.file_exists(rutaMichael):
+		if ResourceLoader.exists(rutaMichael):
 			michael.texture = load(rutaMichael)
 		else:
 			michael.texture = null
