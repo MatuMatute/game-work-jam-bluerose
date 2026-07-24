@@ -25,7 +25,14 @@ func activarNotificacionInventario() -> void:
 
 func BotonLibroPistasPresionado() -> void:
 	if notificacionLibroPistas.is_visible_in_tree():
-		notificacionLibroPistas.hide()
+		notificacionLibroPistas.hide()	
+	
+	if VariablesJugador.tutorialLibroVisto == false:
+		VariablesJugador.tutorialLibroVisto = true
+		
+		var dialogoTutorialLibroPistas : DialogueResource = load("res://tutorialLibroPistas.dialogue")
+		DialogueManager.show_dialogue_balloon(dialogoTutorialLibroPistas)
+		await DialogueManager.dialogue_ended
 	
 	if libroPistas == null:
 		libroPistas = escenaLibroPistas.instantiate()
@@ -41,6 +48,13 @@ func BotonLibroPistasPresionado() -> void:
 func BotonInventarioPresionado() -> void:
 	if notificacionInventario.is_visible_in_tree():
 		notificacionInventario.hide()
+	
+	if VariablesJugador.tutorialInventarioVisto == false:
+		VariablesJugador.tutorialInventarioVisto = true
+		
+		var dialogoTutorialInventario : DialogueResource = load("res://tutorialInventario.dialogue")
+		DialogueManager.show_dialogue_balloon(dialogoTutorialInventario)
+		await DialogueManager.dialogue_ended
 	
 	if inventarioUI == null:
 		inventarioUI = escenaInventario.instantiate()
