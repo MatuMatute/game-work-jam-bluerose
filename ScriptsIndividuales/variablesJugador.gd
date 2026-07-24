@@ -25,6 +25,8 @@ var progresoActual : Progreso
 var interfazPrincipal : InterfazPrincipal
 var slotAgarrado : Slot
 var indiceFuenteLetras : int
+var tutorialInventarioVisto : bool = false
+var tutorialLibroVisto : bool = false 
 
 func _ready() -> void:
 	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
