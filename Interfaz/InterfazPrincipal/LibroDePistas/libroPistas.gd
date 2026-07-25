@@ -2,8 +2,8 @@ class_name LibroPistas extends TextureRect
 
 const pistasPorPaginaSegunTamaño : Array[int] = [
 	8,
-	6,
-	4
+	5,
+	3
 ]
 
 @onready var animacionLibroPistas : AnimationPlayer = $animacionLibroPistas
