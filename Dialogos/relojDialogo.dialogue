@@ -1,2 +1,11 @@
 Michael: Es un reloj con piedras grabadas de colores con forma familiar.
 Michael: ¿Tendrá algo que ver con ese extraño espejo?
+
+if Inventario.tieneObjeto(load("res://Inventario/items/gemaBase.tres")) and Inventario.tieneObjeto(load("res://Inventario/items/cuchillo.tres")):
+	Michael: La gema del superior del reloj es muy similar a la faltante en el espejo.
+	Michael (Confundido): Podría colocar esta gema en el lugar faltante... [wait=1] pero recuerdo que todos tenían tallados simbolos.
+	Michael (Pensando): ¿Y si intento tallarlo yo mismo? 
+else:
+	Michael: La gema del superior del reloj es muy similar a la faltante en el espejo.
+	Michael (Confundido): Si tuviese una gema sería fácil poder colocarla... [wait=1] claro que teniendo tallado esos simbolos que ví antes.
+	

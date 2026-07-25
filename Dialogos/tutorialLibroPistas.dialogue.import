@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://gfaacp6ecaid"
+path="res://.godot/imported/tutorialLibroPistas.dialogue-039bc670948c146491e391457b308bc0.tres"
+
+[deps]
+
+source_file="res://Dialogos/tutorialLibroPistas.dialogue"
+dest_files=["res://.godot/imported/tutorialLibroPistas.dialogue-039bc670948c146491e391457b308bc0.tres"]
+
+[params]
+
+defaults=true
