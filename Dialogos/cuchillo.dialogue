@@ -1,1 +1,4 @@
 Michael: Un cuchillo.
+
+if Inventario.tieneObjeto(load("res://Inventario/items/gemaBase.tres")):
+	Michael: Está tan afilado hasta para afilar una piedra o...[wait=1] una gema.

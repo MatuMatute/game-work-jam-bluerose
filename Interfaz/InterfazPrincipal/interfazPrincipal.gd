@@ -30,7 +30,7 @@ func BotonLibroPistasPresionado() -> void:
 	if VariablesJugador.tutorialLibroVisto == false:
 		VariablesJugador.tutorialLibroVisto = true
 		
-		var dialogoTutorialLibroPistas : DialogueResource = load("res://tutorialLibroPistas.dialogue")
+		var dialogoTutorialLibroPistas : DialogueResource = load("res://Dialogos/tutorialLibroPistas.dialogue")
 		DialogueManager.show_dialogue_balloon(dialogoTutorialLibroPistas)
 		await DialogueManager.dialogue_ended
 	
@@ -52,7 +52,7 @@ func BotonInventarioPresionado() -> void:
 	if VariablesJugador.tutorialInventarioVisto == false:
 		VariablesJugador.tutorialInventarioVisto = true
 		
-		var dialogoTutorialInventario : DialogueResource = load("res://tutorialInventario.dialogue")
+		var dialogoTutorialInventario : DialogueResource = load("res://Dialogos/tutorialInventario.dialogue")
 		DialogueManager.show_dialogue_balloon(dialogoTutorialInventario)
 		await DialogueManager.dialogue_ended
 	

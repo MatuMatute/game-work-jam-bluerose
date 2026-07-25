@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c4ccbgpu00da1"
+path="res://.godot/imported/tutorialInventario.dialogue-877fda3f64ef8f8dae6bcd04d104b7ef.tres"
+
+[deps]
+
+source_file="res://Dialogos/tutorialInventario.dialogue"
+dest_files=["res://.godot/imported/tutorialInventario.dialogue-877fda3f64ef8f8dae6bcd04d104b7ef.tres"]
+
+[params]
+
+defaults=true
