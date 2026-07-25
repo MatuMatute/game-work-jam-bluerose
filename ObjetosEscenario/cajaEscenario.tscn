@@ -6,8 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0d1u"]
 size = Vector2(128, 48)
 
-[node name="cajaEscenario" type="Area2D" unique_id=1756300785]
+[node name="cajaEscenario" type="Area2D" unique_id=1756300785 node_paths=PackedStringArray("colision")]
 script = ExtResource("1_nbv5c")
+colision = NodePath("Colision")
 
 [node name="Caja" type="Sprite2D" parent="." unique_id=1122037579]
 texture = ExtResource("2_j1lf5")

@@ -7,6 +7,6 @@ func _ready() -> void:
 	escenaZoom = load("uid://csnwr0biphujs")
 	
 	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
-		scale = Vector2(2.0, 2.0)
+		scale = Vector2(1.5, 1.5)
 	
 	super()
