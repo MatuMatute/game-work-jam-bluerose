@@ -6,8 +6,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0d1u"]
 size = Vector2(32, 32)
 
-[node name="fragmentoLlave1Escenario" type="Area2D" unique_id=1756300785]
+[node name="fragmentoLlave1Escenario" type="Area2D" unique_id=1756300785 node_paths=PackedStringArray("sprite", "colision")]
 script = ExtResource("1_6c86a")
+sprite = NodePath("Sprite")
+colision = NodePath("Colision")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1122037579]
 texture = ExtResource("2_6c86a")
