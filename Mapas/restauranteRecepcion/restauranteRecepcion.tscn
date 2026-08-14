@@ -49,5 +49,6 @@ z_index = 1000
 position = Vector2(181, 722)
 
 [node name="LocationCanvas" type="CanvasLayer" parent="." unique_id=1841381473]
+layer = 5
 
 [node name="LocationCard" parent="LocationCanvas" unique_id=829454247 instance=ExtResource("7_45ibf")]

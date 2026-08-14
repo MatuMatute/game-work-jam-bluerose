@@ -97,7 +97,7 @@ _data = {
 }
 
 [node name="interfazPrincipal" type="CanvasLayer" unique_id=142371296]
-layer = 3
+layer = 4
 script = ExtResource("1_nhmib")
 
 [node name="Fondo" type="ColorRect" parent="." unique_id=2021417372]

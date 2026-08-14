@@ -24,5 +24,6 @@ IDHabitacion = 1
 position = Vector2(962, 622)
 
 [node name="LocationCanvas" type="CanvasLayer" parent="." unique_id=1672029222]
+layer = 5
 
 [node name="LocationCard" parent="LocationCanvas" unique_id=829454247 instance=ExtResource("4_j3b6v")]

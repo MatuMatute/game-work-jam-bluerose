@@ -746,71 +746,17 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 4
 
-[sub_resource type="Animation" id="Animation_wkb51"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Fondo:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0.5019608)]
-}
-
-[sub_resource type="Animation" id="Animation_jqpr8"]
-resource_name = "fundidoAOscuro"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Fondo:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.5019608)]
-}
-
-[sub_resource type="Animation" id="Animation_brwd2"]
-resource_name = "fundidoATransparente"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Fondo:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0.5019608), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_brwd2"]
-_data = {
-&"RESET": SubResource("Animation_wkb51"),
-&"fundidoAOscuro": SubResource("Animation_jqpr8"),
-&"fundidoATransparente": SubResource("Animation_brwd2")
-}
-
 [node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376]
-layer = 4
+layer = 5
 script = ExtResource("1_36de5")
 
-[node name="Fondo" type="ColorRect" parent="." unique_id=1660735886]
+[node name="PararMouse" type="Control" parent="." unique_id=1537814107]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.5019608)
 
 [node name="Balloon" type="Control" parent="." unique_id=359403728]
 unique_name_in_owner = true
@@ -931,11 +877,6 @@ text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
 unique_name_in_owner = true
-
-[node name="FundidoFondo" type="AnimationPlayer" parent="." unique_id=1239618593]
-unique_name_in_owner = true
-root_node = NodePath("../Balloon")
-libraries/ = SubResource("AnimationLibrary_brwd2")
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

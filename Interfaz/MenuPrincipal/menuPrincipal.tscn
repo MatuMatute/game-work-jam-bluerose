@@ -122,7 +122,7 @@ font_size = 24
 
 [node name="MenuPrincipal" type="CanvasLayer" unique_id=983531362]
 process_mode = 2
-layer = 6
+layer = 7
 script = ExtResource("1_dknr4")
 
 [node name="FondoGradiente" type="TextureRect" parent="." unique_id=49367358]
@@ -188,7 +188,7 @@ offset_left = -40.0
 offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "v0.8.5-demobeta"
+text = "v0.8.6-demobeta"
 label_settings = SubResource("LabelSettings_alxc1")
 vertical_alignment = 1
 

@@ -47,8 +47,8 @@ var dialogue_line: DialogueLine:
 			# The dialogue has finished so close the balloon
 			if owner == null:
 				balloon.hide()
-				fundidoFondo.play("fundidoATransparente")
-				await fundidoFondo.animation_finished
+				fondoInstanciado.animacionFundido.play("fundidoATransparente")
+				await fondoInstanciado.animacionFundido.animation_finished
 				queue_free()
 			else:
 				hide()
@@ -67,8 +67,8 @@ var mutation_cooldown: Timer = Timer.new()
 ## El sprite del personaje que dialoga con michael
 @onready var personaje : TextureRect = %Personaje
 
-## Animacion de inicio y final
-@onready var fundidoFondo : AnimationPlayer = %FundidoFondo
+## Escena de la animacion de inicio y de final, esta en una capa diferente para mostrar el resto por encima
+@onready var fondoDialogo : PackedScene = load("res://Escenas/Dialogue/fondoDialogo.tscn")
 
 ## The label showing the name of the currently speaking character
 @onready var character_label: RichTextLabel = %CharacterLabel
@@ -82,6 +82,7 @@ var mutation_cooldown: Timer = Timer.new()
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
 
+var fondoInstanciado : FondoDialogo
 
 func _ready() -> void:
 	balloon.hide()
@@ -123,8 +124,9 @@ func _notification(what: int) -> void:
 
 ## Start some dialogue
 func start(with_dialogue_resource: DialogueResource = null, title: String = "", extra_game_states: Array = []) -> void:
-	fundidoFondo.play("fundidoAOscuro")
-	await fundidoFondo.animation_finished
+	fondoInstanciado = fondoDialogo.instantiate()
+	get_tree().current_scene.add_child(fondoInstanciado)
+	await fondoInstanciado.animacionFundido.animation_finished
 
 	temporary_game_states = [self] + extra_game_states
 	is_waiting_for_input = false

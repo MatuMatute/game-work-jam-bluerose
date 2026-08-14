@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bmbhrpq411ot6" path="res://Assets/Interfaz/ZoomObjetos/PastillaZoom.png" id="2_c3a18"]
 
 [node name="pastillasZoom" type="CanvasLayer" unique_id=1879841724]
-layer = 2
+layer = 3
 script = ExtResource("1_c3a18")
 
 [node name="Bloqueo" type="Control" parent="." unique_id=128568875]

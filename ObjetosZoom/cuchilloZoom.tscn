@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dewas16m1akco" path="res://Assets/Interfaz/ZoomObjetos/CuchilloZoom.png" id="2_rjmpw"]
 
 [node name="cuchilloZoom" type="CanvasLayer" unique_id=1879841724]
-layer = 2
+layer = 3
 script = ExtResource("1_rjmpw")
 
 [node name="Bloqueo" type="Control" parent="." unique_id=128568875]
