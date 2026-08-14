@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dy7y4dq7oo11m" path="res://icon.svg" id="2_0nv4o"]
 
 [node name="objetoZoom" type="CanvasLayer" unique_id=1879841724]
-layer = 2
+layer = 3
 script = ExtResource("1_g5u3o")
 
 [node name="Bloqueo" type="Control" parent="." unique_id=262310890]

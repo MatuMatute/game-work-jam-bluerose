@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://b7w1er1beayxh" path="res://Assets/Sonidos/AbrirCerradura.wav" id="3_iinro"]
 
 [node name="cajaZoom" type="CanvasLayer" unique_id=1879841724]
-layer = 2
+layer = 3
 script = ExtResource("1_w47i2")
 
 [node name="Bloqueo" type="Control" parent="." unique_id=128568875]

@@ -100,7 +100,7 @@ _data = {
 
 [node name="MenuPausa" type="CanvasLayer" unique_id=1020421535]
 process_mode = 2
-layer = 5
+layer = 6
 script = ExtResource("1_lg406")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1636099358]

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bv2qjlkxcbyg1" path="res://Assets/Interfaz/ZoomObjetos/relojZoom.png" id="2_6nth8"]
 
 [node name="relojZoom" type="CanvasLayer" unique_id=1879841724]
-layer = 2
+layer = 3
 script = ExtResource("1_6nth8")
 
 [node name="Bloqueo" type="Control" parent="." unique_id=128568875]

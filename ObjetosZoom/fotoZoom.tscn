@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bgcbsr7scfoum" path="res://Assets/Interfaz/ZoomObjetos/cuadro 1.png" id="2_2ug1t"]
 
 [node name="fotoZoom" type="CanvasLayer" unique_id=1879841724]
-layer = 2
+layer = 3
 script = ExtResource("1_vibo7")
 
 [node name="Bloqueo" type="Control" parent="." unique_id=128568875]

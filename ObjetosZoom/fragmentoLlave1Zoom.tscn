@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://n3e61psfgy3r" path="res://Assets/Interfaz/ZoomObjetos/LlaveZoom.png" id="2_rpxqa"]
 
 [node name="fragmentoLlave1Zoom" type="CanvasLayer" unique_id=1879841724]
-layer = 2
+layer = 3
 script = ExtResource("1_xp255")
 
 [node name="Bloqueo" type="Control" parent="." unique_id=128568875]
